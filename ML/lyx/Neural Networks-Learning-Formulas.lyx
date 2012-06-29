@@ -1,0 +1,680 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass aastex
+\begin_preamble
+\hoffset=-0.5in
+\voffset=-0.5in
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 0
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_authoryear
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\noindent
+Neural Networks: Learning - Formulas
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Cost function
+\end_layout
+
+\begin_layout Standard
+\noindent
+Neural network now outputs vectors
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $K\longrightarrow$
+\end_inset
+
+number of output elements
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $h_{\Theta}(x)\in\mathbb{R}^{K}$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+K dimensional vector
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $(h_{\Theta}(x))_{i}=i^{th}output\longrightarrow$
+\end_inset
+
+i selects ith element
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $J(\Theta)=-\frac{1}{m}{\displaystyle {\displaystyle \left[\sum_{i=1}^{m}{\displaystyle \sum_{k=1}^{K}y_{k}^{(i)}log(h_{\Theta}(x^{(i)}))_{k}+(1-y_{k}^{(i)}log(1-(h_{\Theta}(x^{(i)}))_{k})}\right]+}\frac{\lambda}{2m}{\displaystyle \sum_{l=1}^{L-1}{\displaystyle \sum_{i=1}^{s_{l}}{\displaystyle \sum_{j=1}^{s_{l+1}}(\Theta_{ji}^{(l)})^{2}}}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $J(\Theta)\longrightarrow$
+\end_inset
+
+cost function
+\end_layout
+
+\begin_layout Standard
+\noindent
+Inner sum is a sum over 
+\begin_inset Formula $k$
+\end_inset
+
+ output units.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Regularization term sums over 
+\begin_inset Formula $\Theta_{ji}^{(l)}$
+\end_inset
+
+ terms but we don't sum over 
+\begin_inset Formula $0^{th}$
+\end_inset
+
+, bias, term.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Backpropagation algorithm
+\end_layout
+
+\begin_layout Standard
+\noindent
+It's an algorithm for minimizing the cost function.
+ We need to comput 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ and then 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)$
+\end_inset
+
+, 
+\begin_inset Formula $\Theta_{ij}^{(l)}\in\mathbb{R}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+The first thing we do is apply forward propagation.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $a^{(1)}=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $z^{(2)}=\Theta^{(1)}a^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $a^{(2)}=g(z^{(2)})\,\,\,(add\, a_{0}^{(2)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $z^{(3)}=\Theta^{(2)}a^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $a^{(3)}=g(z^{(3)})\,\,\,(add\, a_{0}^{(3)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $z^{(4)}=\Theta^{(3)}a^{(3)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $a^{(4)}=h_{\Theta}(x)=g(z^{(4)})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\noindent
+Then we compute gradient (the derivatives) by using backpropagation.
+ We compute the error in the activation of jode j in layer l: 
+\begin_inset Formula $\delta_{j}^{(l)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ex.
+ with 4 layers, we're going to compute:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta_{j}^{(4)}=a_{j}^{(4)}-y_{j}\longrightarrow$
+\end_inset
+
+the 
+\begin_inset Formula $a$
+\end_inset
+
+ term can also be written as 
+\begin_inset Formula $(h_{\Theta}(x))_{j}$
+\end_inset
+
+.
+ Additionally if you think of 
+\begin_inset Formula $\delta,\, a,\, y$
+\end_inset
+
+ as vectors we can vectorize the computation and have 
+\begin_inset Formula $\delta^{(4)}=a^{(4)}-y$
+\end_inset
+
+.
+ Each of 
+\begin_inset Formula $\delta,\, a,\, y$
+\end_inset
+
+'s dimension is equal to the number of output units in the network.
+ Now we have the error terms.
+\end_layout
+
+\begin_layout Standard
+Next we comput 
+\begin_inset Formula $\delta$
+\end_inset
+
+ terms for the earlier terms in the network.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $\delta^{(3)}=(\Theta^{(3)})^{T}\delta^{(4)}.*g'(z^{(3)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\delta^{(2)}=(\Theta^{(2)})^{T}\delta^{(3)}.*g'(z^{(2)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+To compute 
+\begin_inset Formula $g'(z^{(3)})=a^{(3)}.*(1-a^{(3)})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+There is 
+\series bold
+no 
+\begin_inset Formula $\delta^{(1)}$
+\end_inset
+
+
+\series default
+term.
+\end_layout
+
+\begin_layout Standard
+To calc backpropagation given a training set 
+\begin_inset Formula $\left\{ (x^{(1)},\, y^{(1)},\,...,\,(x^{(m)},\, y^{(m)})\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Set 
+\begin_inset Formula $\Delta_{ij}^{(l)}=0\,(\forall_{l,\, i,\, j})\longrightarrow$
+\end_inset
+
+eventually this will be used to compute the derivative term 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Then loop through the training set:
+\end_layout
+
+\begin_layout Standard
+\noindent
+For 
+\begin_inset Formula $i=1$
+\end_inset
+
+to 
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+set 
+\begin_inset Formula $a^{(1)}=x^{(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Perform forward propagation to compute 
+\begin_inset Formula $a^{(l)}$
+\end_inset
+
+for 
+\begin_inset Formula $l=2,\,3,\,...,\, L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using output label 
+\begin_inset Formula $y^{(i)}$
+\end_inset
+
+from a specific example, compute the error term 
+\begin_inset Formula $\delta^{(L)}=a^{(L)}-y^{(i)}$
+\end_inset
+
+ for the output layer 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ 
+\begin_inset Formula $a^{(L)}$
+\end_inset
+
+is what the hypothesis outputs, minus what the target label was, 
+\begin_inset Formula $y^{(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Use backprop algo to compute 
+\begin_inset Formula $\delta^{(L-1)},\,\delta^{(L-2)},\,...,\,\delta^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Next, we accumulate the partial derivative terms from previous line
+\begin_inset Formula $\Delta_{ij}^{(l)}:=\Delta_{ij}^{(l)}+a_{j}^{(l)}\delta_{i}^{(l+1)}$
+\end_inset
+
+.
+ We can vectorize this too 
+\begin_inset Formula $\Delta^{(l)}:=\Delta^{(l)}+\delta^{(l+1)}(a^{(l)})^{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally, we compute gradient matrices D:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)}+\lambda\Theta_{ij}^{(l)}\, if\, j\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)}\,\,\,\,\,\,\,\,\,\,\,\, if\, j=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Once we compute these terms, those are exactly the derivative of the 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ terms, you can use them in gradient descent or other optimization algos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Backpropagation Intuition
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Unrolling Parameters
+\end_layout
+
+\begin_layout Standard
+costFunction and fminunc assume that theta and gradient are vectors.
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Putting it together
+\end_layout
+
+\begin_layout Enumerate
+Pick a network architecture
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Number of input units: Dimension of features 
+\begin_inset Formula $x^{(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Number of output units: Number of classes
+\end_layout
+
+\begin_layout Enumerate
+reasonable default for number of hidden layers: 1, or if >1 have same number
+ of hidden units in every layer (usually the more the better but more computatio
+nally expensive)
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Randomly initialize weights
+\end_layout
+
+\begin_layout Enumerate
+Implement forward propagation to get 
+\begin_inset Formula $h_{\Theta}(x^{(i)})$
+\end_inset
+
+for any 
+\begin_inset Formula $x^{(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Implement code to compute cost function 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Implement backdrop to compute partial derivatives 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{jk}^{(l)}}J(\Theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+for i=1:m
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Perform forward propagation and backpropagation using example 
+\begin_inset Formula $(x^{(i)},\, y^{(i)})$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(Get activations 
+\begin_inset Formula $a^{(l)}$
+\end_inset
+
+and delta terms 
+\begin_inset Formula $\delta^{(l)}$
+\end_inset
+
+for 
+\begin_inset Formula $l=2,\,...,\, L$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+compute delta terms
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Delta^{(l)}:=\Delta^{(l)}+\delta^{(l+1)}(a^{(l)})^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+compute derivative terms
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{jk}^{(l)}}J(\Theta)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Use gradient checking to comare 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{jk}^{(l)}}J(\Theta)$
+\end_inset
+
+ computed using backpropagation vs.
+ using numerical estimate of gradient of 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Then disable gradient checking code.
+\end_layout
+
+\begin_layout Enumerate
+Use gradient descent or advanced optimization method with backpropagation
+ to try to minimize 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ as a function of parameters 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+- non-convex, can get stuck in a local minimum, but it's usually not a problem.
+\end_layout
+
+\end_body
+\end_document

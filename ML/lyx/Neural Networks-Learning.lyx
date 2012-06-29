@@ -1,0 +1,2060 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usetikzlibrary{arrows,%
+petri,%
+topaths}%
+\usepackage{tkz-berge}
+\usepackage[position=top]{subfig}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\noindent
+
+\series bold
+Neural Networks: Learning
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+I.
+ Cost Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\{(x^{(1)},\, y^{(1)}),\,(x^{(2)},\, y^{(2)}),\,...,(x^{(m)},\, y^{(m)})\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L=$
+\end_inset
+
+total number of layers in network
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{l}=$
+\end_inset
+
+number of units (not counting bias unit) in layer 
+\begin_inset Formula $l$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K=$
+\end_inset
+
+number of units in the output layer
+\end_layout
+
+\begin_layout Itemize
+Binary classification:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $y=0\, or\,1$
+\end_inset
+
+ labels
+\end_layout
+
+\begin_layout Itemize
+1 output unit 
+\begin_inset Formula $h_{\Theta}(x)\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{L}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K=1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Multi-class classification (
+\begin_inset Formula $K$
+\end_inset
+
+ classes)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $y\in\mathbb{R}^{K}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+e.g.
+ 
+\begin_inset Formula $\left[\begin{array}{c}
+1\\
+0\\
+0\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+1\\
+0\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+0\\
+1\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+0\\
+0\\
+1
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K$
+\end_inset
+
+ output units
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h_{\Theta}(x)\in\mathbb{R}^{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s_{2}=K,\quad(k\geq3)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\noindent
+The cost function for the neural network is going to be a generalization
+ of the one we used for logistic regression, where instead of having one
+ logistic regression output unit, we'll have K of them.
+\begin_inset Formula 
+\[
+h_{\Theta}(x)\in\mathbb{R}^{k}\qquad(h_{\Theta}(x))_{i}=i^{th}\, output
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $J(\Theta)=-\frac{1}{m}{\displaystyle {\displaystyle \left[\sum_{i=1}^{m}{\displaystyle \sum_{k=1}^{K}y_{k}^{(i)}log(h_{\Theta}(x^{(i)}))_{k}+(1-y_{k}^{(i)}log(1-(h_{\Theta}(x^{(i)}))_{k})}\right]+}\frac{\lambda}{2m}{\displaystyle \sum_{l=1}^{L-1}{\displaystyle \sum_{i=1}^{s_{l}}{\displaystyle \sum_{j=1}^{s_{l+1}}(\Theta_{ji}^{(l)})^{2}}}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Inner sum is a sum over 
+\begin_inset Formula $k$
+\end_inset
+
+ output units.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Regularization term sums over 
+\begin_inset Formula $\Theta_{ji}^{l}$
+\end_inset
+
+, but we are not summing over the terms corresponding to where 
+\begin_inset Formula $i=0$
+\end_inset
+
+, like 
+\begin_inset Formula $\ensuremath{\Theta_{i0}\times x_{0}}$
+\end_inset
+
+.
+ In other words, we don't regularize the bias term.
+\end_layout
+
+\begin_layout Standard
+\noindent
+l - layer
+\end_layout
+
+\begin_layout Standard
+\noindent
+To minimize 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $\Theta$
+\end_inset
+
+, using one of the advanced optimization methods (fminunc, conjugate gradient,
+ BFGS, L-BFGS, etc.), we need to compute
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $J(\Theta),\,\frac{\partial}{\partial\Theta_{ij}^{l}},\quad\forall i,j,l$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Formulas:
+\end_layout
+
+\begin_layout Standard
+\noindent
+Neural network now outputs vectors
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $K\longrightarrow$
+\end_inset
+
+number of output elements
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $h_{\Theta}(x)\in\mathbb{R}^{K}$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+K dimensional vector
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $(h_{\Theta}(x))_{i}=i^{th}output\longrightarrow$
+\end_inset
+
+i selects ith element
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $J(\Theta)=-\frac{1}{m}{\displaystyle {\displaystyle \left[\sum_{i=1}^{m}{\displaystyle \sum_{k=1}^{K}y_{k}^{(i)}log(h_{\Theta}(x^{(i)}))_{k}+(1-y_{k}^{(i)}log(1-(h_{\Theta}(x^{(i)}))_{k})}\right]+}\frac{\lambda}{2m}{\displaystyle \sum_{l=1}^{L-1}{\displaystyle \sum_{i=1}^{s_{l}}{\displaystyle \sum_{j=1}^{s_{l+1}}(\Theta_{ji}^{(l)})^{2}}}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $J(\Theta)\longrightarrow$
+\end_inset
+
+cost function
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Backpropagation Algorithm
+\end_layout
+
+\begin_layout Standard
+\noindent
+Algorithm to minimize the cost function.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In order to use gradient descent or one of the advanced optimization algorithms,
+ we need to write code that takes 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ as a parameter and computes 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ and the partial derivative terms 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{ij}^{l}}J(\Theta)$
+\end_inset
+
+, 
+\begin_inset Formula $\Theta_{ij}^{(l)}\in\mathbb{R}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+The first thing we do is apply forward propagation to compute what the hypothesi
+s actually outputs.
+ Say you have just one training example 
+\begin_inset Formula $(x,\, y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $a^{(1)}=x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $z^{(2)}=\Theta^{(1)}a^{(1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $a^{(2)}=g(z^{(2)})\,\,\,(add\, a_{0}^{(2)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $z^{(3)}=\Theta^{(2)}a^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $a^{(3)}=g(z^{(3)})\,\,\,(add\, a_{0}^{(3)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $z^{(4)}=\Theta^{(3)}a^{(3)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $a^{(4)}=h_{\Theta}(x)=g(z^{(4)})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\noindent
+Then we compute gradient (the derivatives) by using backpropagation.
+ We compute the error in the activation of node j in layer l: 
+\begin_inset Formula $\delta_{j}^{(l)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\noindent
+Ex.
+ with 4 layers, we're going to compute:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\delta_{j}^{(l)}="error"\, of\, node\, j\, in\, layer\, l.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+For each output unit (layer 
+\begin_inset Formula $L=4$
+\end_inset
+
+):
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\delta_{j}^{(4)}=a_{j}^{(4)}-y_{j}\longrightarrow$
+\end_inset
+
+the 
+\begin_inset Formula $a$
+\end_inset
+
+ term can also be written as 
+\begin_inset Formula $(h_{\Theta}(x))_{j}$
+\end_inset
+
+.
+ The 
+\begin_inset Formula $\delta$
+\end_inset
+
+term outputs the difference between what the hypothesis outputs and what's
+ in the training set.
+ Additionally if you think of 
+\begin_inset Formula $\delta,\, a,\, y$
+\end_inset
+
+ as vectors we can vectorize the computation and have 
+\begin_inset Formula $\delta^{(4)}=a^{(4)}-y$
+\end_inset
+
+.
+ Each of 
+\begin_inset Formula $\delta,\, a,\, y$
+\end_inset
+
+'s dimension is equal to the number of output units in the network.
+ Now we have the error terms.
+\begin_inset Newline newline
+\end_inset
+
+Next we comput 
+\begin_inset Formula $\delta$
+\end_inset
+
+ terms for the earlier terms in the network.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\delta^{(3)}=(\Theta^{(3)})^{T}\delta^{(4)}.*g'(z^{(3)})
+\]
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\delta^{(2)}=(\Theta^{(2)})^{T}\delta^{(3)}.*g'(z^{(2)})
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+To compute 
+\begin_inset Formula 
+\[
+g'(z^{(3)})=a^{(3)}.*(1-a^{(3)})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $1$
+\end_inset
+
+ is a vector of 
+\begin_inset Formula $1$
+\end_inset
+
+s
+\end_layout
+
+\begin_layout Itemize
+\noindent
+There is 
+\series bold
+no 
+\begin_inset Formula $\delta^{(1)}$
+\end_inset
+
+
+\series default
+term.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\noindent
+To calc backpropagation given a training set 
+\begin_inset Formula $\left\{ (x^{(1)},\, y^{(1)},\,...,\,(x^{(m)},\, y^{(m)})\right\} $
+\end_inset
+
+ - large training set.
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Set 
+\begin_inset Formula $\Delta_{ij}^{(l)}=0\,(\forall_{l,\, i,\, j})\longrightarrow$
+\end_inset
+
+eventually this will be used to compute the derivative term 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=a_{j}^{(l)}\delta_{i}^{(l+1)}\qquad(ignoring\,\lambda;\, if\,\lambda=0)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Then loop through the training set:
+\begin_inset Newline newline
+\end_inset
+
+For 
+\begin_inset Formula $i=1$
+\end_inset
+
+to 
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\noindent
+set 
+\begin_inset Formula $a^{(1)}=x^{(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Perform forward propagation to compute 
+\begin_inset Formula $a^{(l)}$
+\end_inset
+
+for 
+\begin_inset Formula $l=2,\,3,\,...,\, L$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Using output label 
+\begin_inset Formula $y^{(i)}$
+\end_inset
+
+from a specific example, compute the error term 
+\begin_inset Formula 
+\[
+\delta^{(L)}=a^{(L)}-y^{(i)}
+\]
+
+\end_inset
+
+ for the output layer 
+\begin_inset Formula $L$
+\end_inset
+
+.
+ 
+\begin_inset Formula $a^{(L)}$
+\end_inset
+
+is what the hypothesis outputs, minus what the target label was, 
+\begin_inset Formula $y^{(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Use backprop algo to compute 
+\begin_inset Formula 
+\[
+\delta^{(L-1)},\,\delta^{(L-2)},\,...,\,\delta^{(2)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Next, we accumulate the partial derivative terms from previous line
+\begin_inset Formula 
+\[
+\Delta_{ij}^{(l)}:=\Delta_{ij}^{(l)}+a_{j}^{(l)}\delta_{i}^{(l+1)}
+\]
+
+\end_inset
+
+.
+ We can vectorize this too: 
+\begin_inset Formula 
+\[
+\Delta^{(l)}:=\Delta^{(l)}+\delta^{(l+1)}(a^{(l)})^{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\noindent
+Finally, outside the for loop, we compute gradient matrices 
+\begin_inset Formula $D$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)}+\lambda\Theta_{ij}^{(l)}\, if\, j\neq0
+\]
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+D_{ij}^{(l)}:=\frac{1}{m}\Delta_{ij}^{(l)}\,\,\,\,\,\,\,\,\,\,\,\, if\, j=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+Once we compute these terms, those are exactly the derivative of the 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ terms, you can use them in gradient descent or other optimization algorithms.
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\Theta_{ij}^{(l)}}J(\Theta)=D_{ij}^{(l)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Backpropagation Intuition
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Forward propagation.
+
+\series bold
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+When performing forward propagation, we may have some 
+\begin_inset Formula $(x^{(i)},\, y^{(i)})$
+\end_inset
+
+ that we feed into input layer 
+\begin_inset Formula $x_{2}^{(i)}$
+\end_inset
+
+ and when we forward propagate it to the hidden layer, the first thing we
+ compute are the weights 
+\begin_inset Formula $z_{1}^{(2)}\rightarrow a_{1}^{(2)}$
+\end_inset
+
+ and 
+\begin_inset Formula $z_{2}^{(2)}\rightarrow a_{2}^{(2)}$
+\end_inset
+
+ we apply sigmoid of the logistic function to z values give us activation
+ values 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Then we again propagate to layer 3 until we get the final output value
+ of the neural network 
+\begin_inset Formula $z_{1}^{(4)}\rightarrow a_{1}^{(4)}$
+\end_inset
+
+, for a network with 4 layers.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Turns out back propagation is doing a similar process, but the computations
+ flow from right to left.
+\end_layout
+
+\begin_layout Standard
+
+Final graph at 4:58
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+
+\series bold
+What is backpropagation doing?
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $J(\Theta)=-\frac{1}{m}{\displaystyle {\displaystyle \left[\sum_{i=1}^{m}{\displaystyle \sum_{k=1}^{K}y_{k}^{(i)}log(h_{\Theta}(x^{(i)}))_{k}+(1-y_{k}^{(i)}log(1-(h_{\Theta}(x^{(i)}))_{k})}\right]+}\frac{\lambda}{2m}{\displaystyle \sum_{l=1}^{L-1}{\displaystyle \sum_{i=1}^{s_{l}}{\displaystyle \sum_{j=1}^{s_{l+1}}(\Theta_{ji}^{(l)})^{2}}}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Focusing on a single example 
+\begin_inset Formula $x^{(i)},\, y^{(i)}$
+\end_inset
+
+, the case of 
+\begin_inset Formula $1$
+\end_inset
+
+ output unit, and ignoring regularization (
+\begin_inset Formula $\lambda=0\rightarrow$
+\end_inset
+
+regularization term goes away),
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+cost(i)=y^{(i)}\log h_{\Theta}(x^{(i)})+(1-y^{(i)})\log h_{\Theta}(x^{(i)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Think of 
+\begin_inset Formula $cost(i)\approx(h_{\Theta}(x^{(i)})-y^{(i)})^{2}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+I.e.
+ how well is the network doing on example 
+\begin_inset Formula $i$
+\end_inset
+
+ (how close is the observed output to the label 
+\begin_inset Formula $y^{(i)}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+\noindent
+[6.50] - One useful intuition is that BP is computing erros of cost for 
+\begin_inset Formula $a_{j}^{(l)}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+The 
+\begin_inset Formula $\delta$
+\end_inset
+
+ terms are a measure of how much we want to change the network's weights
+ in order to affect the intermediate values 
+\begin_inset Formula $z$
+\end_inset
+
+ so as to affect the final value of the neural network 
+\begin_inset Formula $h(x)$
+\end_inset
+
+ and therefore the overal cost.
+\end_layout
+
+\begin_layout Standard
+\noindent
+[8.44] - what is back propagation doing.
+\end_layout
+
+\begin_layout Standard
+\noindent
+For the output layer it firsts sets the 
+\begin_inset Formula $\delta$
+\end_inset
+
+ term, say 
+\begin_inset Formula $\delta_{1}^{(4)}=y^{(i)}-a_{1}^{(4)}$
+\end_inset
+
+ then we'll back propagate theset terms and compute 
+\begin_inset Formula $\delta$
+\end_inset
+
+ temrs in that layer, say 3, then propagate further and compute on layer
+ 2.
+ [9.48] - look how we end up at that delta computed on that node.
+ The bias units always output +1 or do output 
+\begin_inset Formula $\delta$
+\end_inset
+
+ values, depending on how back propagation is defined, but you can discard
+ them.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Implementation Note: Unrolling Parameters
+\end_layout
+
+\begin_layout Standard
+\noindent
+Unrolling from matrices or vectors to use advanced optimization algos.
+ The routines assume that 
+\begin_inset Formula $\theta$
+\end_inset
+
+ and gradient are vectors 
+\begin_inset Formula $\mathbb{R}^{n+1}$
+\end_inset
+
+.
+ That was fine when we were using logistic regression.
+ Now they're no longer vectors but matrices.
+ Similarly gradient terms are matrices 
+\begin_inset Formula $D^{(l)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+How to unroll them to be suitable for functions such as 
+\begin_inset Formula $fminunc$
+\end_inset
+
+ - 2.05.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ex:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $s_{l}$
+\end_inset
+
+= number of units in layer 
+\begin_inset Formula $l$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+s_{1}=10,\, s_{2}=10,\, s_{3}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Theta^{(1)}\in\mathbb{R}^{10x11},\,\Theta^{(2)}\in\mathbb{R}^{10x11},\,\Theta^{(3)}\in\mathbb{R}^{1x11}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D^{(1)}\in\mathbb{R}^{10x11},\, D^{(2)}\in\mathbb{R}^{10x11},\, D^{(3)}\in\mathbb{R}^{1x11}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+To unroll:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+thetaVec = [Theta1(:); Theta2(:); Theta3(:)];
+\end_layout
+
+\begin_layout Plain Layout
+
+DVec = [D1(:), D2(:); D3(:)];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To go back from vector representations to matrix representations:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Theta1 = reshape(thetaVec(1:110), 10, 11);
+\end_layout
+
+\begin_layout Plain Layout
+
+Theta2 = reshape(thetaVec(111:220), 10, 11);
+\end_layout
+
+\begin_layout Plain Layout
+
+Theta3 = reshape(thetaVec(221:231), 1, 11);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ex:
+\end_layout
+
+\begin_layout Standard
+Suppose D1 is a 10x6 matrix and D2 is a 1x11 matrix.
+ You set:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+DVec = [D1(:); D2(:)];
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+reshape(DVec(62:71), 1, 11)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+would get D2 back from DVec.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Learning algorithm:
+\end_layout
+
+\begin_layout Itemize
+Have initial parameters 
+\begin_inset Formula $\Theta^{(1)},\,\Theta^{(2)},\,\Theta^{(3)}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Unroll to get initialTheta to pass to
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fminunc(@costFunction, initialTheta, options)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+fminunc(@costFunction, initialTheta, options)
+\end_layout
+
+\begin_layout Plain Layout
+
+function [jval, gradientVec] = costFunction(thetaVec)
+\end_layout
+
+\end_inset
+
+From thetaVec, use reshape to get 
+\begin_inset Formula $\Theta^{(1)},\,\Theta^{(2)},\,\Theta^{(3)}.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use forward/back propagations to compute 
+\begin_inset Formula $D^{(1)},\, D^{(2)},\, D^{(3)}$
+\end_inset
+
+and 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Unroll
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $D^{(1)},\, D^{(2)},\, D^{(3)}$
+\end_inset
+
+ to get gradeintVec, what is what the function can now return.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+\noindent
+
+\series bold
+Gradient Checking
+\end_layout
+
+\begin_layout Standard
+\noindent
+Backprop can appear it's working, a.e.
+ gradient decreasing, even though there may be an error.
+ Use gradient checking.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Suppose you have a function 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ and suppose we want to estimate a derivative.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Theta$
+\end_inset
+
+is a real number
+\end_layout
+
+\begin_layout Standard
+The procedure for estimating the derivative when 
+\begin_inset Formula $\Theta\in\mathbb{R}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+pick 
+\begin_inset Formula $\Theta-\epsilon$
+\end_inset
+
+ and 
+\begin_inset Formula $\Theta+\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+pick points on curve that correspond to above and connect with a line, the
+ actual derivative is tangent to the curve at 
+\begin_inset Formula $\Theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+compute slope of the line:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+vertical height: 
+\begin_inset Formula $J(\Theta+\epsilon)-J(\Theta-\epsilon)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+horizontal width: 
+\begin_inset Formula $2\epsilon$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+so the approximation is:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{d}{d\Theta}J(\Theta)\thickapprox\frac{J(\Theta+\epsilon)-J(\Theta-\epsilon)}{2\epsilon}
+\]
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+this is 2 sided difference, slightly more accurate than 1 sided with 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ in denominator.
+\end_layout
+
+\begin_layout Itemize
+in octave:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+gradApprox = (J(theta + EPSILON) - J(theta - EPSILON))/(2*EPSILON)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When 
+\begin_inset Formula $\Theta\in\mathbb{R}^{n}$
+\end_inset
+
+ (E.g.
+ 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ is 
+\begin_inset Quotes eld
+\end_inset
+
+unrolled
+\begin_inset Quotes erd
+\end_inset
+
+ version of 
+\begin_inset Formula $\Theta^{(1)},\,\Theta^{(2)},\,\Theta^{(3)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Theta=\Theta_{1},\,\Theta_{2},\,...,\Theta_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\Theta_{1}}J(\Theta)\thickapprox\frac{J(\Theta_{1}+\epsilon,\,\Theta_{2},\,\Theta_{3},\,...,\Theta_{n})-J(\Theta_{1}-\epsilon,\,\Theta_{2},\,\Theta_{3},\,...,\Theta_{n})}{2\epsilon}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\Theta_{2}}J(\Theta)\thickapprox\frac{J(\Theta_{1},\,\Theta_{2}+\epsilon,\,\Theta_{3},\,...,\Theta_{n})-J(\Theta_{1},\,\Theta_{2}-\epsilon,\,\Theta_{3},\,...,\Theta_{n})}{2\epsilon}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\Theta_{n}}J(\Theta)\thickapprox\frac{J(\Theta_{1},\,\Theta_{2},\,\Theta_{3},\,...,\Theta_{n}+\epsilon)-J(\Theta_{1},\,\Theta_{2},\,\Theta_{3},\,...,\Theta_{n}-\epsilon)}{2\epsilon}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+In Octave:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+for i = 1:n,
+\end_layout
+
+\begin_layout Plain Layout
+
+	thetaPlus = theta;
+\end_layout
+
+\begin_layout Plain Layout
+
+	thetaPlust(i) = thetaPlus(i) + EPSILON;
+\end_layout
+
+\begin_layout Plain Layout
+
+	thetaMinus = theta;
+\end_layout
+
+\begin_layout Plain Layout
+
+	thetaMinus(i) = thetaMinus(i) - EPSILON;
+\end_layout
+
+\begin_layout Plain Layout
+
+	gradApprox(i) = (J(thetaPlus) - J(thetaMinus))/(2*EPSILON)
+\end_layout
+
+\begin_layout Plain Layout
+
+end;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n$
+\end_inset
+
+ = dimension of parameter vector theta
+\end_layout
+
+\begin_layout Standard
+thetaPlus = 
+\begin_inset Formula $\left[\begin{array}{c}
+\Theta_{1}+\epsilon\\
+\Theta_{2}+\epsilon\\
+\Theta_{i}+\epsilon\\
+\vdots\\
+\Theta_{n}+\epsilon
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+thetaMinus = 
+\begin_inset Formula $\left[\begin{array}{c}
+\Theta_{1}-\epsilon\\
+\Theta_{2}-\epsilon\\
+\Theta_{i}-\epsilon\\
+\vdots\\
+\Theta_{n}-\epsilon
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gradApprox = gives the approximation to the 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{i}}J(\Theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We take DVec from packprop and make sure that it's approximately equal to
+ gradApprox
+\end_layout
+
+\begin_layout Standard
+gradApprox
+\begin_inset Formula $\thickapprox$
+\end_inset
+
+DVec
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+
+\series bold
+Implementation Note:
+\end_layout
+
+\begin_layout Itemize
+Implement backprop to compute DVec (unrolled 
+\begin_inset Formula $D^{(1)},\, D^{(2)},\, D^{(3)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Implement numerical gradient check to compute gradApprox.
+\end_layout
+
+\begin_layout Itemize
+Make sure they give similar values.
+\end_layout
+
+\begin_layout Itemize
+Turn off gradient checking.
+ Using backprop code for learning.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Important
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Be sure to disable your gradient checking code before training your classifier.
+ If you run numerical gradient computation on every iteration of gradient
+ descent (or in the inner loop of costFunction()) your code will be very
+ slow.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Random initialization
+\end_layout
+
+\begin_layout Standard
+For gradient descent and advanced optimization, we need an initial value
+ for 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+optTheta = fminunc(@costFunction, initialTheta, options)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider gradient descent
+\end_layout
+
+\begin_layout Standard
+Set: 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+initialTheta = zeros(n, 1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Initializing to 0 
+\series bold
+does not work
+\series default
+ with a neural network.
+ All parameters will end up being the same, even after updates, they'll
+ be non-zero but identical.
+\end_layout
+
+\begin_layout Standard
+This problem is called a 
+\series bold
+problem of symmetric weights
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+To get around this problem, we use 
+\series bold
+random initialization
+\series default
+: 
+\series bold
+Symmetry breaking
+\end_layout
+
+\begin_layout Standard
+Initialize each 
+\begin_inset Formula $\Theta_{ij}^{(l)}$
+\end_inset
+
+ to a random value in 
+\begin_inset Formula $\left[-\epsilon,\,\epsilon\right]$
+\end_inset
+
+ i.e.
+ 
+\begin_inset Formula $-\epsilon\leq\Theta_{ij}^{(l)}\leq\epsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e.g.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Theta1 = rand(10, 11) * (2 * INIT_EPSILON) - INIT_EPSILON;
+\end_layout
+
+\begin_layout Plain Layout
+
+Theta2 = rand(1, 11) * (2 * INIT_EPSILON) - INIT_EPSILON;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+rand(n, m) 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+random 
+\begin_inset Formula $n\times m$
+\end_inset
+
+ matrix between 0 and 1.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Putting It Together
+\end_layout
+
+\begin_layout Enumerate
+Pick a network architecture
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Number of input units: Dimension of features 
+\begin_inset Formula $x^{(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Number of output units: Number of classes
+\end_layout
+
+\begin_layout Enumerate
+reasonable default for number of hidden layers: 1, or if >1, have same number
+ of hidden units in every layer (usually the more the better but more computatio
+nally expensive).
+ The number of hidden features may be comparable to several (2, 3) times
+ larger than number of input features.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Training a neural network:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Randomly initialize weights, usually to values near 0
+\end_layout
+
+\begin_layout Enumerate
+Implement forward propagation to get 
+\begin_inset Formula $h_{\Theta}(x^{(i)})$
+\end_inset
+
+ for any 
+\begin_inset Formula $x^{(i)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Implement code to compute cost function 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Implement backdrop to compute partial derivatives 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{jk}^{(l)}}J(\Theta)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+for i=1:m (there exist implementations with no for loop, complex)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Perform forward propagation and backpropagation using example 
+\begin_inset Formula $(x^{(i)},\, y^{(i)})$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+(Get activations 
+\begin_inset Formula $a^{(l)}$
+\end_inset
+
+and delta terms 
+\begin_inset Formula $\delta^{(l)}$
+\end_inset
+
+for 
+\begin_inset Formula $l=2,\,...,\, L$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+compute delta terms 
+\begin_inset Formula $\Delta^{(l)}:=\Delta^{(l)}+\delta^{(l+1)}(a^{(l)})^{T}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+compute derivative terms 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{jk}^{(l)}}J(\Theta)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Use gradient checking to comare 
+\begin_inset Formula $\frac{\partial}{\partial\Theta_{jk}^{(l)}}J(\Theta)$
+\end_inset
+
+ computed using backpropagation vs.
+ using numerical estimate of gradient of 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Then disable gradient checking code.
+\end_layout
+
+\begin_layout Enumerate
+Use gradient descent or advanced optimization method with backpropagation
+ to try to minimize 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ as a function of parameters 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ - 
+\series bold
+non-convex
+\series default
+, can get stuck in a local minimum, but it's usually not a problem in practice.
+\end_layout
+
+\begin_layout Standard
+\noindent
+When using gradient descent with neural networks to try to minimize 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+, the way to make sure the learning algorithm is running correctly would
+ be to plot 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ as a function of the number of iterations and make sure it is decreasing
+ (or at least non-increasing) with every iteration.
+\end_layout
+
+\end_body
+\end_document

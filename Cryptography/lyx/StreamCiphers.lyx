@@ -1,0 +1,2264 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Stream Ciphers
+\end_layout
+
+\begin_layout Subsection
+Information theoretic security and the one time pad
+\end_layout
+
+\begin_layout Subsubsection
+Symmetric Ciphers: definition
+\end_layout
+
+\begin_layout Standard
+A cipher defined over 
+\begin_inset Formula $(K,\, M,\, C)$
+\end_inset
+
+ is a pair of 
+\begin_inset Quotes eld
+\end_inset
+
+efficient
+\begin_inset Quotes erd
+\end_inset
+
+ algorithms 
+\begin_inset Formula $(E,\, D)$
+\end_inset
+
+ where
+\begin_inset Formula 
+\[
+E:K\times M\rightarrow C
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+D:K\times C\rightarrow M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+K - key space
+\end_layout
+
+\begin_layout Standard
+M - message space
+\end_layout
+
+\begin_layout Standard
+C - cipher text
+\end_layout
+
+\begin_layout Standard
+E - encryption algorithm
+\end_layout
+
+\begin_layout Standard
+D - decryption algorithm
+\end_layout
+
+\begin_layout Standard
+The requirement is that the algorithms are consistent (satisfy correctness
+ property)
+\begin_inset Formula 
+\[
+\forall m\in M,\, k\in K:\,\mathbf{D(k,\, E(k,\, m))=m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bolded is the consistency equation, which all ciphers must satisfy.
+\end_layout
+
+\begin_layout Standard
+Efficient means that a cipher runs in polynomial time, concrete time constraints.
+\end_layout
+
+\begin_layout Standard
+E is oftne randomized
+\end_layout
+
+\begin_layout Standard
+D is always deterministic
+\end_layout
+
+\begin_layout Subsubsection
+The One Time Pad
+\end_layout
+
+\begin_layout Standard
+First example of a 
+\begin_inset Quotes eld
+\end_inset
+
+secure
+\begin_inset Quotes erd
+\end_inset
+
+ cipher.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M=C=\{0,\,1\}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+set of all n bit binary strings.
+\begin_inset Formula 
+\[
+K=\{0,\,1\}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Key is a random bit string as long as the message.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+C:=E(k,\, m)=k\oplus m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D(k,\, c)=k\oplus c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Indeed:
+\begin_inset Formula 
+\begin{eqnarray*}
+D(k,\, E(k,\, m)) & = & D(k,\, k\oplus m)\\
+ & = & k\oplus(k\oplus m)\\
+ & = & (k\oplus k)\oplus m\\
+ & = & 0\oplus m\\
+ & = & m
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given a message, 
+\begin_inset Formula $m$
+\end_inset
+
+, and it's One Time Pad (OTP) encryption, 
+\begin_inset Formula $c$
+\end_inset
+
+, the key is computed:
+\begin_inset Formula 
+\[
+k=m\oplus c
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+OTP is very fast in enc/dec, but has long keys and so hard to use in practice.
+\end_layout
+
+\begin_layout Standard
+Is the OTP a good cipher?
+\end_layout
+
+\begin_layout Standard
+First we have to answer what is a good cipher.
+\end_layout
+
+\begin_layout Subsubsection
+Information Theoretic Security
+\end_layout
+
+\begin_layout Standard
+(Shannon 1949)
+\end_layout
+
+\begin_layout Standard
+Basic idea: Cipher text (CT) should revel no 
+\begin_inset Quotes eld
+\end_inset
+
+information
+\begin_inset Quotes erd
+\end_inset
+
+ about plain text (PT)
+\end_layout
+
+\begin_layout Standard
+Def: A cipher 
+\begin_inset Formula $(E,\, D)$
+\end_inset
+
+ over 
+\begin_inset Formula $(K,\, M,\, C)$
+\end_inset
+
+ has perfect secrecy if:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\forall m_{0},\, m_{1}\in M &  & |m_{0}|=|m_{1}|\,\forall c\in C\\
+Pr[E(k,\, m_{0})=c] & = & \mathbf{Pr[E(k,\, m)=c]}\\
+ &  & \text{\text{{where}(k\overset{R}{\leftarrow}K)}}\\
+ &  & {k\, is\, uniform\, in\, K}\\
+ &  & \text{{choose\,\ random\,\ key}}\\
+ &  & \text{{from\,\ the\,\ set\,\ K}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This means that if I am an attacker and I intercept a particular cipher,
+ 
+\begin_inset Formula $c$
+\end_inset
+
+, then the probability that the cipher text is the encryption of 
+\begin_inset Formula $m_{0}$
+\end_inset
+
+ is the same as the probability that it's the encryption of 
+\begin_inset Formula $m_{1}$
+\end_inset
+
+.
+ So that means that if we're encrypting messages with the OTP, the most
+ powerful adversary can learn nothing about the plain text from the cipher
+ text.
+ There's no CT only attack on the cipher that has perfect secrecy.
+ Other attacks may be possible.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Lemma
+\bar default
+: OTP has perfect secrecy
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Proof
+\bar default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall m,\, c:\,\underset{K}{PR}[E(k,\, m)=c]=\frac{\#keys\, k\in K}{|K|}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Probability of random choice of key = number of keys in 
+\begin_inset Formula $K$
+\end_inset
+
+/total number of keys.
+\end_layout
+
+\begin_layout Standard
+Suppose we have a cipher such that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall m,\, c:\,\#\{k\in K:\, E(k,\, m)=c\}=const.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+the cipher has perfect secrecy.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $m\in M$
+\end_inset
+
+ and 
+\begin_inset Formula $c\in C$
+\end_inset
+
+.
+ One OTP key maps 
+\begin_inset Formula $m$
+\end_inset
+
+ to 
+\begin_inset Formula $c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Proof
+\bar default
+:
+\end_layout
+
+\begin_layout Standard
+For OTP: if 
+\begin_inset Formula $E(k,\, m)=c$
+\end_inset
+
+ then 
+\begin_inset Formula 
+\begin{eqnarray*}
+k\oplus m & = & c\\
+ & \Rightarrow & k\oplus m=c\\
+ & \Rightarrow & k=m\oplus c\\
+ & \Rightarrow & \#\{k\in K:\, E(k,\, m)=c\}=1\qquad\forall m,\, c\\
+ & \Rightarrow & \text{{OTP\,\ has\,\ perfect\,\ secrecy}}\\
+ & \Rightarrow & \text{{OTP\,\ no\,\ CT\,\ only\,\ attack,\,\ but\,\ others\,\ possible}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bad news lemma...
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Theorem
+\bar default
+: perfect secrecy 
+\begin_inset Formula $\Rightarrow|K|\ge|M|$
+\end_inset
+
+, the length of key in the cipher must be at least the length of message
+\end_layout
+
+\begin_layout Standard
+Hard to use in practice.
+\end_layout
+
+\begin_layout Subsection
+Stream ciphers and pseudo random generators
+\end_layout
+
+\begin_layout Subsubsection
+Stream Ciphers: making OTP practical
+\end_layout
+
+\begin_layout Standard
+idea: replace 
+\begin_inset Quotes eld
+\end_inset
+
+random
+\begin_inset Quotes erd
+\end_inset
+
+ key by 
+\begin_inset Quotes eld
+\end_inset
+
+pseudorandom
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PRG: Pseudo Random Generator is a function, 
+\begin_inset Formula $G$
+\end_inset
+
+, that takes a seed and maps it to a much larger string
+\begin_inset Formula 
+\[
+G:\{0,\,1\}^{S}\rightarrow\{0,\,1\}^{n},\, n\gg S
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Function G is efficiently computable by a deterministic algorithm.
+ Output should look random.
+\end_layout
+
+\begin_layout Standard
+To use this to build a stream cipher, we're going to use the seed as our
+ key and then use the generator to expand the seed to a random looking sequence
+ and XOR it with the message.
+ That will give us our cipher text.
+\begin_inset Formula 
+\begin{eqnarray*}
+c=E(k,\, m) & := & m\oplus G(k)\\
+D(k,\, c) & := & c\oplus G(k)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Can a stream cipher have perfect secrecy? No, the key is shorter than the
+ message.
+\end_layout
+
+\begin_layout Itemize
+Need a different definition of security
+\end_layout
+
+\begin_layout Itemize
+Security will depend on specific PRG
+\end_layout
+
+\begin_layout Subsubsection
+PRG must be unpredictable
+\end_layout
+
+\begin_layout Standard
+Suppose PRG is predictable, that meanst that there exists some 
+\begin_inset Formula $i$
+\end_inset
+
+ such that if i give you the first 
+\begin_inset Formula $i$
+\end_inset
+
+ bits of the output, there's an efficient algorithm that will compute the
+ rest of the stream.
+\begin_inset Formula 
+\[
+\exists i:\, G(k)|_{1,\dots,i}\overset{algo}{\rightarrow}G(k)|_{i+1,\dots,n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If this is the case, then the stream cipher would not be secure.
+ Suppose an attacker intercepts a cipher, then we have a problem because
+ suppose by some prior knowledge, attacker knows the initial part of the
+ message starts with some known value.
+ The attacker could XOR the cipher text with the prefix and that would give
+ him the prefix of the pseudo random sequence.
+ Then he could predict the rest of the message.
+\end_layout
+
+\begin_layout Standard
+It turns out that even predicting even 1 bit of the output, given the first
+ 
+\begin_inset Formula $i$
+\end_inset
+
+ bits, predicting the 
+\begin_inset Formula $i_{th}+1$
+\end_inset
+
+ bit 
+\begin_inset Formula $G(k)|_{1,\dots,i}\rightarrow G(k)|_{i+1}$
+\end_inset
+
+, is problematic.
+\end_layout
+
+\begin_layout Standard
+We say that 
+\begin_inset Formula $G:K\rightarrow\{0,\,1\}^{n}$
+\end_inset
+
+ is 
+\series bold
+predictable
+\series default
+ if there exists an efficient algorithm, 
+\begin_inset Formula $A$
+\end_inset
+
+, and there is some position, 
+\begin_inset Formula $i$
+\end_inset
+
+, between 1 and -1, such that if we look at the probability over a random
+ key, if we give this algorithm the prefix of the output, the probability
+ that it can predict the next bit of the output is 
+\begin_inset Formula $\ge\frac{1}{2}+\varepsilon$
+\end_inset
+
+ for some non-negligible 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ (
+\begin_inset Formula $\varepsilon\ge1/2^{30})$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\underset{k\overset{R}{\leftarrow K}}{PR}[A|G(k))|_{1,\dots,i}=G(k)|_{i+1}]\ge\frac{1}{2}+\varepsilon
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Def
+\bar default
+: PRG is unpredictable if it is not 
+\series bold
+predictable
+\series default
+ 
+\begin_inset Formula $\Rightarrow\forall i:$
+\end_inset
+
+ no 
+\begin_inset Quotes eld
+\end_inset
+
+efficient
+\begin_inset Quotes erd
+\end_inset
+
+ adversary can predict bit 
+\begin_inset Formula $(i+1)$
+\end_inset
+
+ for 
+\begin_inset Quotes eld
+\end_inset
+
+non-negligible
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Weak PRGs (do not use for crypt)
+\end_layout
+
+\begin_layout Standard
+Linear congruential generator.
+ It has three parameters: 
+\begin_inset Formula $a,\, b,\, p$
+\end_inset
+
+ where 
+\begin_inset Formula $a$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ are integers and 
+\begin_inset Formula $p$
+\end_inset
+
+ is a prime.
+ The generator is defined as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r[0]\equiv seed
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+the way you generate randomness is run iteratively through the following
+ steps:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r[i]\leftarrow a\times r[i-1]+b\mod p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+that outputs a few bits of 
+\begin_inset Formula $r[i]$
+\end_inset
+
+, then 
+\begin_inset Formula $i++$
+\end_inset
+
+ and repeat.
+ This generator has some statistical properties (#0s
+\begin_inset Formula $\approx$
+\end_inset
+
+#1s) that make it easy to predict.
+\end_layout
+
+\begin_layout Standard
+Another example is random generator implemented in glibc.
+\end_layout
+
+\begin_layout Subsubsection
+Negligible and non-negligible
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+In practice
+\bar default
+: 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ is a scalar and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon\text{{non-neg:}}\varepsilon\ge\frac{1}{2^{30}}\text{{(likely\,\ to\,\ happen\,\ over\,1GB\,\ of\,\ data)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\varepsilon\text{{negligible:}}\varepsilon\ge\frac{1}{2^{80}}\text{{(won't\,\ happen\,\ over\,\ life\,\ of\,\ key)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If you happen to use a key for encrypting a gigabyte of data, then an event
+ with a probability of happening of 
+\begin_inset Formula $\frac{1}{2^{30}}$
+\end_inset
+
+ will likely happen after about a gigabyte of data.
+ Therefore 
+\begin_inset Formula $\frac{1}{2^{30}}$
+\end_inset
+
+ is non-negilible.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+In theory
+\bar default
+: 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ is a function 
+\begin_inset Formula $\varepsilon:\mathbb{\, Z}^{\ge0}\rightarrow\mathbb{R}^{\ge0}$
+\end_inset
+
+ and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon\text{{non-neg:}}\exists d:\,\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{\,{inf.\,\ often\,(\varepsilon\ge\frac{1}{poly},\,\ for\,\ many\,\lambda})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon\text{{negligible:}}\forall d:\,\lambda\ge\lambda_{d}:\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{\,{(\varepsilon\le\frac{1}{poly},\,\ for\,\ large\,\lambda})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When we talk about probability of events, we talk about them as functions
+ of a security parameter.
+ These functions act on non-negative integers and output positive real values.
+ So for the function to be non-negligible, it means that the function is
+ bigger than some polynomial infinitely often.
+ In other words for infinitely many values, the function is bigger than
+ 
+\begin_inset Formula $\frac{1}{\text{{some\,\ polynomial}}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If something is smaller than all polynomials then we say that it's negiligible.
+ So what this says is that for any degree polynomial, 
+\begin_inset Formula $d$
+\end_inset
+
+, there exists some lower bound 
+\begin_inset Formula $\lambda_{d}$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ bigger than that lambda 
+\begin_inset Formula $(\lambda_{d})$
+\end_inset
+
+, the function 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ is smaller than 
+\begin_inset Formula $\frac{1}{polynomial}$
+\end_inset
+
+.
+ So all this says is that the function is negiligible if it's less than
+ all the polynomial fractions, 
+\begin_inset Formula $(\frac{1}{\lambda^{d}})$
+\end_inset
+
+ for sufficiently large 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Examples
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon(\lambda)=\frac{1}{2^{\lambda}}:$
+\end_inset
+
+ negiligible, because for any constant, 
+\begin_inset Formula $d$
+\end_inset
+
+, there is a sufficiently large lambda, such that 
+\begin_inset Formula $\frac{1}{2^{\lambda}}<\frac{1}{\lambda^{d}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon(\lambda)=\frac{1}{\lambda^{1000}}:$
+\end_inset
+
+ non-negiligible, because 
+\begin_inset Formula $\frac{1}{\lambda^{d=10000}}<\frac{1}{\lambda^{1000}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varepsilon(\lambda)\begin{cases}
+\frac{1}{2^{\lambda}} & \text{{for\,\ odd\,\lambda}}\\
+\frac{1}{\lambda^{1000}} & \text{{for\,\ even\,\lambda}}
+\end{cases}$
+\end_inset
+
+: non-negiligible, because if a function happens to be only polynomially
+ small very often, that means that this event is already too large to be
+ used in a real cryptosystem.
+\end_layout
+
+\begin_layout Subsection
+Attacks on stream ciphers and the one time pad
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Attack 1
+\series default
+: Two time pad is insecure.
+\end_layout
+
+\begin_layout Standard
+If the key is used in more than one message, it's insecure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{1}\leftarrow m_{1}\oplus PRG(k)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+c_{2}\leftarrow m_{2}\oplus PRG(k)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eavesdropper does:
+\begin_inset Formula 
+\[
+c_{1}\oplus c_{2}\rightarrow m_{1}\oplus m_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Enough redundancy in English and ASCII encoding that
+\begin_inset Formula 
+\[
+m_{1}\oplus m_{2}\rightarrow m_{1},\, m_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Real world examples
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Project Venona:
+\series default
+ (1941-1946): Russians used OTP, the key was generated by a person throwing
+ dice.
+ This was labourious, so they used the same keys to encrypt more than one
+ messages.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+MS-PPTP:
+\series default
+ (Windows NT): Client server communication protocol.
+ The entire communication from client to server is considered a single string.
+ Messages are cocatenated, then the stream is encrypted with a stream cipher
+ using a key.
+ The problem is the same thing is happening on the server side using the
+ same OTP key.
+ Need different keys for Client
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Server and Server
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+Client, should have a pair of keys in the shared key.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+802.11b WEP:
+\series default
+ [7:20] 
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Problem 1
+\series default
+: In WEP, there's a client and an access point, both sharing a secret 104
+ big key, 
+\begin_inset Formula $k$
+\end_inset
+
+, and when they want to transmit a message to one another, say client sends
+ a plain text message, he first appends a CRC checksum and then the concatenatio
+n gets encrypted using a stream cipher, where they key is a concatenation
+ of IV and a a long term key, 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ IV is a 24 bit string, it's a counter that increments by 1 for every packet.
+ This is for changing the key for every frame to enforce 1 key per message.
+ They changed the key by prepending the IV and then IV is sent in the clear
+ with the ciphertext.
+ The problem is that IV repeats after 
+\begin_inset Formula $2^{24}\approx16$
+\end_inset
+
+M frames, meaning it has to cycle and we get a two time pad.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Problem 2
+\series default
+: On some 802.11cards IV resets to 0 after power cycle and so afterwards
+ you'll be using a 0 concatenated key to encrypt the message.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Problem 3
+\series default
+: Avoid related keys.
+ The keys aren't randomized, so the PRG key for frame has the same 104 bit
+ suffix.
+ Turns out that the PRG used in WEP, RC4, is not designed to be secure when
+ you use so closely related keys.
+ There's an attack covered by Fluhrer, Mantin and Shamir (2001), that shows
+ that after about 
+\begin_inset Formula $10^{6}$
+\end_inset
+
+ frames, you can recover the key.
+ Better attacks came out with about 40k frames are sufficient to get the
+ key.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Treat the frames as one long stream and then XOR using the PRG.
+ With different key for every frame, like before, use the PRG again, take
+ the long term key and feed it into PRG, then first segment could be used
+ as key for frame 1, etc.
+ Now keys have no relation.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Disk encryption
+\series default
+.
+ A file on disk is broken into blocks, all blocks encrypted.
+ Suppose a user modifies the file.
+ After saving/reencrypting.
+ An attacker looking at this, will see that just some small segment changed.
+ Bad idea to use stream ciphers for disk encryption.
+\end_layout
+
+\begin_layout Standard
+Summary:
+\end_layout
+
+\begin_layout Standard
+Never use steram cipher key more than once.
+\end_layout
+
+\begin_layout Standard
+Network traffic: negotiate new key for every session (e.g.
+ TLS)
+\end_layout
+
+\begin_layout Standard
+Disk encryption: typically do not use a stream cipher.
+\end_layout
+
+\begin_layout Subsubsection
+Attack 2: no itegrity (OTP is malleable)
+\end_layout
+
+\begin_layout Standard
+All they do is try to provide confidentiality.
+ It's easy to modify cipher text and have known effects on the text.
+\end_layout
+
+\begin_layout Standard
+Suppose you have some message, 
+\begin_inset Formula $m$
+\end_inset
+
+, that gets encrypted
+\begin_inset Formula 
+\[
+m\xrightarrow{enc(\oplus k)}m\oplus k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An attacker can modify the cipher text
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+m\oplus p\xleftarrow{dec(\oplus k)}(m\oplus k)\oplus p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Modification to siphertext are undetected and have predictable impact on
+ plaintext.
+\end_layout
+
+\begin_layout Subsection
+Real-world stream ciphers
+\end_layout
+
+\begin_layout Subsubsection
+RC4 (1987)
+\end_layout
+
+\begin_layout Standard
+Takes a variable seed, used as a key for the stream cipher, which expands
+ the key into a 2048 bits, which will be used as an internal state for the
+ generator.
+ Then it executes a loop, which every operation of outputs one byte of output.
+\end_layout
+
+\begin_layout Standard
+Used in HTTPS and WEP
+\end_layout
+
+\begin_layout Standard
+Weakesses:
+\end_layout
+
+\begin_layout Enumerate
+Bias in initial output: 
+\begin_inset Formula $Pr[2^{nd}\, byte=0]=\frac{2}{256}$
+\end_inset
+
+, ignore 256 bytes of the output, all biased.
+\end_layout
+
+\begin_layout Enumerate
+Prob.
+ of (0, 0) is 
+\begin_inset Formula $\frac{1}{256^{2}}+\frac{1}{256^{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Related key attacks
+\end_layout
+
+\begin_layout Subsubsection
+CSS
+\end_layout
+
+\begin_layout Standard
+Easy to implement in hardware, based on:
+\end_layout
+
+\begin_layout Standard
+Linear feedback shift register (LFSR):
+\end_layout
+
+\begin_layout Standard
+A register consisting of cells with one bit.
+ There are taps into the cells, not all, these taps feed into XOR and at
+ every clock cycle, the shift register shifts to the left, last bit falls
+ off, first bit becomes the XOR of the previous bit.
+\end_layout
+
+\begin_layout Standard
+seed = initial state of LFSR
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Examples
+\series default
+ (all broken):
+\end_layout
+
+\begin_layout Itemize
+DVD encryption (CSS): 2 LFSRs
+\end_layout
+
+\begin_layout Itemize
+GSM encryption (A5/1, 2): 3 LFSRs
+\end_layout
+
+\begin_layout Itemize
+Bluetooth (E0): 4 LFSRs
+\end_layout
+
+\begin_layout Subsubsection
+CSS Attack
+\end_layout
+
+\begin_layout Standard
+CSS: seed = 5 bytes = 40 bits
+\end_layout
+
+\begin_layout Standard
+40 bits because at the time DVD encryption was designed, US expo regulations
+ only allowed for export of algorithms with up to 40 bit keys.
+\end_layout
+
+\begin_layout Standard
+CSS uses 2 LFSRs: 17 bit and 25 bit.
+\end_layout
+
+\begin_layout Standard
+They are seeded as follows
+\end_layout
+
+\begin_layout Standard
+17 bit key start with 1 and concatenate with 2 first bytes of the key
+\end_layout
+
+\begin_layout Standard
+25 bit key 1 || last 3 bytes of key
+\end_layout
+
+\begin_layout Standard
+They generate 6 and 8 bit outputs, and go through a mod 256 adder + carry
+ from previous block (?) and output one byte per round.
+\end_layout
+
+\begin_layout Standard
+This is brakeable in 
+\begin_inset Formula $\approx2^{17}$
+\end_inset
+
+ time.
+\end_layout
+
+\begin_layout Standard
+If the files are mpeg, if you know the prefix of the plaintext, say 20 bytes,
+ then XOR the 2 things (?) together, you'll get the initial segment of the
+ PRG.
+ Then try all 
+\begin_inset Formula $2^{17}$
+\end_inset
+
+ possible values of the first LFSR and run it for 20 bytes.
+ We can take the output and subtract from the output of the LFSR and get
+ the first 20 byte output of the second LFSR.
+ Turns out that by looking at the LFSR sequence it's easy to tell if it
+ came from the 25 bit LFSR, if it didn't, then the guess for the 17 bit
+ LFSR was incorrect and move to the next guess till we hit the correct one.
+ Then we can predict the remaining output of the CSS.
+\end_layout
+
+\begin_layout Subsubsection
+Modern Stream Ciphers: eStream (2008)
+\end_layout
+
+\begin_layout Standard
+5 stream ciphers came out of that project.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{{PRG:\,}}\{0,\,1\}^{S}\times R\rightarrow\{0,\,1\}^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+R - nonce
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\{0,\,1\}^{s}$
+\end_inset
+
+- seed
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n\gg s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nonce: a non-repeating value for a given key.
+ Unique value that never repeats as long as the key is the same.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E(k,\, m;\, r)=m\oplus PRG(k;\, r)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A property of the nonce is that the pair (k; r) is never used more than
+ once.
+ We can re-use the key, because (k, r) are unique.
+\end_layout
+
+\begin_layout Subsubsection
+Salsa 20 (software + hardware)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\{0,\,1\}^{128\, or\,256}\times\{0,\,1\}^{64}\rightarrow\{0,\,1\}^{n}\qquad(\text{{max\,\ n=2^{73}\,\ bits}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+128 (or 256) bit seed and 64 bit nonce
+\begin_inset Formula 
+\[
+\text{{Salsa20}}(k;\, r):=H(k;\,(r,\,0))\,||\, H(k,\,(r,\,1))\,||\,\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given the key and the nonce, generate a long pseudo-random sequence by using
+ function H, which takes 3 inputs: the key, k, nonce, r, and the counter
+ that increments from step to step.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+How does the function H work?
+\end_layout
+
+\begin_layout Standard
+We start by expanding the states into 64 bytes long (something), put constants
+ 
+\begin_inset Formula $\tau_{0}$
+\end_inset
+
+ 4 bytes, k 16 bytes, 
+\begin_inset Formula $\tau_{1}$
+\end_inset
+
+ 4 bytes, r 8 byes, i (index) 8 bytes, 
+\begin_inset Formula $\tau_{2}$
+\end_inset
+
+ 4 bytes, k 16 bytes, 
+\begin_inset Formula $\tau_{3}$
+\end_inset
+
+ 4 bytes.
+ If we sum all of them , we get 64 bytes.
+ All this comes from spec.
+\end_layout
+
+\begin_layout Standard
+Then we apply a 1:1 invertible function, designed to be fast on x86 (SSE2),
+ mapping function, 
+\begin_inset Formula $h$
+\end_inset
+
+, 10 times.
+ This by itself isn't random due to h being invertible, so you XOR the inputs
+ and the final output (of h) and then you get the 64 byte output.
+\end_layout
+
+\begin_layout Subsection
+PRG Security Definitions
+\end_layout
+
+\begin_layout Standard
+Let
+\begin_inset Formula 
+\[
+G:K\rightarrow\{0,\,1\}^{n}\text{ be a PRG}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PRG with keyspace K that outputs an n bit string.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Goal
+\bar default
+: define what that means for the otuput of the generator to be indistinguishable
+ from random.
+\begin_inset Formula 
+\[
+[K\xleftarrow{R}K,\,\text{output }G(K)]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{is "indistinguishable" from a truly random string}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r\xleftarrow{R}\{0,\,1\}^{n},\text{output }r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uniform distribution can output any of 
+\begin_inset Formula $\{0,\,1\}^{n}$
+\end_inset
+
+ strings with equal probability but the generator can output a tiny subset.
+ We're arguing that an adversary that can look at the output of a generator
+ in the tiny set, can distinguish it from the output of the uniform distribution
+ over the entire set.
+\end_layout
+
+\begin_layout Subsubsection
+Statistical Tests
+\end_layout
+
+\begin_layout Standard
+Statistical test on 
+\begin_inset Formula $\{0,1\}^{n}:$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{an algorithm A s.t }A(x)\text{ outputs "0" or "1"}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+x is an n bit string
+\end_layout
+
+\begin_layout Standard
+0 - not random
+\end_layout
+
+\begin_layout Standard
+1 - random
+\end_layout
+
+\begin_layout Standard
+Ex.:
+\end_layout
+
+\begin_layout Standard
+1.
+ #0(x) - number of 0s in string x
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(x)=1\iff|\#0(x)-\#1(x)|\le10*\sqrt{(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ #00(x) - number of consecutive 0s in x
+\end_layout
+
+\begin_layout Standard
+in a random string we'll expect to see that about 1/4th of the time
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A(x)=1\iff\#00(x)-\frac{n}{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\begin_inset Formula $A(x)=1\iff\text{max-run-of-0(x)}\le10\times\log_{2}(n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the past, a fixed set of statistical tests for randomness would be run
+ against an algo and if all output 1 then algo is random.
+\end_layout
+
+\begin_layout Subsubsection
+Advantage (of statistical tests)
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $G:K\rightarrow\{0,1\}^{n}\text{ be a PRG and A a statistical test on }\{0,1\}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Define:
+\end_layout
+
+\begin_layout Standard
+An 
+\series bold
+advantage
+\series default
+ of the statistical test A wrt.
+ generator G is the difference between how likely is the statistical test
+ to output 1 when we give it a pseudo-random output generated by the generator
+ vs how likely is the statistical test to output 1 given a truly random
+ string
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+ADV_{PRG}[A,G]:=\left|\underset{k\xleftarrow{R}K}{Pr}[A(G(K))=1-\underset{r\xleftarrow{R}\{0,1\}^{n}}{Pr}[A(r)=1]\right|\in[0,1]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if ADV close to 1 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+means that statistical test A behavied differently when we gave it pseudo-random
+ inputs from when we gave it truly random input.
+ A can distinguish G from rand.
+\end_layout
+
+\begin_layout Standard
+if ADV close to 0 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ test behaves same on both types of inputs, can't distinguish G from random.
+\end_layout
+
+\begin_layout Standard
+A silly exmaple: 
+\begin_inset Formula $A(x)=0\Rightarrow ADV_{PRG}[A,G]=0$
+\end_inset
+
+, because if the test always outputs 0, then it'll never output 1 for any
+ input.
+\end_layout
+
+\begin_layout Standard
+Example:
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $G:K\rightarrow\{0,1\}^{n}$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $msb(G(k))=1$
+\end_inset
+
+ for 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+ of keys in K (msb = most significant bit)
+\end_layout
+
+\begin_layout Standard
+Define stat.
+ test 
+\begin_inset Formula $A(x)$
+\end_inset
+
+ as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+if[msb(x)=1]\text{ output "1" else output "0"}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+Adv_{PRG}[A,G] & = & \left|Pr[A(G(k))=1]-Pr[A(r)=1]\right|\\
+ & = & \left|\frac{2}{3}-\frac{1}{2}\right|=\frac{1}{6}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose we give the pseudo-random input.
+ From definition of G, we know with probability 
+\begin_inset Formula $\frac{2}{3}$
+\end_inset
+
+ the output will be 1.
+ In a truly random input, the probability of msb being 1 is 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+.
+ We can say that A breaks G with advantage 
+\begin_inset Formula $\frac{1}{6}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Secure PRGs: crypto definition
+\end_layout
+
+\begin_layout Standard
+We say that 
+\begin_inset Formula $G:K\rightarrow\{0,1\}^{n}$
+\end_inset
+
+ is a 
+\series bold
+secure PRG
+\series default
+ if;
+\begin_inset Formula 
+\[
+\forall\text{ "efficient" statistical tests A: }Adv_{PRG}[A,G]\text{ is negiligible}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Are there provable secure PRGs? We don't know because then we'd be able
+ to prove P
+\begin_inset Formula $\neq$
+\end_inset
+
+NP.
+\end_layout
+
+\begin_layout Standard
+Easy fact: 
+\series bold
+a secure PRG is unpredictable
+\series default
+.
+ Given a prefix of the output of the generator, it's impossible to predict
+ the next bit of the output.
+\end_layout
+
+\begin_layout Standard
+We show: PRG predictable 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ PRG is insecure
+\end_layout
+
+\begin_layout Standard
+Suppose A is an efficient algorithm s.t.
+\end_layout
+
+\begin_layout Standard
+We feed it first i bits of the output of the generator G, we choose a random
+ key from keyspace.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\underset{k\xleftarrow{R}K}{PR}\left[A(G(k)|_{1,\dots,i})=G(k)|_{i+1}\right] & = & \frac{1}{2}+\varepsilon\\
+\text{for non-negiligible \varepsilon\ (e.g. \varepsilon=\frac{1}{1000})}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's see that we can break the generator with this algorithm:
+\end_layout
+
+\begin_layout Standard
+Define statistical test B as follows: 
+\begin_inset Formula 
+\[
+B(x)=\begin{cases}
+\text{if }A(x|_{1,\dots,i})=x_{i+1} & \text{output 1}\\
+else & \text{output 0}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose we give this test a truly random string 
+\begin_inset Formula $r$
+\end_inset
+
+ and ask what is the probability that this statistical test outputs 1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r\xleftarrow{R}\{0,1\}^{n}\qquad Pr[B(r)=1]=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a random string the first 
+\begin_inset Formula $i+1$
+\end_inset
+
+ bit is independent of the first 
+\begin_inset Formula $i$
+\end_inset
+
+ bits, so whatever 
+\begin_inset Formula $A$
+\end_inset
+
+ outputs is independent of what the 
+\begin_inset Formula $i+1$
+\end_inset
+
+ bit of the string 
+\begin_inset Formula $r$
+\end_inset
+
+ is.
+ So the probability that it's going to be equal to some random bit is 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose now, that we give the test a pseudo-random string and ask how likely
+ is it to output 1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+r\xleftarrow{R}K\qquad Pr[B(G(k)) & = & 1]>\frac{1}{2}+\varepsilon\\
+ & \Rightarrow & Adv_{PRG}[B,G]>\varepsilon
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By definition of A, we know that if we give it the first 
+\begin_inset Formula $i$
+\end_inset
+
+ bits of the output of the generator, it'll predict the next bit with the
+ probability 
+\begin_inset Formula $\frac{1}{2}+\varepsilon$
+\end_inset
+
+.
+ What this means the diff between the quantities for random and pseudo-random
+ strings, it's 
+\begin_inset Formula $>\varepsilon$
+\end_inset
+
+.
+ That means if algorithm A is able to predict the next bit with advantage
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, algorithm B is able to distinguish the output of the generator with advantage
+ 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ So if A is a good predictor, B is a good statistical test that breaks the
+ generator.
+ The contrapositive is that if G is a secure generator, then there aren't
+ no good statistical tests and as a result no predictors and the generator
+ unpredictable.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+An unpredictable PRG is secure (Yao 1982)
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $G:K\rightarrow\{0,1\}^{n}$
+\end_inset
+
+ be PRG
+\end_layout
+
+\begin_layout Standard
+Theorem: if 
+\begin_inset Formula $\forall_{i\in\{0,\dots,n-1\}}$
+\end_inset
+
+ PRG 
+\begin_inset Formula $G$
+\end_inset
+
+ is unpredictable at position 
+\begin_inset Formula $i$
+\end_inset
+
+ then 
+\begin_inset Formula $G$
+\end_inset
+
+ is a secure PRG.
+\end_layout
+
+\begin_layout Standard
+If next-bit predictors cannot distinguish G from random then no statistical
+ test can.
+\end_layout
+
+\begin_layout Standard
+Ex:
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $G:K\rightarrow\{0,1\}^{n}$
+\end_inset
+
+ be a PRG such that from last 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ bits of 
+\begin_inset Formula $G(k)$
+\end_inset
+
+ it is easy to compute the first 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ bits.
+ 
+\begin_inset Formula $G$
+\end_inset
+
+ is predictable for some 
+\begin_inset Formula $i\in\{0,\dots,n-1\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If the last 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ bits supply the first 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ it means that 
+\begin_inset Formula $G$
+\end_inset
+
+ is not secure, and therefore predictible (by Yao).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+More Generally
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ be two distributions over 
+\begin_inset Formula $\{0,1\}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Def: We say that 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ are 
+\series bold
+computationally indistinguishable
+\series default
+ (denoted 
+\begin_inset Formula $P_{1}\underset{p}{\approx}P_{2}$
+\end_inset
+
+) if 
+\begin_inset Formula $\forall$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+efficient
+\begin_inset Quotes erd
+\end_inset
+
+ statistical tests 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|\underset{x\leftarrow P_{1}}{Pr}[A(x)=1]-\underset{x\leftarrow P_{2}}{Pr}[A(x)=1]\right|<negligible
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Example: a PRG is secure if 
+\begin_inset Formula $\left\{ k\xleftarrow{R}K:G(k)\right\} \underset{p}{\approx}uniform(\left\{ 0,1\right\} ^{n})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Stream ciphers are semantically secure
+\end_layout
+
+\begin_layout Standard
+Theorem: given 
+\begin_inset Formula $G:K\rightarrow\{0,1\}^{n}$
+\end_inset
+
+ is a secure PRG 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ stream cipher 
+\begin_inset Formula $E$
+\end_inset
+
+ derived from 
+\begin_inset Formula $G$
+\end_inset
+
+ is semantically secure.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall$
+\end_inset
+
+ semantically secure adversary A, 
+\begin_inset Formula $\exists$
+\end_inset
+
+ a PRG adversary B s.t.
+\begin_inset Formula 
+\[
+Adv_{SS}[A,E]\le2\times Adv_{PRG}[B,G]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose you have a semantic security adversary A, what you'll then do is
+ we'll build a PRG adversary B that satisfies the above inequality.
+ If we know that if 
+\begin_inset Formula $B$
+\end_inset
+
+ is an efficient adversary, since 
+\begin_inset Formula $G$
+\end_inset
+
+ is a secure generator, we know that this advantage is negiligible.
+ Because rhs is negiligible, the left side is too and so the adversary has
+ a negiligible advantage in attacking the stream cipher.
+\end_layout
+
+\begin_layout Standard
+Proof: [3:00]
+\end_layout
+
+\end_body
+\end_document

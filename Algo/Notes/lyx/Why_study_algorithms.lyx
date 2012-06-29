@@ -1,0 +1,904 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Integer Multiplication 
+\end_layout
+
+\begin_layout Standard
+Input: 2 n-digit numbers x and y 
+\end_layout
+
+\begin_layout Standard
+Output: product 
+\begin_inset Formula $x\times y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Primitive operation: add or multiply 2 single-digit numbers.
+ n^2 number of operations n operations per row up to a constant
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+can we do better? 
+\end_layout
+
+\begin_layout Standard
+recursion, split the numbers in 2 
+\end_layout
+
+\begin_layout Standard
+write 
+\begin_inset Formula $x=10^{\frac{n}{2}}a+b$
+\end_inset
+
+ and 
+\begin_inset Formula $y=10^{\frac{n}{2}}c+d$
+\end_inset
+
+, where a, b, c, d are 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ digit numbers
+\end_layout
+
+\begin_layout Standard
+Example:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=56,\, b=78,\, c=12,\, d=34$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\times y=(10^{\frac{n}{2}}a+b)(10^{\frac{n}{2}}c+d)=10^{n}ac+10^{\frac{n}{2}}(ad+bc)+bd$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Idea:
+\end_layout
+
+\begin_layout Standard
+recursively compute ac, ad, bc, bd, then compute (*) in the obvious way.
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+Karatsuba Multiplication
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $x\times y=10^{n}\mathbf{ac}+10^{\frac{n}{2}}(\mathbf{ad+bc})+\mathbf{bd}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are really just 3 quantities that we care about
+\end_layout
+
+\begin_layout Itemize
+Recursively compute ac
+\end_layout
+
+\begin_layout Itemize
+Recursively compute bd
+\end_layout
+
+\begin_layout Itemize
+recursively compute 
+\begin_inset Formula $(a+b)(c+d)=ac+bd+ad+bc$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gauss's trick: The result of the third recursive call minus first and second
+ = 
+\begin_inset Formula $ad+bc$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Upshot: only need 3 recursive multiplications (and some additions)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Merge Sort: Motivation and Example
+\end_layout
+
+\begin_layout Subsubsection
+Why Study Merge Sort?
+\end_layout
+
+\begin_layout Itemize
+Good introduction to divide & conquer
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Improves over Selection, Insertion, Bubble sort (
+\begin_inset Formula $n^{2})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Calibrate your preparation
+\end_layout
+
+\begin_layout Itemize
+Motivates guiding principles for algorithm analysis (worst-case and asymptotic
+ analysis)
+\end_layout
+
+\begin_layout Itemize
+Analysis generalizes to 
+\begin_inset Quotes eld
+\end_inset
+
+Master Method
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The Sorting Problem
+\end_layout
+
+\begin_layout Standard
+Input: an array of 
+\begin_inset Formula $n$
+\end_inset
+
+ numbers, unsorted, assume distinct
+\end_layout
+
+\begin_layout Standard
+Output: same numbes, sorted in increasing order
+\end_layout
+
+\begin_layout Standard
+Merge sort is recursive, it will spawn calls to itself to smaller arrays.
+\end_layout
+
+\begin_layout Standard
+E.g.
+ [8:30]
+\end_layout
+
+\begin_layout Subsection
+Merge Sort: Pseudocode
+\end_layout
+
+\begin_layout Itemize
+Recursively sort 1st half of input array
+\end_layout
+
+\begin_layout Itemize
+Recursively sort 2nd half of input array
+\end_layout
+
+\begin_layout Itemize
+Merge two sorted sublists into one
+\end_layout
+
+\begin_layout Standard
+[ignores base cases, odd number of elements, details of recursion implementation
+]
+\end_layout
+
+\begin_layout Subsubsection
+Pseudocode for Merge
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+C = output array [length=n]
+\end_layout
+
+\begin_layout Plain Layout
+
+A = 1st sorted array [n/2]
+\end_layout
+
+\begin_layout Plain Layout
+
+B = 2nd sorted array [n/2]
+\end_layout
+
+\begin_layout Plain Layout
+
+i = counter of A elements
+\end_layout
+
+\begin_layout Plain Layout
+
+j = counter of B elements
+\end_layout
+
+\begin_layout Plain Layout
+
+i = j = 1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+for k = 1 to n
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	if A(i) < B(j)
+\end_layout
+
+\begin_layout Plain Layout
+
+		C(k) = A(i)
+\end_layout
+
+\begin_layout Plain Layout
+
+		i++
+\end_layout
+
+\begin_layout Plain Layout
+
+	else [B(j)<A(i)]
+\end_layout
+
+\begin_layout Plain Layout
+
+		C(k)=B(j)
+\end_layout
+
+\begin_layout Plain Layout
+
+		j++
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+(ignores end cases)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Merge Sort Running Time
+\end_layout
+
+\begin_layout Standard
+Key Question: running tome of Merge Sort on array of 
+\begin_inset Formula $n$
+\end_inset
+
+ numbers?
+\end_layout
+
+\begin_layout Standard
+How many will get executed on a 
+\series bold
+single merge
+\series default
+?
+\end_layout
+
+\begin_layout Standard
+Initialization step - 2 operations
+\end_layout
+
+\begin_layout Standard
+for loop executes 
+\begin_inset Formula $n$
+\end_inset
+
+ times
+\end_layout
+
+\begin_layout Standard
+3 operations per iteration: test and assignment, increment
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Upshot
+\series default
+: running time of Merge on array of 
+\begin_inset Formula $m$
+\end_inset
+
+ numbers is 
+\begin_inset Formula $\leq4m+2\approx6m\,(since\, m\ge1)$
+\end_inset
+
+ for the sake of simplicity.
+\end_layout
+
+\begin_layout Standard
+On successive recursive calls, our input is smaller by half.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+: MergeSort requires 
+\begin_inset Formula 
+\[
+\le6n\log_{2}n+6n
+\]
+
+\end_inset
+
+ operations to sort 
+\begin_inset Formula $n$
+\end_inset
+
+ numbers.
+\end_layout
+
+\begin_layout Standard
+Logarithm review: # of times you divide by 
+\begin_inset Formula $2$
+\end_inset
+
+ until you get down to 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Merge Sort: Analysis
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim
+\series default
+: For every input array of 
+\begin_inset Formula $n$
+\end_inset
+
+ numbers, Merge Sort produces a sorted output array and uses at most 
+\begin_inset Formula $6n\log_{2}n+6n$
+\end_inset
+
+ operations.
+\end_layout
+
+\begin_layout Standard
+Proof of claim (assuming 
+\begin_inset Formula $n$
+\end_inset
+
+ = power of 
+\begin_inset Formula $2$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Recursion tree method [2:00]
+\end_layout
+
+\begin_layout Standard
+The recursion tree has roughly 
+\begin_inset Formula $log_{2}n$
+\end_inset
+
+ levels, 
+\begin_inset Formula $n$
+\end_inset
+
+ = length of input array.
+ The reason is that essentially the input size is being decreased by a factor
+ of 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ 
+\begin_inset Formula $log_{2}n+1$
+\end_inset
+
+ to be exact.
+\end_layout
+
+\begin_layout Standard
+This allows us to count the work level by level.
+\end_layout
+
+\begin_layout Standard
+At each level 
+\begin_inset Formula $j=0,\,1,\,2,\,...,\,\log_{2}n$
+\end_inset
+
+, there are 
+\begin_inset Formula $2^{j}$
+\end_inset
+
+ subproblems, each of size
+\begin_inset Formula $\frac{n}{2^{j}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+MergeSort calls itself twice, hence 
+\begin_inset Formula $2^{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof of claim
+\series default
+ (assuming 
+\begin_inset Formula $n$
+\end_inset
+
+ = power of 
+\begin_inset Formula $2$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Total number of operations at level 
+\begin_inset Formula $j$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+[Each 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $j=0,\,1,\,2,\,...,\,\log_{2}n$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\le\left[\text{2^{j}}\right]_{1}+\left[6\left[(\frac{n}{2^{j}})\right]_{2}\right]_{3}=\left[6n\right]_{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1: all of level 
+\begin_inset Formula $j$
+\end_inset
+
+ subproblems
+\end_layout
+
+\begin_layout Standard
+2: subproblem size at level 
+\begin_inset Formula $j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3: work per level 
+\begin_inset Formula $j$
+\end_inset
+
+ subproblem
+\end_layout
+
+\begin_layout Standard
+4: independent of 
+\begin_inset Formula $j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The number of subproblems is doubling and the amount of work we do per sub
+ problem is halving.
+\end_layout
+
+\begin_layout Standard
+We care about the total work but if we have the amount of work the algorithm
+ does per level, we just take the and multiply by number of levels
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\le\left[6n\right]_{1}\left[(\log_{2}n+1)\right]_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1: work per level
+\end_layout
+
+\begin_layout Standard
+2: # of levels
+\end_layout
+
+\begin_layout Subsection
+Guiding Principles for Analysis of Algorithms
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Guiding Principle #1
+\end_layout
+
+\begin_layout Standard
+Worst case analysis: 
+\end_layout
+
+\begin_layout Itemize
+Our running time bout holds for every input of length 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+particularly appropriate for 
+\begin_inset Quotes eld
+\end_inset
+
+general-purpose
+\begin_inset Quotes erd
+\end_inset
+
+ routines
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Guiding Principle #2
+\end_layout
+
+\begin_layout Standard
+As opposed to:
+\end_layout
+
+\begin_layout Enumerate
+average-case analysis: analyze average running time of an algorithm under
+ some assumption about relative frequency of the inputs.
+\end_layout
+
+\begin_layout Enumerate
+bench marks: one agrees up front about some set, say ten or twenty, benchmark
+ inputs, which are thought to represent practical or typical inputs for
+ the algorithm.
+\end_layout
+
+\begin_layout Standard
+Won't pay much attention to constant factors, lower order terms.
+\end_layout
+
+\begin_layout Itemize
+Justifications: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Way easier mathematically
+\end_layout
+
+\begin_layout Itemize
+constants depend on architecture/compiler/programmer
+\end_layout
+
+\begin_layout Itemize
+lose very little predictive power
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Guiding Principle #3
+\end_layout
+
+\begin_layout Standard
+Asyptotic Analysis: Focus on running time for 
+\series bold
+large 
+\series default
+input sizes.
+\end_layout
+
+\begin_layout Standard
+E.g.
+ 
+\begin_inset Formula $6n\log_{2}n+6n$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+better than
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\frac{1}{2}n^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Merge Sort better than Insertion Sort
+\end_layout
+
+\begin_layout Standard
+Only big problems are interesting
+\end_layout
+
+\begin_layout Standard
+To decide principle, you need to have domain knowledge of the problem.
+\end_layout
+
+\begin_layout Standard
+Fast algorithm 
+\begin_inset Formula $\approx$
+\end_inset
+
+ worst-case running time grows slowly with input size.
+\end_layout
+
+\begin_layout Standard
+Holy grail: linear running time or close to it.
+ Number of instructions grows proportional to the input size.
+\end_layout
+
+\end_body
+\end_document

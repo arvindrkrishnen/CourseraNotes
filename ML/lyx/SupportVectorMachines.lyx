@@ -1,0 +1,1271 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Support Vector Machines
+\end_layout
+
+\begin_layout Subsection
+Optimization Objective
+\end_layout
+
+\begin_layout Standard
+The performance of a lot of learning algorithms is similar.
+\end_layout
+
+\begin_layout Standard
+Support Vector Machine compared to Neural Networks and Logistic Regression,
+ it sometimes offers cleaner and more powerful way of learning complex non-linea
+r functions.
+\end_layout
+
+\begin_layout Subsubsection
+Alternative view of logistic regression
+\end_layout
+
+\begin_layout Standard
+In logistic regression we have a hypothesis:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{\Theta}(x)=\frac{1}{1+e^{-\Theta^{\top}x}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and a sigmoid activation function
+\begin_inset Formula 
+\[
+z=\Theta^{\top}x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h_{\Theta}(x)=g(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $y=1$
+\end_inset
+
+, we want 
+\begin_inset Formula $h_{\Theta}(x)\approx1,\,\Theta^{\top}\gg0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so the output of logistic regression is close to 1.
+ And similarly
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $y=0$
+\end_inset
+
+, we want 
+\begin_inset Formula $h_{\Theta}(x)\approx0,\,\Theta^{\top}\ll0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we look at cost of logistic regression, we see that eacy example 
+\begin_inset Formula $(x,\, y)$
+\end_inset
+
+ contributs a term 
+\begin_inset Formula 
+\[
+-(h\log h_{\Theta}(x)+(1-y)\log(1-h_{\Theta}(x)))
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=-y\log\frac{1}{1+e^{-\Theta^{\top}x}}-(1-y)\log(1-\frac{1}{1+e^{-\Theta^{\top}x}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+to the overall objective function for logistic regression.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $y=1$
+\end_inset
+
+ (want 
+\begin_inset Formula $\Theta^{\top}x\gg0$
+\end_inset
+
+), we get
+\begin_inset Formula 
+\[
+cost_{1}(z)=-\log\frac{1}{1+e^{-z}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we plot this function, if 
+\begin_inset Formula $z$
+\end_inset
+
+ is large, that gives us a fairly small contribution.
+\end_layout
+
+\begin_layout Standard
+To build SVM, we're going to take this function and modify it.
+ [6:00]
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $y=0$
+\end_inset
+
+ (want 
+\begin_inset Formula $\Theta^{\top}x\ll0$
+\end_inset
+
+), we get
+\begin_inset Formula 
+\[
+cost_{0}(z)=-\log(1-\frac{1}{1+e^{-\Theta^{\top}x}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We'll do the same to the function.
+\end_layout
+
+\begin_layout Subsubsection
+Support Vector Machine
+\end_layout
+
+\begin_layout Standard
+Logistic regression:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\min_{\Theta}\frac{1}{m}\left[{\displaystyle \sum_{i=1}^{m}y^{(i)}(-\log h_{\Theta}(x^{(i)}))+(1-y^{(i)})(-\log(1-h_{\Theta}(x^{(i)})))}\right]+\frac{\lambda}{2m}{\displaystyle \sum_{j=1}^{n}\Theta_{j}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Support vector machine:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\min_{\Theta}\frac{1}{m}\left[{\displaystyle \sum_{i=1}^{m}cost_{1}(\Theta^{\top}x^{(i)})+(1-y^{(i)})cost_{0}(\Theta^{\top}x^{(i)})}\right]+\frac{\lambda}{2m}{\displaystyle \sum_{j=1}^{n}\Theta_{j}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By convention for SVM, we write things slightly differently,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\min_{\Theta}c\left[{\displaystyle \sum_{i=1}^{m}cost_{1}(\Theta^{\top}x^{(i)})+(1-y^{(i)})cost_{0}(\Theta^{\top}x^{(i)})}\right]+\frac{1}{2}{\displaystyle \sum_{j=1}^{n}\Theta_{j}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+we should get the same values for theta.
+\end_layout
+
+\begin_layout Standard
+For logistic regression we had two terms 
+\begin_inset Formula $A+\lambda B$
+\end_inset
+
+ and for SVM, we're going to use a different parameter, 
+\begin_inset Formula $c$
+\end_inset
+
+, and we'll minimize 
+\begin_inset Formula $cA+B$
+\end_inset
+
+.
+ So now, giving 
+\begin_inset Formula $c$
+\end_inset
+
+ a small value, it corresponds to giving B a large weight.
+ As opposed to setting a large value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+to get large weight for logistic regressoin.
+ 
+\begin_inset Formula $c$
+\end_inset
+
+ may be thought of as 
+\begin_inset Formula $c=1/\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Unlike Logistic Regression, SVM does not output a probability, instead we
+ have a cost function, which we minimize to get the parameters, 
+\begin_inset Formula $\Theta$
+\end_inset
+
+and what the SVM does is make a prediction of 
+\begin_inset Formula $y$
+\end_inset
+
+ being equal 1 or 0
+\begin_inset Formula 
+\[
+h_{\Theta}(x)\begin{cases}
+1 & if\,\Theta^{\top}x\ge0\\
+0 & otherwise
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Large Margin Intuition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename SVM-largemargin.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we have a positive example, 
+\begin_inset Formula $y=1$
+\end_inset
+
+, then all we really need is 
+\begin_inset Formula $\Theta^{\top}x\ge0$
+\end_inset
+
+ and that would mean that we classified correctly.
+ Similarly for the negative, 
+\begin_inset Formula $\Theta^{\top}<0$
+\end_inset
+
+.
+ SVM wants a bit more than that, 
+\begin_inset Formula $\Theta^{\top}x\ge1$
+\end_inset
+
+, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Theta^{\top}<-1$
+\end_inset
+
+.
+ This build in an extra margin factor into the SVM.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider a case where we set the constant, 
+\begin_inset Formula $c$
+\end_inset
+
+, to a very large value.
+ If 
+\begin_inset Formula $c$
+\end_inset
+
+ is very large, we're going to be motivated to choose a value that will
+ make the first term equal 0.
+ What would that take? We're going to 
+\begin_inset Formula ${\displaystyle \min_{\Theta}c\times0+\frac{1}{2}{\displaystyle \sum_{i=1}^{1}\Theta_{j}^{2}}}$
+\end_inset
+
+ and this will be subject to a constraint that: 
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+\Theta^{\top}x^{(i)}\ge1 & if\, y^{(i)}=1\\
+\Theta^{\top}x^{(i)}\le-1 & if\, y^{(i)}=0
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When we minimize this, we get an interesting decision boundary.
+\end_layout
+
+\begin_layout Subsubsection
+SVM Decision Boundary: Linearly separable case
+\end_layout
+
+\begin_layout Standard
+The black line is the best boundary, it has a larger margin (blue-to-black).
+ This gives the SVM a certain robustnes.
+\begin_inset Graphics
+	filename SVM-largemargin2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Large Margin Classifier in Presence of Outliers
+\end_layout
+
+\begin_layout Standard
+If you're only using a large margin classifier, then the SVM may be succeptible
+ to outliers.
+ The decision boundary may be significantly different from what it should
+ be, just to include the outlier if 
+\begin_inset Formula $c$
+\end_inset
+
+ is large, but not if 
+\begin_inset Quotes eld
+\end_inset
+
+not too large
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Kernels I
+\end_layout
+
+\begin_layout Subsubsection
+Non-linear Decision Boundary
+\end_layout
+
+\begin_layout Standard
+Let's say we predict 
+\begin_inset Formula $y=1$
+\end_inset
+
+ if
+\begin_inset Formula 
+\[
+\Theta_{0}+\Theta_{1}x_{1}+\Theta_{2}x_{2}+\Theta_{3}x_{1}x_{2}+\Theta_{4}x_{1}^{2}+\Theta_{5}x_{2}^{2}+\dots\ge0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h_{\Theta}(x)\begin{cases}
+1 & if\,\Theta_{0}+\Theta_{1}x_{1}+\dots\ge0\\
+0 & otherwise
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Another way of writing this is we can think of the hypothesis as computing
+ a decision boundary using:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Theta_{0}+\Theta_{1}f1+\Theta_{2}f_{2}+\Theta_{3}f_{3}+\dots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{1}=x_{1},\, f_{2}=x_{2}\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is there a different/better choice of the features 
+\begin_inset Formula $f_{1},\, f_{2},\,\dots$
+\end_inset
+
+? Using high order polynomials becomes computationally expensive.
+\end_layout
+
+\begin_layout Subsubsection
+Kernel
+\end_layout
+
+\begin_layout Standard
+Define 3 new features:
+\end_layout
+
+\begin_layout Standard
+Given x, compute new feature depending on proximity to landmarks 
+\begin_inset Formula $l^{(1)},\, l^{(2)},\, l^{(3)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given x: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{1}=similarity(x,\, l^{(1)})=exp(-\frac{\|x-l^{(1)}\|^{2}}{2\sigma^{2}})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{1}=similarity(x,\, l^{(2)})=exp(-\frac{\|x-l^{(2)}\|^{2}}{2\sigma^{2}})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{1}=similarity(x,\, l^{(3)})=exp(-\frac{\|x-l^{(3)}\|^{2}}{2\sigma^{2}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The similarity function is called a 
+\series bold
+kernel
+\series default
+ and specifically a 
+\series bold
+Gaussian kernel
+\series default
+, denoted 
+\begin_inset Formula $k(x,\, l^{(i)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Kernels and Similarity
+\end_layout
+
+\begin_layout Standard
+Take the first landmark
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{1}=similarity(x,\, l^{(1)})=exp(-\frac{\|x-l^{(1)}\|^{2}}{2\sigma^{2}})=exp(-\frac{\sum_{j=1}^{n}(x_{j}-l_{j}^{(i)})^{2}}{2\sigma^{2}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $x$
+\end_inset
+
+ is close to one of the landmarks 
+\begin_inset Formula $x\approx l^{(1)}$
+\end_inset
+
+: Then the Euclidian distance in numerator will be cose to 
+\begin_inset Formula $0$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\[
+f_{1}=exp(-\frac{0^{2}}{2\sigma^{2}})\approx1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conversely, if 
+\begin_inset Formula $x$
+\end_inset
+
+ is far from 
+\begin_inset Formula $l^{(1)}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{1}=exp(-\frac{(large\, number)^{2}}{2\sigma^{2}})\approx0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These features measure how similar 
+\begin_inset Formula $x$
+\end_inset
+
+ is from one of the landmarks.
+ Each of the landmarks, 
+\begin_inset Formula $l_{i}$
+\end_inset
+
+, defines a new feature, 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ex.: If we plot what the 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ feature looks like, we notice that when 
+\begin_inset Formula $x=\left[\begin{array}{c}
+3\\
+5
+\end{array}\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $f_{1}=1$
+\end_inset
+
+ and as 
+\begin_inset Formula $x$
+\end_inset
+
+ moves farther away, 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+takes values closer to 0.
+\end_layout
+
+\begin_layout Standard
+If we set
+\begin_inset Formula $\sigma^{2}=0.5$
+\end_inset
+
+ the width of the bump becomes narrower.
+ If 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ is increased, then as you move away from 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+ then the value of the feature falls away more slowely.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename kernels.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given these features, let's see what hypotheses we could learn.
+\end_layout
+
+\begin_layout Standard
+Predict 1 when: 
+\begin_inset Formula $\Theta_{0}+\Theta_{1}f1+\Theta_{2}f_{2}+\Theta_{3}f_{3}\ge0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Theta_{0}=-0.5,\,\Theta_{1}=1,\,\Theta_{2}=1,\,\Theta_{3}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+consider what happens if we have an example close to an 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ If we look at the formula, we'll have 
+\begin_inset Formula $f_{1}\approx1,\, f_{2}\approx0,\, f_{3}\approx0$
+\end_inset
+
+, so 
+\begin_inset Formula $\Theta_{0}+\Theta_{1}\times1+\Theta_{2}\times0+\Theta_{3}\times0=-0.5+1=0.5\ge0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a point far away from landmarks 1 and 2, where 
+\begin_inset Formula $f_{1,2,3}\approx0$
+\end_inset
+
+, we'll predict 
+\begin_inset Formula $-0.5<0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Kernels II
+\end_layout
+
+\begin_layout Subsubsection
+Where to get landmarks?
+\end_layout
+
+\begin_layout Standard
+Given a training set, we're going to take the examples and for every training
+ example that we have, we're going to put landmarks in exactly the same
+ location as the examples.
+ We'll end up with 
+\begin_inset Formula $m$
+\end_inset
+
+ landmarks with 1 landmark per location.
+ Our features will measure how close an example is to one of the things
+ I saw in the training set.
+\end_layout
+
+\begin_layout Subsubsection
+SVM with Kernels
+\end_layout
+
+\begin_layout Standard
+Given 
+\begin_inset Formula $(x^{(1)},\, y^{(1)}),\,(x^{(2)},\, y^{(2)}),\,\dots,(x^{(m)},\, y^{(m)})$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Standard
+Choose 
+\begin_inset Formula $l^{(1)}=x^{(1)},\, l^{(2)}=x^{(2)},\dots,\, l^{(m)}=x^{(m)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Given example 
+\begin_inset Formula $x$
+\end_inset
+
+ we'll compute:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{1}=similarity(x,\, l^{(1)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{2}=similarity(x,\, l^{(2)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and these then give us a feature vector:
+\begin_inset Formula 
+\[
+f=\left[\begin{array}{c}
+f_{0}\\
+f_{1}\\
+f_{2}\\
+\vdots\\
+f_{m}
+\end{array}\right],\, f_{0}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example: for training example 
+\begin_inset Formula $(x^{(i)},\, y^{(i)})$
+\end_inset
+
+ the features will be:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{(i)}\rightarrow\begin{array}{c}
+f_{1}^{(i)}=similarity(x^{(i)},\, l^{(1)})\\
+f_{1}^{(i)}=similarity(x^{(i)},\, l^{(2)})\\
+\vdots\leftarrow f_{1}^{(i)}=similarity(x^{(i)},\, l^{(i)}),\, l^{(i)}=x^{(i)}=exp(-\frac{0}{2\sigma^{2}})=1\\
+f_{m}^{(i)}=similarity(x^{(i)},\, l^{(m)})
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly to the above, we can take all of the 
+\begin_inset Formula $m$
+\end_inset
+
+ features and group them into a feature vector.
+ Instead of representing the example as 
+\begin_inset Formula $x^{(i)}\in\mathbb{R}^{n}(or\,\mathbb{R}^{n+1})$
+\end_inset
+
+, we can now instead represent the training example using:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f^{(i)}=\left[\begin{array}{c}
+f_{0}^{(i)}\\
+f_{1}^{(i)}\\
+\vdots\\
+f_{m}^{(i)}
+\end{array}\right],\, f_{0}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hypothesis: Given 
+\begin_inset Formula $x$
+\end_inset
+
+, compute features 
+\begin_inset Formula $f\in\mathbb{R}^{m+1}$
+\end_inset
+
+......[5:30]
+\end_layout
+
+\begin_layout Standard
+...
+\end_layout
+
+\begin_layout Standard
+SVM Parameters:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $c(=\frac{1}{\lambda})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Large 
+\begin_inset Formula $c$
+\end_inset
+
+: lower bias, high variance (small 
+\begin_inset Formula $\lambda)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Small 
+\begin_inset Formula $c$
+\end_inset
+
+: higher bias, low variance (large 
+\begin_inset Formula $\lambda)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Large 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+: features 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ vary more smoothly.
+ Higher bias, lower variance, fat curve
+\end_layout
+
+\begin_layout Standard
+Small 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+: Features 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ vary less smoothly.
+ Lower bias, higher variance, skinny curve.
+\end_layout
+
+\begin_layout Standard
+If an SVM overfits: decrease 
+\begin_inset Formula $c$
+\end_inset
+
+, increase 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Using An SVM
+\end_layout
+
+\begin_layout Standard
+Need to specify:
+\end_layout
+
+\begin_layout Itemize
+choice of parameter 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+choice of kernel
+\end_layout
+
+\begin_layout Standard
+E.g.
+ No kernel (
+\begin_inset Quotes eld
+\end_inset
+
+linear kernel
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Predict 
+\begin_inset Formula $y=1$
+\end_inset
+
+ if 
+\begin_inset Formula $\Theta^{\top}x\ge0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If n (features) is large and m (examples) is small
+\end_layout
+
+\begin_layout Standard
+Gaussian kernel:
+\end_layout
+
+\begin_layout Itemize
+need to choose 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+if 
+\begin_inset Formula $n$
+\end_inset
+
+ is small and 
+\begin_inset Formula $m$
+\end_inset
+
+ is large.
+\end_layout
+
+\begin_layout Itemize
+depending on software package, you may need to provide the kernel function
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+do perform feature scaling before using the Gaussian kernel
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Other choices of kernel:
+\end_layout
+
+\begin_layout Standard
+Note: Not all similarity functions 
+\begin_inset Formula $similarity(x,\, l)$
+\end_inset
+
+ make valid kernels.
+ Need to satisfy technical condition called 
+\begin_inset Quotes eld
+\end_inset
+
+Mercer's Theorem
+\begin_inset Quotes erd
+\end_inset
+
+ to make sure SVM packages' optimizations run correctly, and do not diverge.
+\end_layout
+
+\begin_layout Standard
+Many off-the-shelf kernels available:
+\end_layout
+
+\begin_layout Standard
+Polynomial kernel: 
+\begin_inset Formula $k(x,\, l)=(x^{\top}l)^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(x^{\top}l)^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $(x^{\top}l+5)^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+More esoteric: String kernel, chi-squared kernel, histogram, intersection
+ kernel...
+\end_layout
+
+\begin_layout Standard
+Choose a kernel that performs best on the cross-validation set
+\end_layout
+
+\begin_layout Subsubsection
+Multi-class classification
+\end_layout
+
+\begin_layout Standard
+Use one-vs-all method (Train K SVMs, one to distinguish 
+\begin_inset Formula $y=i$
+\end_inset
+
+ from the rest, for...
+\end_layout
+
+\end_body
+\end_document

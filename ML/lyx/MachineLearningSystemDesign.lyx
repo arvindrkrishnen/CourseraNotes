@@ -1,0 +1,1263 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Machine Learning System Design
+\end_layout
+
+\begin_layout Subsection
+Prioritizing what to work on: Spam classification example
+\end_layout
+
+\begin_layout Standard
+Say you want to build a spam classifier.
+ Spam messages often have misspelled words.
+ We'll have a labeled training set of spam (1) and non-spam (0) messages.
+\end_layout
+
+\begin_layout Standard
+Build a supervised learning classifier to distinguish between the two.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x$
+\end_inset
+
+ = features of email
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y$
+\end_inset
+
+ = spam (1) or non-spam (0)
+\end_layout
+
+\begin_layout Standard
+Features 
+\begin_inset Formula $x$
+\end_inset
+
+: Choose 100 words indicative of spam/not spam.
+\end_layout
+
+\begin_layout Standard
+Eg: 
+\end_layout
+
+\begin_layout Standard
+deal - more likely spam
+\end_layout
+
+\begin_layout Standard
+buy - no spam
+\end_layout
+
+\begin_layout Standard
+discount - spam
+\end_layout
+
+\begin_layout Standard
+...
+ etc
+\end_layout
+
+\begin_layout Standard
+Given a piece of email, we can then encode it into a feature vector.
+ Take the list of 100 words, sort in alphabetical order and check and see
+ if each of those words appears in the email, 0 for doesn't occur, 1 for
+ occurs
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x=\left[\begin{array}{c}
+0\\
+1\\
+1\\
+0\\
+\vdots\\
+1\\
+\vdots
+\end{array}\right]\begin{array}{c}
+andrew\\
+buy\\
+deal\\
+discount\\
+\vdots\\
+now\\
+\vdots
+\end{array}\in\mathbb{R}^{100}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Each of the features 
+\begin_inset Formula $x_{j}=\begin{cases}
+1 & if\, appears\, in\, email\\
+0 & otherwise
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In practice, take most frequently occuring n words (10000 to 50000) in training
+ set, rather than manually picking 100 words.
+\end_layout
+
+\begin_layout Subsubsection
+Building a spam classifier
+\end_layout
+
+\begin_layout Standard
+How to make it low error:
+\end_layout
+
+\begin_layout Itemize
+Collect lots of data
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+e.g.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+honeypot
+\begin_inset Quotes erd
+\end_inset
+
+ project
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Develop sophisticated features based on email routing information (from
+ email header)
+\end_layout
+
+\begin_layout Itemize
+Develop sophisticated features for message body, e.g.
+ should 
+\begin_inset Quotes eld
+\end_inset
+
+discount
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+discounts
+\begin_inset Quotes erd
+\end_inset
+
+ be treated as the same word? How about 
+\begin_inset Quotes eld
+\end_inset
+
+deal
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+Dealer
+\begin_inset Quotes erd
+\end_inset
+
+? Features about punctuation?
+\end_layout
+
+\begin_layout Itemize
+Develop sophisticated algorithm to detect misspellings (e.g.
+ m0rtgage, med1cine, w4tches)
+\end_layout
+
+\begin_layout Subsection
+Error analysis
+\end_layout
+
+\begin_layout Subsubsection
+Recommender Approach
+\end_layout
+
+\begin_layout Itemize
+Start with a simple algorithm that you can implement quickly.
+ Implement it and test it on your cross-validation data.
+\end_layout
+
+\begin_layout Itemize
+Plot learning curves to decide if more data, more features, etc.
+ are likely to help
+\end_layout
+
+\begin_layout Itemize
+Error analysis: Manually examine the examples (in cross validation set)
+ that your algorithm made errors on.
+ See if you spot any systematic trend in what type of examples it is making
+ errors on.
+\end_layout
+
+\begin_layout Standard
+Ex.:
+\end_layout
+
+\begin_layout Standard
+Say you've built a spam classifier.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m_{cv}=500$
+\end_inset
+
+ examples in cross validation set
+\end_layout
+
+\begin_layout Standard
+Algorithm misclassifies 100 emails.
+\end_layout
+
+\begin_layout Standard
+Manually examine the 100 errors, and categorize them based on:
+\end_layout
+
+\begin_layout Itemize
+What type of email it is
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+pharma: 12
+\end_layout
+
+\begin_layout Itemize
+replica watches: 4
+\end_layout
+
+\begin_layout Itemize
+steal passwords/phishing: 53
+\end_layout
+
+\begin_layout Itemize
+other: 31
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+What cues (features) you think would have helped the algorithm classify
+ them correctly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+deliberate misspellings (m0rgage, med1cine, etc): 5
+\end_layout
+
+\begin_layout Itemize
+unusual email routing: 17
+\end_layout
+
+\begin_layout Itemize
+unusual (spamming) punctuation: 32
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+We want to learn which are the most difficult examples to classify.
+ For different algorithms we often find that the same categories of examples
+ are difficult.
+ A quick and dirty algorithm can help identify errors and decide quickly
+ what to work on.
+\end_layout
+
+\begin_layout Subsubsection
+The importance of numerical evaluation
+\end_layout
+
+\begin_layout Standard
+When developing an algorithm, we should have a way to numerically evaluate
+ an algorithm that tells how well it's doing, a single number.
+\end_layout
+
+\begin_layout Standard
+Should discount/discounts/discounted/discounting be treated as the same
+ word?
+\end_layout
+
+\begin_layout Standard
+Can use 
+\begin_inset Quotes eld
+\end_inset
+
+stemming
+\begin_inset Quotes erd
+\end_inset
+
+ software (E.g.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Porter stemmer
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+This software can help or hurt, like with universe/university.
+\end_layout
+
+\begin_layout Standard
+Error analysis may not be helpful for deciding if this is likely to improve
+ performance.
+ Only solution is to try it and see if it works.
+\end_layout
+
+\begin_layout Standard
+Need numerical evaluation (e.g.
+ cross validation error) of algorithm's performance with and without stemming.
+\end_layout
+
+\begin_layout Standard
+Without stemming: 5% error
+\end_layout
+
+\begin_layout Standard
+With stemming: 3% error
+\end_layout
+
+\begin_layout Standard
+Based on this we can decide that using stemming is a good idea.
+\end_layout
+
+\begin_layout Standard
+Say we want to distinguish between upper vs lower case (Mom/mom): 3.2%
+\end_layout
+
+\begin_layout Standard
+If we find that distinguising does worse than if I use only stemming, so
+ we can decide to distinguish or not.
+\end_layout
+
+\begin_layout Standard
+Manually examining those examples, is going to take a long time.
+ Numerical method is faster.
+\end_layout
+
+\begin_layout Subsection
+Error metrics for skewed classes
+\end_layout
+
+\begin_layout Standard
+In this context it may be tricky to come up with an error metric.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Cancer classification example
+\end_layout
+
+\begin_layout Standard
+Train logistic regression model 
+\begin_inset Formula $h_{\Theta}(x).$
+\end_inset
+
+ 
+\begin_inset Formula $\begin{cases}
+y=1 & if\, cancer\\
+y=0 & otherwise
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We find that we have 1% error on test set.
+\end_layout
+
+\begin_layout Standard
+(99% correct diagnoses)
+\end_layout
+
+\begin_layout Standard
+Let's say we now find out that only 0.50% of patients have cancer.
+ The 1% error no longer looks so impressive.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+function y = predictCancer(x)
+\end_layout
+
+\begin_layout Plain Layout
+
+	y = 0; %ignore x!
+\end_layout
+
+\begin_layout Plain Layout
+
+return
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This algorithm would get 0.5% error.
+ The setting of the ratio of positive to negative examples is very close
+ to one of two extremes where in one case the number of positive examples
+ is much, much smaller than the number of negative examples because 
+\begin_inset Formula $y=1$
+\end_inset
+
+ so rarely.
+ This is what we call a problem of 
+\series bold
+skewed classes, 
+\series default
+where we have much more examples from one class.
+ So the problem with using classification accuracy as the evaluation metric
+ is the following:
+\end_layout
+
+\begin_layout Standard
+Say we have two learning algorithms getting:
+\end_layout
+
+\begin_layout Standard
+99.2% accuracy = 0.8% error
+\end_layout
+
+\begin_layout Standard
+99.5% accuracy = 0.5% error
+\end_layout
+
+\begin_layout Standard
+Is the second improved over the first one or did we just replace the code
+ with something that predicts 
+\begin_inset Formula $y=0$
+\end_inset
+
+ more often?
+\end_layout
+
+\begin_layout Standard
+When facing skewed classes, we want to use another metric.
+\end_layout
+
+\begin_layout Subsubsection
+Precision/Recall
+\end_layout
+
+\begin_layout Standard
+Let's say we're evaluating examples on a test set.
+ The classes are going to be 1 or 0, binary classification.
+ Our algorithm will predict some value for each example in the test set,
+ 1 or 0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+actual
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+class
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+predicted
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+True positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+False positive
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+class
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+False negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+True negative
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+True positive: algorithm predicts 1 and it actually is 1
+\end_layout
+
+\begin_layout Standard
+True negative: algorithm predicts 0 and it actually is 0
+\end_layout
+
+\begin_layout Standard
+False positive: algorithm predicts 1 and it actually is 0
+\end_layout
+
+\begin_layout Standard
+False negative: algorithm predicts 0 and it actually is 1
+\end_layout
+
+\begin_layout Standard
+Precision: of all patients where we predicted 
+\begin_inset Formula $y=1$
+\end_inset
+
+ (have cancer) what fraction actually has cancer?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+precision=\frac{True\, positives}{\#predicted\, positives}=\frac{True\, positives}{True\, positives+False\, positives}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Recall: of all patients that actually have cancer, what fraction did we
+ correctly detect as having cancer?
+\begin_inset Formula 
+\[
+recall=\frac{True\, positives}{\#actual\, positives}=\frac{True\, positives}{True\, positives+False\, negatives}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we have a learning algorithm that predicts 
+\begin_inset Formula $y=0$
+\end_inset
+
+ all the time, then this classifier will have 
+\begin_inset Formula $recall=0$
+\end_inset
+
+.
+ A classifier with high precision and high recall is a good classifier.
+\end_layout
+
+\begin_layout Standard
+We use the convention that 
+\begin_inset Formula $y=1$
+\end_inset
+
+ in presence of a rare class.
+\end_layout
+
+\begin_layout Subsection
+Trading off precision and recall
+\end_layout
+
+\begin_layout Standard
+Continuing the cancer example.
+ Let's say we trained a logistic regression classifier: 
+\begin_inset Formula $0\leq h_{\Theta}(x)\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Predict 1 if 
+\begin_inset Formula $h_{\Theta}(x)\geq0.7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Predict 0 if 
+\begin_inset Formula $h_{\Theta}(x)<0.7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose we want to predict 
+\begin_inset Formula $y=1$
+\end_inset
+
+ (cancer) only if 
+\series bold
+very
+\series default
+ confident.
+ We end up with a classifier that has:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Higher precision
+\series default
+: higher fraction of patients that were diagnosed with cancer, do have cancer
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lower recall
+\series default
+: we're going to predict 
+\begin_inset Formula $y=1$
+\end_inset
+
+ on a lower number of patients.
+\end_layout
+
+\begin_layout Standard
+Suppose we want to avoid missing too many cases of cancer (avoide false
+ negatives).
+\end_layout
+
+\begin_layout Standard
+When in doubt we want to predict 
+\begin_inset Formula $y=1$
+\end_inset
+
+ so the patients do get treated:
+\end_layout
+
+\begin_layout Standard
+Predict 1 if 
+\begin_inset Formula $h_{\Theta}(x)\geq0.3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Predict 0 if 
+\begin_inset Formula $h_{\Theta}(x)<0.3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Well have:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Lower precision
+\series default
+: the higher fraction of the patients who we have said have cancer, the
+ higher fraction of them will turn out not to have cancer after all.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Higher recall
+\series default
+: correctly flagging a higher fraction of patients that do have cancer.
+\end_layout
+
+\begin_layout Standard
+In general there's going to be a tradeoff between precision and recall and
+ as you vary the value of the threshold we can plot a curve [6.02].
+ The curve may look many different shapes.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset Formula $\mathbf{F}_{\mathbf{1}}$
+\end_inset
+
+ Score (F score)
+\end_layout
+
+\begin_layout Standard
+Is there a way to choose this threshold automatically? If we have a few
+ different algorithms, how do we compare different precision recall numbers?
+\end_layout
+
+\begin_layout Standard
+By switching to precision/recall metric, we now have two numbers that evaluate
+ the classifier.
+ We still want one.
+\end_layout
+
+\begin_layout Standard
+We could look at the 
+\begin_inset Formula $average=\frac{P+R}{2}$
+\end_inset
+
+.
+ This turns out not to be a great solution, because similar to the example
+ we had earlier, it turns out that if we have a classifier that gives 
+\begin_inset Formula $y=1$
+\end_inset
+
+ all the time, then we get a very high recall.
+ Conversely, if you have a classifier that predicts 
+\begin_inset Formula $y=0$
+\end_inset
+
+ almost all the time, that is it predicts 
+\begin_inset Formula $y=1$
+\end_inset
+
+ very sparingly, this corresponds to setting a very high threshold, and
+ we can end up with high precision and low recall.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $\mathbf{F_{1}Score=2\frac{PR}{P+R}}$
+\end_inset
+
+ is a bit like taking the average of precision and recall, but gives a lower
+ value of precision and recall.
+ If either precision or recall is 0, the 
+\begin_inset Formula $F_{1}Score=0$
+\end_inset
+
+ but for 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+ to be large, both precision and recall need to be large.
+ There are more ways to combine precision and recall for 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+ score.
+\end_layout
+
+\begin_layout Standard
+Measure precision and recall on cross validation set and choose the value
+ of threshold which maximizes 
+\begin_inset Formula $2\frac{PR}{P+R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Data for machine learning
+\end_layout
+
+\begin_layout Standard
+The issue of how much data to train on.
+ Under certain conditions getting and training on a lot of data can can
+ be an effective way to get good performance.
+\end_layout
+
+\begin_layout Subsubsection
+Designing a high accuracy learning system
+\end_layout
+
+\begin_layout Standard
+Banko and Brill, 2001 experimented with effect of different algorithms on
+ trying them out on different data set sizes.
+ They were trying a problem of classify between confusable words:
+\end_layout
+
+\begin_layout Standard
+{to, two, too}, {then, than}
+\end_layout
+
+\begin_layout Standard
+For breakfast I ate ____ eggs.
+\end_layout
+
+\begin_layout Standard
+Algorithms:
+\end_layout
+
+\begin_layout Itemize
+Perceptron (logistic regression)
+\end_layout
+
+\begin_layout Itemize
+Winnow
+\end_layout
+
+\begin_layout Itemize
+Memory-based
+\end_layout
+
+\begin_layout Itemize
+Naive Bayes
+\end_layout
+
+\begin_layout Standard
+Most of these algorithms give similar performance and as you increase the
+ training set size, performance almost monotonically increase.
+ If you give an 
+\begin_inset Quotes eld
+\end_inset
+
+inferior algorithm
+\begin_inset Quotes erd
+\end_inset
+
+ a lot of data, it can perform well.
+\end_layout
+
+\begin_layout Subsubsection
+Large data rationale
+\end_layout
+
+\begin_layout Standard
+Assume feature 
+\begin_inset Formula $x\in\mathbb{R}^{n+1}$
+\end_inset
+
+ has sufficient information to predict 
+\begin_inset Formula $y$
+\end_inset
+
+ accurately.
+\end_layout
+
+\begin_layout Standard
+Confusable words example: For breakfast I ate ____ eggs.
+\end_layout
+
+\begin_layout Standard
+The surrouding features capture that what I want is 
+\begin_inset Quotes eld
+\end_inset
+
+two
+\begin_inset Quotes erd
+\end_inset
+
+ and not 
+\begin_inset Quotes eld
+\end_inset
+
+to
+\begin_inset Quotes erd
+\end_inset
+
+ or 
+\begin_inset Quotes eld
+\end_inset
+
+too
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Counterexample: Predict housing price from only size (
+\begin_inset Formula $feet^{2}$
+\end_inset
+
+) and no other features.
+\end_layout
+
+\begin_layout Standard
+If you imagine that the house is 
+\begin_inset Formula $500ft^{2}$
+\end_inset
+
+ and no other information, there are so many other factors that affect the
+ price of the house than just the size, it's difficult to predict the price
+ accurately.
+\end_layout
+
+\begin_layout Standard
+Useful test: Given the input 
+\begin_inset Formula $x$
+\end_inset
+
+, can a human expert confidently predict 
+\begin_inset Formula $y$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+Ex.: A good English speaker can predict what words go in blank.
+\end_layout
+
+\begin_layout Standard
+Suppose the features have enough information to predict the value of 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Use a learning algorithm with many parameters (e.g.
+ logistic regression/linear regression with many features; neural network
+ with many hidden units), low bias algorithms, can fit complex functions.
+ Chances are that we'll be able to fit the training set well and the training
+ error will be small.
+\begin_inset Formula 
+\[
+J_{train}(\Theta)\, will\, be\, small
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's say we use a massive training set, then even though we have a lot
+ of parameters, then hopefully these algorithms will be unlikely to overfit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J_{train}(\Theta)\approx J_{test}(\Theta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So putting these two together, if training error is small and test error
+ is close to it, then hopefully the test set error will also be small.
+\end_layout
+
+\begin_layout Standard
+In order to have a well performing algorithm, the bias and variance needs
+ to be low.
+ Having many parameters we ensure a low bias and haring a large training
+ set, low variance.
+\end_layout
+
+\end_body
+\end_document

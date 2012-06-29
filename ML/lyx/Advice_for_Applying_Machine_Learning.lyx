@@ -1,0 +1,2110 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+\noindent
+
+\series bold
+Deciding What to Try Next
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+Debugging a learning algorithm:
+\end_layout
+
+\begin_layout Standard
+Suppose you have implemented regularized linear regression to predict housing
+ prices.
+\begin_inset Formula 
+\[
+J(\Theta)=\frac{1}{2m}{\displaystyle \left[\sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}+\lambda{\displaystyle \sum_{j=1}^{m}\Theta_{j}^{2}}\right]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However, when you test your hypothesis on a new set of houses, you find
+ that it makes unacceptably large errors in its predictions.
+ What should you try next?
+\end_layout
+
+\begin_layout Itemize
+Get more training examples - sometimes it doesn't help
+\end_layout
+
+\begin_layout Itemize
+Try smaller sets of features
+\end_layout
+
+\begin_layout Itemize
+Try geting additional features
+\end_layout
+
+\begin_layout Itemize
+Try adding polynomial features (
+\begin_inset Formula $x_{1}^{2},\, x_{2}^{2},\, x_{1}x_{2},\, etc)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Try decreasing 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Try increasing 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Many people will randomly pick one of those options and for example spend
+ 6 months collecting data.
+ A technique to rule out many of those options called machine 
+\series bold
+learning diagnostics
+\series default
+.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Machine learning diagnostic:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Diagnostic
+\series default
+: A test that you can run to gain insight what is/isn't working with a learning
+ algorithm, and gain guidance as to how best to improve its performance.
+\end_layout
+
+\begin_layout Standard
+Diagnostics can take time to implement, but doing so can be a very good
+ use of your time.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Evaluating a Hypothesis
+\end_layout
+
+\begin_layout Standard
+When we fit the parameters of our learning algorithm, we think about choosing
+ the parameters to minimize the training error.
+ But just because a hypothesis has a low error, doesn't mean it's a good
+ hypothesis and we saw how it can overfit and fail to generalize to new
+ examples not in the training set.
+\end_layout
+
+\begin_layout Standard
+How do we tell if a hypothesis is overfitting.
+ For a small number of features, we can plot but for a large number of features
+ that may be hard or impossible what the hypothesis function looks like.
+\end_layout
+
+\begin_layout Standard
+The standard way to evaluate a hypothesis is as follows.
+ We can split the data in two portions:
+\end_layout
+
+\begin_layout Itemize
+Training set
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(x^{(1)},\, y^{(1)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x^{(2)},\, y^{(2)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\vdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x^{(m)},\, y^{(m)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Test set
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(x_{test}^{(1)},\, y_{test}^{(1)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x_{test}^{(2)},\, y_{test}^{(2)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\vdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x_{test}^{(m_{test})},\, y_{test}^{(m_{test})})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $m_{test}=number\, of\, test\, examples$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A typical split is 70/30 %.
+\end_layout
+
+\begin_layout Standard
+If an implementation of linear regression without regularization is badly
+ overfitting the training set, we canexpect the training error 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ to be low and the test set error 
+\begin_inset Formula $J_{test}(\Theta)$
+\end_inset
+
+ to be high.
+\end_layout
+
+\begin_layout Standard
+If there is any sort of ordering to the data, take a random 70/30 % of the
+ training set.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Training/testing procedure for linear regression
+\end_layout
+
+\begin_layout Itemize
+Learn parameter 
+\begin_inset Formula $\Theta$
+\end_inset
+
+from training data (minimizing training error 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+), the 70%.
+\end_layout
+
+\begin_layout Itemize
+Compute test set error:
+\begin_inset Formula 
+\[
+J_{test}(\Theta)=\frac{1}{2m_{test}}{\displaystyle \sum_{i=1}^{m_{test}}(h_{\Theta}(x_{test}^{(i)})-y_{test}^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Average squared error as measured on the test set.
+ This is for linear regression and squared error metric.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Training/testing procedure for logistic regression
+\end_layout
+
+\begin_layout Itemize
+Learn parameter 
+\begin_inset Formula $\Theta$
+\end_inset
+
+from training data
+\end_layout
+
+\begin_layout Itemize
+Compute test set error:
+\begin_inset Formula 
+\[
+J_{test}(\Theta)=-\frac{1}{m_{test}}{\displaystyle \sum_{i=1}^{m_{test}}y_{test}^{(i)}log}(h_{\theta}(x_{test}^{(i)}))+(1-y_{test}^{(i)})log(h_{\Theta}(x_{test}^{(i)}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Misclassification error (or 0/1 misclassification error) - alternative test
+ set metric, may be easier to interpret.
+ 0 - right, 1 - wrong
+\begin_inset Formula 
+\[
+err(h_{\Theta}(x),\, y)=\begin{cases}
+1 & if\, h_{\Theta}(x)\geq0.5,\, y=0\,\\
+ & or\, if\, h_{\Theta}(x)<0.5,\, y=1\\
+0 & otherwise
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Test\, error=\frac{1}{m_{test}}{\displaystyle \sum_{i=1}^{m_{test}}err(h_{\Theta}(x_{test}^{(i)}),\, y_{test}^{(i)})}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Test error is the fraction of examples in test set that the hypothesis has
+ mislabeled.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Model selection and training/validation/test sets
+\end_layout
+
+\begin_layout Standard
+Suppose we'd like to decide what degree of a polynomial to fit to the data
+ set or choose a regularization parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ for learning algo.
+ These are called model selection problems.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Overfitting example
+\end_layout
+
+\begin_layout Standard
+Once parameters 
+\begin_inset Formula $\Theta_{0},\,\Theta_{1},\,...,\Theta_{4}$
+\end_inset
+
+were fit to some set of data (training set), the error of the parameters
+ as measured on that data (the training error 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ is likely to be lower than the actual generalization error.
+\end_layout
+
+\begin_layout Standard
+A hypothesis that fits well for the training set doesn't necessarily fit
+ well for examples not in the training set.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Model selection
+\end_layout
+
+\begin_layout Standard
+Let's say you try to choose what degree polynomial to fit to data:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+ 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\longrightarrow d=1,\,\Theta^{(1)}\rightarrow J_{test}(\Theta^{(1)})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+ 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\Theta_{2}x^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\longrightarrow d=2,\,\Theta^{(2)}\rightarrow J_{test}(\Theta^{(2)})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\ldots+\Theta_{3}x^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\longrightarrow d=3,\,\Theta^{(3)}\rightarrow J_{test}(\Theta^{(3)})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.
+ 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\ldots+\Theta_{10}x^{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\longrightarrow d=10,\,\Theta^{(10)}\rightarrow J_{test}(\Theta^{(10)})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d=degree\, of\, polynomial$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's say you want to choose one of those models and also get some estimate
+ your fitted hypothesis would generalize to new examples.
+ You could take the first model and minimize the training error, that would
+ give you some parameter vector 
+\begin_inset Formula $\Theta^{(d)}$
+\end_inset
+
+.
+ One thing we could do then is take those parameters and look at the test
+ set errors 
+\begin_inset Formula $J_{test}(\Theta^{(d)})$
+\end_inset
+
+.
+ So take each of the hypotheses with the corresponding parameters and measure
+ the performance on the test set.
+ Then in order to select one of the models, we can select a model with the
+ 
+\series bold
+lowest test set error
+\series default
+.
+ Let's say for this example it was the fifth order model 
+\begin_inset Formula $J_{test}(\Theta^{(5)})=\Theta_{0}+\ldots+\Theta_{5}x^{5}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+How well does the model generalize? 
+\end_layout
+
+\begin_layout Standard
+We could look at how well the hypothesis had done on the test set.
+ The problem is this will not be a fair estimate of how well it generalizes.
+ 
+\begin_inset Formula $J_{test}(\Theta^{(5)})$
+\end_inset
+
+ is likely to be an optimistic estimate of generalization error.
+ I.e.
+ our extra parameter (d=degreee of a polynomial) is fit to test set.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Evaluating your hypothesis
+\end_layout
+
+\begin_layout Standard
+To address the problem in the model selection setting if we want to evaluate
+ a hypothesis, this is what we do.
+ Given a data set, instead of splitting it into 2, split it 3 pieces:
+\end_layout
+
+\begin_layout Itemize
+training set ~ 60%
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(x^{(1)},\, y^{(1)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x^{(2)},\, y^{(2)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\vdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x^{(m)},\, y^{(m)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+cross validation set or validation set (CV) ~ 20%
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(x_{cv}^{(1)},\, y_{cv}^{(1)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x_{cv}^{(2)},\, y_{cv}^{(2)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\vdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x_{cv}^{(m_{cv})},\, y_{cv}^{(m_{cv})})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+test set ~ 20%
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(x_{test}^{(1)},\, y_{test}^{(1)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x_{test}^{(2)},\, y_{test}^{(2)})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\vdots
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(x_{test}^{(m_{test})},\, y_{test}^{(m_{test})})
+\]
+
+\end_inset
+
+
+\begin_inset Formula $m_{cv}$
+\end_inset
+
+= number of CV examples 
+\begin_inset Formula $(x_{cv}^{(i)},\, y_{cv}^{(i)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m_{test}$
+\end_inset
+
+= number of test examples
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Training/validation/test error
+\end_layout
+
+\begin_layout Standard
+Training error:
+\begin_inset Formula 
+\[
+J_{train}(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cross Validation error:
+\begin_inset Formula 
+\[
+J_{cv}(\Theta)=\frac{1}{2m_{cv}}{\displaystyle \sum_{i=1}^{m_{cv}}(h_{\Theta}(x_{cv}^{(i)})-y_{cv}^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Test error:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J_{test}(\Theta)=\frac{1}{2m_{test}}{\displaystyle \sum_{i=1}^{m_{test}}(h_{\Theta}(x_{test}^{(i)})-y_{test}^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So when faced with a model selection problem, we're going to use the validation
+ set.
+ We'll take the first model and minimize the cost function and that will
+ give some parameter vector 
+\begin_inset Formula $\Theta$
+\end_inset
+
+for the linear model.
+ We do the same for quadratic up to 
+\begin_inset Formula $10^{th}$
+\end_inset
+
+ degree polynomial (as per ex.).
+ Then instead of testing these on a test set, we'll test them on the cross
+ validation set.
+ Next, we pick the hypothesis with the lowest cross validation error.
+ Let's say it's 
+\begin_inset Formula $4^{th}$
+\end_inset
+
+.
+ We now fit the parameter 
+\begin_inset Formula $d$
+\end_inset
+
+ using the validation set.
+ The degree of polynomial is no longer fit to the test set.
+ We can use the test set and we can use it to estimate the generalization
+ error of the model that was selected
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1.
+ 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\longrightarrow{\displaystyle \min_{\Theta}J(\Theta)}\rightarrow\Theta^{(1)}\rightarrow J_{cv}(\Theta^{(1)})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+ 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\Theta_{2}x^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\longrightarrow{\displaystyle \min_{\Theta}J(\Theta)}\rightarrow\Theta^{(2)}\rightarrow J_{cv}(\Theta^{(2)})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\ldots+\Theta_{3}x^{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle \longrightarrow\min_{\Theta}J(\Theta)}\rightarrow\Theta^{(3)}\rightarrow J_{cv}(\Theta^{(3)})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.
+ 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\ldots+\Theta_{10}x^{10}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\longrightarrow{\displaystyle \min_{\Theta}J(\Theta)}\rightarrow\Theta^{(10)}\rightarrow J_{cv}(\Theta^{(10)})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pick 
+\begin_inset Formula $\Theta_{0}+\Theta_{1}x_{1}+\ldots+\Theta_{4}x^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Estimate generalization error for test set 
+\begin_inset Formula $J_{test}(\Theta^{(4)})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Diagnosing bias vs.
+ variance
+\end_layout
+
+\begin_layout Standard
+If you run a learning algorithm and it doesn't do as well as you were hoping,
+ almost all the time it will be either an under or over fitting problem
+ - high bias or high variance.
+ It's important to figure out which one or little of both you have.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Bias/variance
+\end_layout
+
+\begin_layout Standard
+High bias - underfit
+\end_layout
+
+\begin_layout Standard
+High variance - overfit
+\end_layout
+
+\begin_layout Standard
+Training error: 
+\begin_inset Formula $J_{train}(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cross Validation error: 
+\begin_inset Formula $J_{cv}(\Theta)=\frac{1}{2m_{cv}}{\displaystyle \sum_{i=1}^{m_{cv}}(h_{\Theta}(x_{cv}^{(i)})-y_{cv}^{(i)})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can plot training and cross validation errors:
+\end_layout
+
+\begin_layout Standard
+horizontal = degree of polynomial
+\end_layout
+
+\begin_layout Standard
+vertical = error
+\end_layout
+
+\begin_layout Standard
+As we increase the degree of the polynomial, we'll be able to fit our training
+ set better and better.
+ So if 
+\begin_inset Formula $d=1$
+\end_inset
+
+ we're going to have a relatively high training error, if a very high degree
+ polynomial, we can have an error close to 0.
+ For cross validation, we may have a very high validation error for 
+\begin_inset Formula $d=1$
+\end_inset
+
+, for 
+\begin_inset Formula $d=2$
+\end_inset
+
+, we can have a much lower error, because we're finding a much better fit
+ to the data.
+ Conversely if we have a high degree, we're again going to have a high error,
+ because we're overfitting.
+\end_layout
+
+\begin_layout Standard
+Suppose your learning algorithm is performing less well than you were hoping.
+ 
+\begin_inset Formula $(J_{cv}(\Theta)$
+\end_inset
+
+ or 
+\begin_inset Formula $J_{test}(\Theta)$
+\end_inset
+
+ is high).
+ 
+\end_layout
+
+\begin_layout Standard
+Is it a bias problem or a variance problem? [7:40]
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Bias
+\series default
+ (uderfit): 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Cross validation error: high
+\end_layout
+
+\begin_layout Itemize
+Training errors: high
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Variance
+\series default
+ (overfit): 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Training error is going to be low 
+\end_layout
+
+\begin_layout Itemize
+Cross validation error will be much higher than training error
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+\noindent
+
+\series bold
+Regularization and bias/variance
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Linear regression with regularization
+\end_layout
+
+\begin_layout Standard
+Suppose we're fitting a high order polynomial and we're going to use regularizat
+ion to prevent overfitting.
+\end_layout
+
+\begin_layout Standard
+Model: 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\Theta_{2}x^{2}+\Theta_{3}x^{3}+\Theta_{4}x^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $J(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}+\frac{\lambda}{2m}{\displaystyle \sum_{i=1}^{m}\Theta_{j}^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a house price to size example, let's consider 3 cases:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Large
+\series default
+ 
+\begin_inset Formula $\mathbf{\lambda}$
+\end_inset
+
+, High bias (
+\series bold
+underfit
+\series default
+) - All the 
+\begin_inset Formula $\Theta s$
+\end_inset
+
+ will be heavily penalized and we'll end up with most of those parameters
+ 
+\begin_inset Formula $\thickapprox0$
+\end_inset
+
+ and 
+\begin_inset Formula $h_{\Theta}(x)\thickapprox\Theta_{0}$
+\end_inset
+
+.
+ We'll probably end up with a horizontal straight line that doesn't fit
+ the data.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Small
+\series default
+ 
+\begin_inset Formula $\mathbf{\lambda}$
+\end_inset
+
+, high variance (
+\series bold
+overfit
+\series default
+).
+\end_layout
+
+\begin_layout Standard
+Only for an intermediate value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+that is neither too large nor too small that we end up with 
+\begin_inset Formula $\Theta s$
+\end_inset
+
+ that give us a reasonable fit.
+\end_layout
+
+\begin_layout Standard
+Let's define: 
+\begin_inset Formula 
+\[
+J_{train}(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Previously when we were not using regularization, we defined 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+ to be the same as 
+\begin_inset Formula $J_{train}(\Theta)$
+\end_inset
+
+ as the cost function but when we're using regularization it'll be defined
+ as average square error on training set without the regularization term.
+ We also define:
+\begin_inset Formula 
+\[
+J_{train}(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{cv}(\Theta)=\frac{1}{2m_{cv}}{\displaystyle \sum_{i=1}^{m_{cv}}(h_{\Theta}(x_{cv}^{(i)})-y_{cv}^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J_{test}(\Theta)=\frac{1}{2m_{test}}{\displaystyle \sum_{i=1}^{m_{test}}(h_{\Theta}(x_{test}^{(i)})-y_{test}^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Average sum of squares on the training, validation and test sets.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Choosing the regularization parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Model:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\Theta_{2}x^{2}+\Theta_{3}x^{3}+\Theta_{4}x^{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $J(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}}+\frac{\lambda}{2m}{\displaystyle \sum_{j=1}^{m}\Theta_{j}^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What we can do is have a range of values for 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ We can go larger than 10
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+ Try 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rightarrow{\displaystyle \min_{\Theta}J(\Theta)\rightarrow\Theta^{(1)}\rightarrow J_{cv}(\Theta^{(1)})}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.
+ Try 
+\begin_inset Formula $\lambda=0.01$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rightarrow{\displaystyle \min_{\Theta}J(\Theta)\rightarrow\Theta^{(2)}\rightarrow J_{cv}(\Theta^{(2)})}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.
+ Try 
+\begin_inset Formula $\lambda=0.02$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rightarrow{\displaystyle \min_{\Theta}J(\Theta)\rightarrow\Theta^{(3)}\rightarrow J_{cv}(\Theta^{(3)})}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.
+ Try 
+\begin_inset Formula $\lambda=0.04$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rightarrow{\displaystyle \min_{\Theta}J(\Theta)\rightarrow\Theta^{(4)}\rightarrow J_{cv}(\Theta^{(4)})}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.
+ Try 
+\begin_inset Formula $\lambda=0.08$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rightarrow{\displaystyle \min_{\Theta}J(\Theta)\rightarrow\Theta^{(5)}\rightarrow J_{cv}(\Theta^{(5)})}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.
+ Try 
+\begin_inset Formula $\lambda=10$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rightarrow{\displaystyle \min_{\Theta}J(\Theta)\rightarrow\Theta^{(12)}\rightarrow J_{cv}(\Theta^{(12)})}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pick, say 
+\begin_inset Formula $\Theta^{(5)}$
+\end_inset
+
+, the one with lowest cross validation error.
+ Test error: 
+\begin_inset Formula $J_{test}(\Theta^{(5)})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can take each of these and minimize the cost function 
+\begin_inset Formula $J(\Theta)$
+\end_inset
+
+.
+ That would give some parameter vector 
+\begin_inset Formula $\Theta^{(1)}$
+\end_inset
+
+.
+ Then we can use the cross validation set to evaluate the 
+\begin_inset Formula $\Theta^{(i)}$
+\end_inset
+
+parameters and pick whichever of those models has the lowest cross validation
+ error.
+ Finally we take the parameter and look how well it does on the test set.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Bias/variance as a function of the regularization parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}+\frac{\lambda}{2m}{\displaystyle \sum_{i=1}^{m}\Theta_{j}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J_{train}(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{cv}(\Theta)=\frac{1}{2m_{cv}}{\displaystyle \sum_{i=1}^{m_{cv}}(h_{\Theta}(x_{cv}^{(i)})-y_{cv}^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+How well do 
+\begin_inset Formula $J_{train}(\Theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{cv}(\Theta)$
+\end_inset
+
+ do as we vary 
+\begin_inset Formula $\lambda$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is small, we're not running regularization and run a risk of overfitting,
+ whereas if 
+\begin_inset Formula $\lambda$
+\end_inset
+
+is large, then we run a risk of having a bias problem.
+ 
+\end_layout
+
+\begin_layout Itemize
+For small values of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, the regularization term goes away and we're just minimizing the square
+ error.
+ 
+\begin_inset Formula $J_{train}(\Theta)$
+\end_inset
+
+ will tend to increase as 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ increases, because large value of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ corresponds to high bias, where as small corresponds to fitting a high
+ degree polynomial to the data set.
+ For cross validation error, when we have a large 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ we may end up with high bias, where as with low 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ then we may be overfitting - high variance.
+ An intermediate lambda will work fine.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Learning curves
+\end_layout
+
+\begin_layout Standard
+Used for sanity check or improve performance of an algorithm, or determine
+ bias or variance errors.
+\end_layout
+
+\begin_layout Standard
+We plot:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+J_{train}(\Theta)=\frac{1}{2m}{\displaystyle \sum_{i=1}^{m}(h_{\Theta}(x^{(i)})-y^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+J_{cv}(\Theta)=\frac{1}{2m_{cv}}{\displaystyle \sum_{i=1}^{m_{cv}}(h_{\Theta}(x_{cv}^{(i)})-y_{cv}^{(i)})^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with:
+\end_layout
+
+\begin_layout Itemize
+horizontal axis: 
+\begin_inset Formula $m$
+\end_inset
+
+ (training set size)
+\end_layout
+
+\begin_layout Itemize
+vertical: error
+\end_layout
+
+\begin_layout Standard
+We'll artificially reduce the number of examples, from 100 to, say, 10,
+ and plot training and cross validation errors.
+\end_layout
+
+\begin_layout Standard
+Let's say we're fitting a quadratic function: 
+\begin_inset Formula $h_{\Theta}(x)=\Theta_{0}+\Theta_{1}x+\Theta_{2}x^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For 1, 2, 3 training example, quadratic function will fit perfectly, so
+ 
+\begin_inset Formula $J_{train}(\Theta)\thickapprox0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So if the training set is small, the error will be small as well and easy
+ to fit the set.
+\end_layout
+
+\begin_layout Standard
+When the trainig set becomes larger, it becomes harder to fit the hypothesis
+ and the average training error increases, for larger m.
+\end_layout
+
+\begin_layout Standard
+For a small training set, we're not going to be able to generalize well,
+ so the cross validation error will be large and will decrease the more
+ training examples we test on.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+High bias - underfit
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $J_{cv}(\Theta)$
+\end_inset
+
+ will start with a high error for small 
+\begin_inset Formula $m$
+\end_inset
+
+ and decrease slightly as 
+\begin_inset Formula $m$
+\end_inset
+
+ becomes larger, however it'll flatten out pretty fast.
+\end_layout
+
+\begin_layout Standard
+The training error will be small for small 
+\begin_inset Formula $m$
+\end_inset
+
+ and will increase finally flattening out for large 
+\begin_inset Formula $m$
+\end_inset
+
+s, close to the cross validation error.
+ The performance of 
+\begin_inset Formula $J_{train}$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{cv}$
+\end_inset
+
+ will be similar.
+ However, both 
+\begin_inset Formula $J_{train}$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{cv}$
+\end_inset
+
+ are ultimately high.
+\end_layout
+
+\begin_layout Standard
+If a learning algorithm is suffering from high bias, gettig more training
+ data will not (by itself) help much.
+ e.g.
+ you'll get a straight line for quadratic function fitting examples regardless
+ of whether you have 5 training examples or 100.
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+High variance - overfit
+\end_layout
+
+\begin_layout Standard
+If you have a very small trainig set and fitting high order polynomial and
+ we're using a small 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, we'll end up with an overfit, 
+\begin_inset Formula $J_{train}(\Theta)$
+\end_inset
+
+ will be small.
+ As the training size increases, the error will still be pretty low.
+ The cross validation error will remain high even if we get a high training
+ set because the hypothesis is overfitting.
+ The indicative diagnostic that we have a high variance problem is that
+ we have a large gap between 
+\begin_inset Formula $J_{cv}(\Theta)$
+\end_inset
+
+ and 
+\begin_inset Formula $J_{train}(\Theta)$
+\end_inset
+
+.
+ However the training and cross validation errors are converging.
+ If we were to extrapolate a graph to the right, cross validation would
+ keep going down and training error up.
+ 
+\end_layout
+
+\begin_layout Standard
+If a learning algorithm is suffering from high variance, getting more training
+ data is likely to help.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+
+\series bold
+Deciding What to Do Next Revisited
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Debugging a learning algorithm:
+\end_layout
+
+\begin_layout Standard
+Suppose you have implemented regularized linear regression to predict housing
+ prices.
+ However, when you test your hypothesis in a new set of houses, you find
+ that it makes unaccpetably large errors in its prediction.
+ What should you try next?
+\end_layout
+
+\begin_layout Itemize
+Get 
+\series bold
+more training examples
+\series default
+: 
+\series bold
+fixes
+\series default
+ 
+\series bold
+high variance
+\end_layout
+
+\begin_layout Itemize
+Try 
+\series bold
+smaller sets of features
+\series default
+: 
+\series bold
+fixes
+\series default
+ 
+\series bold
+high variance
+\end_layout
+
+\begin_layout Itemize
+Try 
+\series bold
+getting
+\series default
+ 
+\series bold
+additional features
+\series default
+: may 
+\series bold
+fix
+\series default
+ 
+\series bold
+high bias
+\end_layout
+
+\begin_layout Itemize
+Try 
+\series bold
+adding polynomial features
+\series default
+ (
+\begin_inset Formula $x_{1}^{2},\, x_{2}^{2},\, x_{1}x_{2},\, etc)$
+\end_inset
+
+: 
+\series bold
+fixes high bias
+\end_layout
+
+\begin_layout Itemize
+Try 
+\series bold
+decreasing 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\series default
+: 
+\series bold
+fixes high bias
+\end_layout
+
+\begin_layout Itemize
+Try 
+\series bold
+increasing 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\series default
+: 
+\series bold
+fixes high variance
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Neural networks and overfitting
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Small
+\begin_inset Quotes erd
+\end_inset
+
+ neural network (fewer parameters; more prone to underfitting), computationally
+ cheaper.
+\end_layout
+
+\begin_layout Standard
+Alternatively, 
+\begin_inset Quotes eld
+\end_inset
+
+large
+\begin_inset Quotes erd
+\end_inset
+
+ neural network (more parameters; more prone to overfitting).
+ Computationally more expensive.
+ Use regularization, 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ to address overfitting.
+ Often using a large network is more effective than using a smaller one.
+ The number of hidden layers - try training several and see which performs
+ best for the cross validation set.
+\end_layout
+
+\begin_layout Standard
+Suppose you fit a neural network with one hidden layer to a training set.
+ You find that the cross validation error 
+\begin_inset Formula $J_{cv}(\Theta)\gg J_{train}(\Theta)$
+\end_inset
+
+.
+ Increasing the number of hidden units is unlikely to help, because it is
+ currently suffering from high variance.
+\end_layout
+
+\end_body
+\end_document

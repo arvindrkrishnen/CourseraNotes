@@ -1,0 +1,1771 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Neural Networks
+\end_layout
+
+\begin_layout Section
+Neural Networks: Representation
+\end_layout
+
+\begin_layout Subsection
+Non-linear Hypotheses
+\end_layout
+
+\begin_layout Standard
+Logistic regression applied to classification, can work for a small number
+ of features, say 2 but for a lot of ML problems we have many more features.
+\end_layout
+
+\begin_layout Standard
+Take a housing prediction, say that a house will be sold within the next
+ 6 months.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $number\, of\, features=n+n*(n+1)/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The number of features grows asymptotically in 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It's computationally expensive to work with that many features.
+ One thing to do could be work only with quadratic features, but that isn't
+ enough features, you can fit ellipses, but nont complex polynomials.
+\end_layout
+
+\begin_layout Standard
+We need a non-linear hypothesis because when classifying, say images, we
+ have a large number of features lying in different areas.
+\end_layout
+
+\begin_layout Standard
+For third order polynomial features there will be more than 
+\begin_inset Formula $O(n^{3})$
+\end_inset
+
+ such features.
+\end_layout
+
+\begin_layout Subsection
+Neurons and the Brain
+\end_layout
+
+\begin_layout Standard
+Originally developed to have computers mimic the brain.
+\end_layout
+
+\begin_layout Standard
+Widely used in 80s and early 90s with diminishing popularity until recently.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Quotes eld
+\end_inset
+
+one learning algorithm
+\begin_inset Quotes erd
+\end_inset
+
+ hypothesis.
+ Auditory cortex learns to see, say if, say, the visual nerves get cut.
+ Neuro rewiring experiments.
+ 
+\end_layout
+
+\begin_layout Standard
+Metin & Frost, 1989.
+\end_layout
+
+\begin_layout Standard
+BrainPort; welsh & Blasch, 1997; 
+\end_layout
+
+\begin_layout Standard
+Nage et al., 2005; 
+\end_layout
+
+\begin_layout Standard
+Constantine-Paton & Law, 2009;
+\end_layout
+
+\begin_layout Subsection
+Model Representation I
+\end_layout
+
+\begin_layout Standard
+Neuron model - Logistic unit:
+\end_layout
+
+\begin_layout Itemize
+input
+\end_layout
+
+\begin_layout Itemize
+output
+\end_layout
+
+\begin_layout Itemize
+bias unit 
+\begin_inset Formula $x_{0}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+sigmoid (logistic) activation function 
+\begin_inset Formula $g(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Formula 
+\[
+h_{\Theta}(x)=\frac{1}{1+e^{-\Theta^{T}x}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x=\left[\begin{array}{c}
+x_{0}\\
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Formula 
+\[
+\Theta=\left[\begin{array}{c}
+\Theta_{0}\\
+\Theta_{1}\\
+\Theta_{2}\\
+\Theta_{3}
+\end{array}\right]\longrightarrow weights\,(parameters)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+g(z)=\frac{1}{1+e^{-z}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z=\Theta^{T}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neural network is a network of the above units.
+\end_layout
+
+\begin_layout Itemize
+Layer 1 - input layer, input features 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Layer 2 - hidden layer (values not in training set) 
+\begin_inset Formula $a_{i}^{(j)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Layer 3 - output layer - outputs the final value computed by the hypothesis
+ 
+\begin_inset Formula $h_{\Theta}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}^{(j)}\longrightarrow$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+activation
+\begin_inset Quotes erd
+\end_inset
+
+ of unit 
+\begin_inset Formula $i$
+\end_inset
+
+ in layer 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+activation
+\begin_inset Quotes erd
+\end_inset
+
+ is the value computed and output by a specific ?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Theta^{(j)}\longrightarrow$
+\end_inset
+
+matrix of weights controlling function mapping from layer 
+\begin_inset Formula $j$
+\end_inset
+
+ to layer 
+\begin_inset Formula $j+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Figure at 8:50:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{1}^{(2)}=g(\Theta_{10}^{(1)}x_{0}+\Theta_{11}^{(1)}x_{1}+\Theta_{12}^{(1)}x_{2}+\Theta_{13}^{(1)}x_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{2}^{(2)}=g(\Theta_{20}^{(1)}x_{0}+\Theta_{21}^{(1)}x_{1}+\Theta_{22}^{(1)}x_{2}+\Theta_{23}^{(1)}x_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{3}^{(2)}=g(\Theta_{30}^{(1)}x_{0}+\Theta_{31}^{(1)}x_{1}+\Theta_{32}^{(1)}x_{2}+\Theta_{33}^{(1)}x_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{\Theta}(x)=a_{1}^{(3)}=g(\Theta_{10}^{(2)}a_{0}^{(2)}+\Theta_{11}^{(2)}a_{1}^{(2)}+\Theta_{12}^{(2)}a_{2}^{(2)}+\Theta_{13}^{(2)}a_{3}^{(2)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Theta^{(1)}\in\mathbb{R}^{3\times4}$
+\end_inset
+
+for 3 input, 3 hidden layers, according to:
+\end_layout
+
+\begin_layout Standard
+If a network has 
+\begin_inset Formula $s_{j}$
+\end_inset
+
+units in layer 
+\begin_inset Formula $j$
+\end_inset
+
+, 
+\begin_inset Formula $s_{j+1}$
+\end_inset
+
+unites in layer 
+\begin_inset Formula $j+1$
+\end_inset
+
+, then 
+\begin_inset Formula $\Theta^{(j)}$
+\end_inset
+
+will be of dimension 
+\begin_inset Formula $s_{j+1}\times(s_{j}+1).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So a neural network maps from a space of predictions 
+\begin_inset Formula $h_{\Theta}(x)$
+\end_inset
+
+ parameterized by 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ to some space of predicitons 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ As we vary 
+\begin_inset Formula $\Theta$
+\end_inset
+
+ we get a different mapping.
+\end_layout
+
+\begin_layout Subsection
+Model Representation II
+\end_layout
+
+\begin_layout Subsubsection
+Forward propagation: Vectorized implementation
+\end_layout
+
+\begin_layout Standard
+Consider the network:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{1}^{(2)}=g(\Theta_{10}^{(1)}x_{0}+\Theta_{11}^{(1)}x_{1}+\Theta_{12}^{(1)}x_{2}+\Theta_{13}^{(1)}x_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{2}^{(2)}=g(\Theta_{20}^{(1)}x_{0}+\Theta_{21}^{(1)}x_{1}+\Theta_{22}^{(1)}x_{2}+\Theta_{23}^{(1)}x_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a_{3}^{(2)}=g(\Theta_{30}^{(1)}x_{0}+\Theta_{31}^{(1)}x_{1}+\Theta_{32}^{(1)}x_{2}+\Theta_{33}^{(1)}x_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{\Theta}(x)=a_{1}^{(3)}=g(\Theta_{10}^{(2)}a_{0}^{(2)}+\Theta_{11}^{(2)}a_{1}^{(2)}+\Theta_{12}^{(2)}a_{2}^{(2)}+\Theta_{13}^{(2)}a_{3}^{(2)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+definitions:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+z_{1}^{(2)}=\Theta_{10}^{(1)}x_{0}+\Theta_{11}^{(1)}x_{1}+\Theta_{12}^{(1)}x_{2}+\Theta_{13}^{(1)}x_{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so 
+\begin_inset Formula $a_{1}^{(2)}=g(z_{1}^{(2)})$
+\end_inset
+
+ and similarly for 
+\begin_inset Formula $a_{2}^{(2)}$
+\end_inset
+
+and 
+\begin_inset Formula $a_{3}^{(2)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Formula $z$
+\end_inset
+
+ values are weighted linear combinations of input values 
+\begin_inset Formula $x_{0},\, x_{1},\, x_{2},\, x_{3}$
+\end_inset
+
+that go into the particular neuron.
+\end_layout
+
+\begin_layout Standard
+Let's define:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Formula 
+\[
+x=\left[\begin{array}{c}
+x_{0}\\
+x_{1}\\
+x_{2}\\
+x_{3}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+z^{(2)}=\left[\begin{array}{c}
+z_{1}^{(2)}\\
+z_{2}^{(2)}\\
+z_{3}^{(2)}
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+now we can vectorize:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z^{(2)}=\Theta^{(1)}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a^{(2)}=g(z^{(2)})\quad,\, z^{(2)}\in\mathbb{R}^{3}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $a^{(2)}\in\mathbb{R}^{3}\therefore$
+\end_inset
+
+the activation 
+\begin_inset Formula $g$
+\end_inset
+
+ applies sigmoid function element wise to each of 
+\begin_inset Formula $z^{(2)}$
+\end_inset
+
+elements.
+\end_layout
+
+\begin_layout Standard
+We can also think of inputs as activations 
+\begin_inset Formula $a^{(1)}$
+\end_inset
+
+, so we can rewrite:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z^{(2)}=\Theta^{(1)}a^{(1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+add bias unit: 
+\begin_inset Formula 
+\[
+a_{0}^{(2)}=1\quad,a^{(2)}\in\mathbb{R}^{4}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z^{(3)}=\Theta^{(2)}a^{(2)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally the activation of the only unit in the output layer,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{\Theta}(x)=a^{(3)}=g(z^{(3)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This process is also called 
+\series bold
+forward propagation
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Neural Network learning its own features.
+\end_layout
+
+\begin_layout Standard
+The process is similar to logistic regression where
+\begin_inset Formula 
+\[
+h_{\Theta}(x)=g(\Theta_{10}^{(2)}a_{0}^{(2)}+\Theta_{11}^{(2)}a_{1}^{(2)}+\Theta_{12}^{(2)}a_{2}^{(2)}+\Theta_{13}^{(2)}a_{3}^{(2)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+but rather than using features 
+\begin_inset Formula $x_{1},\, x_{2},\,\dots x_{n}$
+\end_inset
+
+, we use 
+\begin_inset Formula $a_{1},\, a_{2},\,\dots x_{n}$
+\end_inset
+
+.
+ These features are themselves learned as functions of the input.
+ Concretely, the function mapping from layer 1 to layer 2 is determined
+ by some other set of parameters 
+\begin_inset Formula $\Theta_{1}$
+\end_inset
+
+.
+ So instead of the network being constrained by feeding the features 
+\begin_inset Formula $x_{1},\, x_{2},\,\dots x_{n}$
+\end_inset
+
+, it gets to learn its own set of features, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $a_{1},\, a_{2},\,\dots x_{n}$
+\end_inset
+
+, to feed into logistic regression.
+ You can learn a better hypothesis if you were constrained.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There can be different network architectures.
+ Each layers can learn more complex features.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Octave implementation
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+loops:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+% Theta1 is Theta with superscript "(1)" from lecture 
+\end_layout
+
+\begin_layout Plain Layout
+
+% ie, the matrix of parameters for the mapping from layer 1 (input) to layer
+ 2 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Theta1 has size 3x3 
+\end_layout
+
+\begin_layout Plain Layout
+
+% Assume 'sigmoid' is a built-in function to compute 1 / (1 + exp(-z))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+a2 = zeros (3, 1); 
+\end_layout
+
+\begin_layout Plain Layout
+
+for i = 1:3
+\end_layout
+
+\begin_layout Plain Layout
+
+  for j = 1:3
+\end_layout
+
+\begin_layout Plain Layout
+
+    a2(i) = a2(i) + x(j) * Theta1(i, j);
+\end_layout
+
+\begin_layout Plain Layout
+
+  end
+\end_layout
+
+\begin_layout Plain Layout
+
+  a2(i) = sigmoid (a2(i));
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+vectorized:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+a2 = sigmoid(Theta1 * x);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Examples and Intuitions I
+\end_layout
+
+\begin_layout Standard
+Non-linear classification example: XOR/XNOR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1},\, x_{2}$
+\end_inset
+
+are binary 
+\begin_inset Formula $(0\, or\,1)$
+\end_inset
+
+.
+ We want to learn a non-linear boundary that separates positive and negative
+ examples.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y=x_{1}\, XOR\, x_{2}$
+\end_inset
+
+, however it turns out XNOR is better suited, so 
+\begin_inset Formula 
+\[
+y=x_{1}\, XNOR\, x_{2}=NOT(x_{1}\, XOR\, x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's start with a simpler network: AND
+\end_layout
+
+\begin_layout Standard
+inputs:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1,}\, x_{2}\in\left\{ 0,\,1\right\} 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+target labels:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=x_{1}\, AND\, x_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+you can associate edges of the network with 
+\begin_inset Formula $\Theta$
+\end_inset
+
+values, so:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Theta_{10}^{(1)}=-30\longrightarrow for\, x_{0}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Theta_{11}^{(1)}=20
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Theta_{12}^{(1)}=20
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and so
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h_{\Theta}(x)=g(-30+20x_{1}+20x_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You can now plot the sigmoid function and estimate 
+\begin_inset Formula $h_{\Theta}(x)$
+\end_inset
+
+ 
+\begin_inset Formula $\forall_{x_{1},\, x_{2}\in\{0,1\}}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Look at the four possible input values for 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ and what the hypothesis will output.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h_{\Theta}(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g(-30)\approx0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g(-30+20)=g(-10)\approx0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g(-10)\approx0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $g(10)\approx1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+if you look at the results of the hypotheses, that's exactly the AND function.
+\end_layout
+
+\begin_layout Subsection
+Examples and Intuitions II
+\end_layout
+
+\begin_layout Standard
+For negations, put a large negative weight infront the variable you want
+ to negate.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{1}\, XNOR\, x_{2}$
+\end_inset
+
+ 04:30
+\end_layout
+
+\begin_layout Standard
+Use 2 activations for layer 2: 
+\begin_inset Formula $x_{1}\, AND\, x_{2}$
+\end_inset
+
+and 
+\begin_inset Formula $(NOT\, x_{1})\, AND\,(NOT\, x_{2})$
+\end_inset
+
+.
+ Activation for the output layer is 
+\begin_inset Formula $x_{1}\, OR\, x_{2}$
+\end_inset
+
+, add bias unit.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}^{(2)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $h_{\Theta}(x)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Multiclass Classification
+\end_layout
+
+\begin_layout Standard
+We have more than one category that we want to distinguish between.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+One-vs-all
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+say 
+\begin_inset Formula $h_{\Theta}(x)\in\mathbb{R}^{4}$
+\end_inset
+
+and:
+\end_layout
+
+\begin_layout Standard
+training set: 
+\begin_inset Formula 
+\[
+(x^{(1)},\, y^{(1)}),\,(x^{(2)},\, y^{(2)}),\,...,\,(x^{(i)},\, y^{(i)}),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+one training example is one pair of:
+\begin_inset Formula 
+\[
+(x^{(i)},\, y^{(i)})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $x^{(i)}$
+\end_inset
+
+is an image with one of the objects and 
+\begin_inset Formula $y^{(i)}$
+\end_inset
+
+is one of the below vectors.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The output layer has essentially 4 logistic regression classifiers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $h_{\Theta}(x)\in\mathbb{R}^{4}$
+\end_inset
+
+ one of: 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1\\
+0\\
+0\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+1\\
+0\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+0\\
+1\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+0\\
+0\\
+1
+\end{array}\right]
+\]
+
+\end_inset
+
+ for pedestrian, car, motorcycle, truck respectively.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y^{(i)}$
+\end_inset
+
+ one of: 
+\begin_inset Formula 
+\[
+\left[\begin{array}{c}
+1\\
+0\\
+0\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+1\\
+0\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+0\\
+1\\
+0
+\end{array}\right],\,\left[\begin{array}{c}
+0\\
+0\\
+0\\
+1
+\end{array}\right]
+\]
+
+\end_inset
+
+ for pedestrian, car, motorcycle, truck respectively.
+\end_layout
+
+\end_body
+\end_document
