@@ -1,0 +1,900 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+The Master Method (Theorem)
+\end_layout
+
+\begin_layout Subsection
+Recurrence Format
+\end_layout
+
+\begin_layout Enumerate
+Base Case: 
+\begin_inset Formula $T(n)\le$
+\end_inset
+
+a constant for all sufficiently small n
+\end_layout
+
+\begin_layout Enumerate
+For all larger n:
+\begin_inset Formula 
+\[
+T(n)\le aT(\frac{n}{b})+O(n^{d})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Where:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+ = number of recursive calls (
+\begin_inset Formula $\ge1$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $b$
+\end_inset
+
+ = input size shrinkage factor (
+\begin_inset Formula $>1$
+\end_inset
+
+)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $d$
+\end_inset
+
+ = exponent in running time of 
+\begin_inset Quotes eld
+\end_inset
+
+combine step
+\begin_inset Quotes erd
+\end_inset
+
+ (
+\begin_inset Formula $\ge0$
+\end_inset
+
+) (outside of loop)
+\begin_inset Newline newline
+\end_inset
+
+[a, b, d independent of n]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(n)=\begin{cases}
+O(n^{d}\log n) & \text{if }a=b^{d}\\
+O(n^{d}) & \text{if }a<b^{d}\\
+O(n^{\log_{b}a}) & \text{if }a>b^{d}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In first case the base of 
+\begin_inset Formula $\log$
+\end_inset
+
+ doesn't matter (differs by constant factor).
+ In third case, 
+\begin_inset Formula $\log$
+\end_inset
+
+ is in the exponent, so it matters.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ex.
+ 1: 
+\bar under
+Merge Sort
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=2$
+\end_inset
+
+ number of recursive calls
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=2$
+\end_inset
+
+ we recurse on 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ of the array
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d=1$
+\end_inset
+
+ merge step
+\end_layout
+
+\begin_layout Standard
+Case 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(n)\le O(n^{d}\log n)=O(n\log n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ex.
+ 2: 
+\bar under
+Binary Search
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=1$
+\end_inset
+
+ compare element to the middle element and recurse on left or right
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=2$
+\end_inset
+
+ half of the array
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d=0$
+\end_inset
+
+ outside of loop you just do one comparison, constant time
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(n)=O(n^{d}\log n)=O(n\log n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ex.
+ 3: 
+\bar under
+Integer Multiplication (no Gauss trick)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=2$
+\end_inset
+
+ 
+\begin_inset Formula $\frac{n}{2}$
+\end_inset
+
+ digits
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d=1$
+\end_inset
+
+ linear time
+\end_layout
+
+\begin_layout Standard
+Case 3:
+\begin_inset Formula 
+\begin{eqnarray*}
+T(n) & = & O(n^{\log_{b}a})=O(n^{\log_{2}4})=O(n^{2})
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ex.
+ 4: 
+\bar under
+With Gauss's trick:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $c=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Case 3:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+T(n) & = & O(n^{\log_{b}a})=O(n^{\log_{2}3})=O(n^{1.59})
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ex.
+ 5: 
+\bar under
+Strassen's Matrix Multiplication
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=7$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d=2$
+\end_inset
+
+ linear in the matrix size (quadratic number of entries)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(n)=O(n^{\log_{2}7})=O(n^{2.81})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Ex.
+ 6: 
+\bar under
+Fictitious recurrence
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $T(n)\le2T(\frac{n}{2})+O(n^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Case 2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T(n)=O(n^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proof I 
+\end_layout
+
+\begin_layout Standard
+Recursion tree approach, remember what tree types the three cases correspond
+ to.
+\end_layout
+
+\begin_layout Standard
+Assume: recurrence is
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T(1)\le c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $T(n)\le aT(\frac{n}{b})+cn^{d}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n$
+\end_inset
+
+ is a power of 
+\begin_inset Formula $b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Idea
+\bar default
+: generalize MergeSort analysis
+\end_layout
+
+\begin_layout Standard
+At each level 
+\begin_inset Formula $j=0,1,2,\dots,\log_{b}n$
+\end_inset
+
+, there are 
+\begin_inset Formula $\mathbf{a}^{\mathbf{j}}$
+\end_inset
+
+ subproblems each of size 
+\begin_inset Formula $\mathbf{\frac{n}{b^{j}}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\log_{b}n$
+\end_inset
+
+ - number of times you can divide 
+\begin_inset Formula $n$
+\end_inset
+
+ by 
+\begin_inset Formula $b$
+\end_inset
+
+ before reaching 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+[5:40] - The Recursion Tree
+\end_layout
+
+\begin_layout Subsubsection
+Work at a Single Level
+\end_layout
+
+\begin_layout Standard
+Total work at level 
+\begin_inset Formula $j$
+\end_inset
+
+ [ignoring work in recursive calls]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\le a^{j}\times c\times\left[\frac{n}{b^{j}}\right]^{d}=cn^{d}\times\left[\frac{a}{b^{d}}\right]^{j}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Total Work
+\end_layout
+
+\begin_layout Standard
+Summing ? all levels 
+\begin_inset Formula $j=0,1,2,\dots,\log_{b}n:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+^{*}Total\, work\le cn^{d}\times\sum_{j=0}^{\log_{b}n}\left[\frac{a}{b^{d}}\right]^{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Interpretation of the 3 Cases
+\end_layout
+
+\begin_layout Standard
+How to think about 
+\begin_inset Formula $(^{*})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our upper bound on the work at level 
+\begin_inset Formula $j$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+cn^{d}\times\left[\frac{a}{b^{d}}\right]^{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $^{*}$
+\end_inset
+
+is a sum of the above expressions
+\end_layout
+
+\begin_layout Subsubsection
+
+\bar under
+Interpretation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=$
+\end_inset
+
+rate of subproblem proliferation (RSP)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b^{d}$
+\end_inset
+
+= rate of work shrinkage per subproblem (RWS)
+\end_layout
+
+\begin_layout Standard
+If RSP < RWS, then the amount of work is decreasing with the recursion level
+ j.
+ Most work at the root [might expect 
+\begin_inset Formula $O(n^{d})$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Standard
+If RSP > RWS, then the amount of work is increasing with the recursion level
+ j.
+ Most work at the leaves [might expect 
+\begin_inset Formula $O(\#leaves)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If RSP = RWS, then the amount of work is the same at every recursion level
+ j.
+ [merge sort, expect 
+\begin_inset Formula $O(n^{d}\log n)$
+\end_inset
+
+].
+\end_layout
+
+\begin_layout Subsection
+Proof II
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Total\, work\le cn^{d}\times\sum_{j=0}^{\log_{b}n}\left[\frac{a}{b^{d}}\right]^{j}\qquad{}^{(*)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+If 
+\begin_inset Formula $a=b^{d}$
+\end_inset
+
+
+\series default
+, then 
+\begin_inset Formula 
+\begin{eqnarray*}
+total\, work & = & cn^{d}(\log_{b}n+1)\\
+ & = & O(n^{d}\log n)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+If 
+\begin_inset Formula $a<b^{d}$
+\end_inset
+
+
+\series default
+, then
+\end_layout
+
+\begin_layout Standard
+call 
+\begin_inset Formula $\frac{a}{b^{d}}:=r\le$
+\end_inset
+
+a constant (independent of n)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+total\, work=O(n^{d})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+If 
+\begin_inset Formula $a>b^{d}$
+\end_inset
+
+
+\series default
+, then
+\end_layout
+
+\begin_layout Standard
+call 
+\begin_inset Formula $\frac{a}{b^{d}}:=r>1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+total\, work=O(n^{d}\times(\frac{a}{b^{d}})^{\log_{b}n})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note: 
+\begin_inset Formula $b^{-d\log_{b}n}=(b^{\log_{b}n})^{-d}=n^{-d}$
+\end_inset
+
+, so
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+total\, work=O(a^{\log_{b}n})=O(\#leaves)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+a^{\log_{b}n}=n^{\log_{b}a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Expression on left more intuitive, on right simpler to apply.
+\end_layout
+
+\end_body
+\end_document
