@@ -1855,11 +1855,15 @@ let
 \end_layout
 
 \begin_layout Standard
+
+\bar under
 Case 1 [
 \begin_inset Formula $v\in C_{1}$
 \end_inset
 
-]: all of 
+]
+\bar default
+: all of 
 \begin_inset Formula $C_{1}$
 \end_inset
 
@@ -1871,7 +1875,11 @@ explored before
 \end_layout
 
 \begin_layout Standard
-Reason: no paths from 
+
+\bar under
+Reason
+\bar default
+: no paths from 
 \begin_inset Formula $C_{1}$
 \end_inset
 
@@ -1880,6 +1888,49 @@ to
 \end_inset
 
  (since meta-graph is acyclic)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+all F-values in 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ are less than all of F-values in 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Case 2 [
+\begin_inset Formula $v\in C_{2}$
+\end_inset
+
+]
+\bar default
+: DFS(
+\begin_inset Formula $G^{rev}$
+\end_inset
+
+, 
+\begin_inset Formula $v$
+\end_inset
+
+) won't finish until all of 
+\begin_inset Formula $C_{1}\cup C_{2}$
+\end_inset
+
+ completely explored 
+\begin_inset Formula $\Rightarrow\forall_{w\in C_{1}}F(v)>F(w)$
+\end_inset
+
+ .
 \end_layout
 
 \end_body
