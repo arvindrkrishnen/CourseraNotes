@@ -1,0 +1,1886 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Graph Search And Connectivity
+\end_layout
+
+\begin_layout Subsection
+A Few Motivations
+\end_layout
+
+\begin_layout Enumerate
+Check if a network is connected (can get to anywhere from anywhere else)
+\end_layout
+
+\begin_layout Enumerate
+driving directions
+\end_layout
+
+\begin_layout Enumerate
+formulate a plan [e.g.
+ how to fill in a sudoku puzzle]
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+nodes = a partially completed puzzle
+\end_layout
+
+\begin_layout Enumerate
+arcs = filling in one new square
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+compute the 
+\begin_inset Quotes eld
+\end_inset
+
+pieces (or components)
+\begin_inset Quotes erd
+\end_inset
+
+ of a graph
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+clustering, structure of the web graph, etc.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Goals:
+\end_layout
+
+\begin_layout Enumerate
+find everything findable from the a given start vertex
+\end_layout
+
+\begin_layout Enumerate
+don't explore anything twice 
+\begin_inset Formula $O(m+n)$
+\end_inset
+
+ time
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Generic Algorithm
+\bar default
+ (given graph G, vertex 
+\begin_inset Formula $s$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+- initially s explored, all other vertices unexplored
+\end_layout
+
+\begin_layout Plain Layout
+
+- while possible:
+\end_layout
+
+\begin_layout Plain Layout
+
+	- choose an edge (u, v) with u explored and v unexplored (if none, halt)
+\end_layout
+
+\begin_layout Plain Layout
+
+	- mark v explored
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Claim
+\bar default
+: at end of the algorithm, v explored 
+\begin_inset Formula $\iff$
+\end_inset
+
+has a path from 
+\begin_inset Formula $s$
+\end_inset
+
+ to 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Proof
+\bar default
+: induction on number of iterations
+\end_layout
+
+\begin_layout Standard
+by contradiction
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $G$
+\end_inset
+
+ has a path 
+\begin_inset Formula $P$
+\end_inset
+
+ from 
+\begin_inset Formula $s$
+\end_inset
+
+ to 
+\begin_inset Formula $v$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+but 
+\begin_inset Formula $v$
+\end_inset
+
+ is unexplored at the end of the algorithm.
+ Then 
+\begin_inset Formula $\exists$
+\end_inset
+
+ edge 
+\begin_inset Formula $(u,w)\in P$
+\end_inset
+
+ with 
+\begin_inset Formula $u$
+\end_inset
+
+ explored and 
+\begin_inset Formula $w$
+\end_inset
+
+ unexplored.
+ But then algorithm would not terminate, contradiction.
+\end_layout
+
+\begin_layout Subsubsection
+BFS vs.
+ DFS
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: how to choose among the possibility many 
+\begin_inset Quotes eld
+\end_inset
+
+frontier
+\begin_inset Quotes erd
+\end_inset
+
+ edges?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Breadth First Search (BFS)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Formula $O(m+n)$
+\end_inset
+
+ 
+\series default
+using a queue (FIFO)
+\end_layout
+
+\begin_layout Standard
+explore nodes in 
+\begin_inset Quotes eld
+\end_inset
+
+layers
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+can compute shortest paths
+\end_layout
+
+\begin_layout Standard
+can compute connected components of an undirected graph
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Depth First Search (DFS)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $O(m+n)$
+\end_inset
+
+ time using a stack (LIFO), or via recursion
+\end_layout
+
+\begin_layout Standard
+explore aggresively like a maze, backtrack only when necessary
+\end_layout
+
+\begin_layout Standard
+compute topological ordering of directed acyclic graph
+\end_layout
+
+\begin_layout Standard
+compute connected components in graphs
+\end_layout
+
+\begin_layout Subsection
+Breadth-First Search (BFS): The Basics
+\end_layout
+
+\begin_layout Subsubsection
+The Code
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+BFS(graph G, start vertex s)
+\end_layout
+
+\begin_layout Plain Layout
+
+[all nodes intially unexplored]
+\end_layout
+
+\begin_layout Plain Layout
+
+- mark s as explored
+\end_layout
+
+\begin_layout Plain Layout
+
+- let Q = queue (FIFO), initialized with s
+\end_layout
+
+\begin_layout Plain Layout
+
+- while Q != 0
+\end_layout
+
+\begin_layout Plain Layout
+
+	- remove the first node of Q, call it v
+\end_layout
+
+\begin_layout Plain Layout
+
+	- for each edge (v, w):
+\end_layout
+
+\begin_layout Plain Layout
+
+		if w unexplored
+\end_layout
+
+\begin_layout Plain Layout
+
+			- mark w as explored
+\end_layout
+
+\begin_layout Plain Layout
+
+			- add w to Q (at the end)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Claim #1
+\bar default
+: At the end of BFS, 
+\begin_inset Formula $v$
+\end_inset
+
+ explored 
+\begin_inset Formula $\iff$
+\end_inset
+
+G has a path from 
+\begin_inset Formula $s$
+\end_inset
+
+ to 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Reason
+\bar default
+: Special case of the generic algorithm
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Claim #2
+\bar default
+: running time of main while lop = 
+\begin_inset Formula $O(n_{s}+m_{s})$
+\end_inset
+
+, where:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n_{s}$
+\end_inset
+
+= number of nodes reachable from 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{s}$
+\end_inset
+
+= number of edges reachable from 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+BFS and Shortest Paths
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Goal
+\bar default
+: Compute 
+\begin_inset Formula $dist(v)$
+\end_inset
+
+, the fewest number of edges on a path from 
+\begin_inset Formula $s$
+\end_inset
+
+ to 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Extra code
+\bar default
+: 
+\end_layout
+
+\begin_layout Standard
+initialize dist(v)=
+\begin_inset Formula $\begin{cases}
+0 & \text{if v=s}\\
++\infty & \text{if v\neq s}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+when considering edge (v, w):
+\end_layout
+
+\begin_layout Plain Layout
+
+	-if w unexplored
+\end_layout
+
+\begin_layout Plain Layout
+
+		- set dist(w)=dist(v)+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Claim
+\bar default
+: at termination, 
+\begin_inset Formula $dist(v)=i\iff v$
+\end_inset
+
+ in 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ layer (i.e.
+ 
+\begin_inset Formula $\iff$
+\end_inset
+
+shortest 
+\begin_inset Formula $s-v$
+\end_inset
+
+ path has 
+\begin_inset Formula $i$
+\end_inset
+
+ edges)
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Proof idea
+\bar default
+: every layer 
+\begin_inset Formula $i$
+\end_inset
+
+ node 
+\begin_inset Formula $w$
+\end_inset
+
+ is added to 
+\begin_inset Formula $Q$
+\end_inset
+
+ by a layer 
+\begin_inset Formula $(i-1)$
+\end_inset
+
+ node 
+\begin_inset Formula $v$
+\end_inset
+
+ via the edge (u, w)
+\end_layout
+
+\begin_layout Subsubsection
+BFS and Undirected Connectivity
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ be an undirected graph.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Connected components 
+\bar default
+= the 
+\begin_inset Quotes eld
+\end_inset
+
+pieces
+\begin_inset Quotes erd
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Formal definition
+\bar default
+: equivalence classes of the relation 
+\begin_inset Formula $u\sim v\iff\exists u-v$
+\end_inset
+
+ path in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Equivalence relation
+\bar default
+:
+\end_layout
+
+\begin_layout Standard
+satisfy these three properties
+\end_layout
+
+\begin_layout Itemize
+reflexive - everything needs to be related to itself
+\end_layout
+
+\begin_layout Itemize
+symmetric - if 
+\begin_inset Formula $u\sim v$
+\end_inset
+
+ then 
+\begin_inset Formula $v\sim u$
+\end_inset
+
+, true since undirected graph
+\end_layout
+
+\begin_layout Itemize
+transitive - if 
+\begin_inset Formula $u\sim v$
+\end_inset
+
+ and 
+\begin_inset Formula $v\sim w$
+\end_inset
+
+ then 
+\begin_inset Formula $u\sim w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Goal
+\bar default
+: compute all connected components
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Why
+\bar default
+: check if network is disconnected
+\end_layout
+
+\begin_layout Itemize
+graph visualization - clustering
+\end_layout
+
+\begin_layout Subsubsection
+Connected Components via BFS
+\end_layout
+
+\begin_layout Standard
+To compute all components (undirected case)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+-all nodes unexplored [O(n)]
+\end_layout
+
+\begin_layout Plain Layout
+
+[assume labelled 1 to n] 
+\end_layout
+
+\begin_layout Plain Layout
+
+- for i=1 to n [O(n)]
+\end_layout
+
+\begin_layout Plain Layout
+
+	- if vertex i not yet explored [O(n), in some previous BFS]
+\end_layout
+
+\begin_layout Plain Layout
+
+		- BFS(G, i) [discovers percisely i's connected components]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note: Finds every connected component.
+\end_layout
+
+\begin_layout Standard
+Running time: 
+\begin_inset Formula $O(m+n)$
+\end_inset
+
+, 
+\begin_inset Formula $m\rightarrow O(1)$
+\end_inset
+
+ per edge in each BFS, 
+\begin_inset Formula $n\rightarrow O(1)$
+\end_inset
+
+ per node
+\end_layout
+
+\begin_layout Subsection
+Depth First Search (DFS): The Basics
+\end_layout
+
+\begin_layout Subsubsection
+Overview and Example
+\end_layout
+
+\begin_layout Standard
+Explore aggressively, only backtrack when necessary
+\end_layout
+
+\begin_layout Standard
+Also computes a topological ordering of a directed acyclic graph
+\end_layout
+
+\begin_layout Standard
+and strongly connected components of directed graphs
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Running time
+\bar default
+: 
+\begin_inset Formula $O(m+n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The Code
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Exercise
+\bar default
+: mimic BFS code, use a stack instead of a queue [+minor other modifications].
+\end_layout
+
+\begin_layout Standard
+Recursive version: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+DFS (graph G, start vertex s)
+\end_layout
+
+\begin_layout Plain Layout
+
+	- mark s as explored
+\end_layout
+
+\begin_layout Plain Layout
+
+	- for every edge (s, v):
+\end_layout
+
+\begin_layout Plain Layout
+
+		- if v unexplored
+\end_layout
+
+\begin_layout Plain Layout
+
+			- DFS(G, v)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Basic DFS Properties
+\end_layout
+
+\begin_layout Standard
+Claim #1: at end of the algorithm, v marked as explored 
+\begin_inset Formula $\iff\exists$
+\end_inset
+
+ path from 
+\begin_inset Formula $s$
+\end_inset
+
+ to 
+\begin_inset Formula $v$
+\end_inset
+
+ in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Reason: particular instantiation of generic search procedure.
+\end_layout
+
+\begin_layout Standard
+Claim #2: running time is 
+\begin_inset Formula $O(n_{s}+m_{s})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $n_{s}=$
+\end_inset
+
+number of nodes reachable from 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{s}=$
+\end_inset
+
+number of edges reachable from 
+\begin_inset Formula $s$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reason: ?ods at each node in connected component of 
+\begin_inset Formula $s$
+\end_inset
+
+ at most once, each edge at most twice.
+\end_layout
+
+\begin_layout Subsection
+Topological Sort
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Definition
+\bar default
+: A topological ordering of a directed graph 
+\begin_inset Formula $G$
+\end_inset
+
+ is a labelling 
+\begin_inset Formula $F$
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+'s nodes such that:
+\end_layout
+
+\begin_layout Enumerate
+the 
+\begin_inset Formula $f(v)$
+\end_inset
+
+'s are the set 
+\begin_inset Formula $\left\{ 1,2,\dots,n\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $(u,v)\in G\Rightarrow f(u)<f(v)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Motivation
+\bar default
+: sequence tasks while respecting all precedence constraings.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: 
+\begin_inset Formula $G$
+\end_inset
+
+ has directed cycle 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+no topological ordering.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Theorem
+\bar default
+: no directed cycle 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+can recompute topological ordering in 
+\begin_inset Formula $O(m+n)$
+\end_inset
+
+ time
+\end_layout
+
+\begin_layout Subsubsection
+Straightforward Solution
+\end_layout
+
+\begin_layout Standard
+Every directed, acyclic graph has a 
+\bar under
+sink vertex
+\bar default
+, a vertex without any outgoing arcs.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Reason
+\bar default
+: if not, can keep following outgoing arcs to produce directed cycle.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+To compute topological ordering
+\bar default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+- let v be a sing vertex of G
+\end_layout
+
+\begin_layout Plain Layout
+
+- set f(v)=n
+\end_layout
+
+\begin_layout Plain Layout
+
+- recurse on G-{v}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Why does it work? When 
+\begin_inset Formula $v$
+\end_inset
+
+ is assigned to position 
+\begin_inset Formula $i$
+\end_inset
+
+, all outgoing arcs already deleted 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+all lead to later vertices in ordering.
+\end_layout
+
+\begin_layout Subsubsection
+Topological Sort via DFS (Slick)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+DFS-Loop(graph G)
+\end_layout
+
+\begin_layout Plain Layout
+
+- mark all nodes unexplored
+\end_layout
+
+\begin_layout Plain Layout
+
+- current_label=n [ to keep track of ordering]
+\end_layout
+
+\begin_layout Plain Layout
+
+- for each vertex v in G:
+\end_layout
+
+\begin_layout Plain Layout
+
+	- if v not yet explored [in some previous DFS call]
+\end_layout
+
+\begin_layout Plain Layout
+
+	- DFS(G, v)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+DFS(graph G, start vertex s)
+\end_layout
+
+\begin_layout Plain Layout
+
+- mark s explored
+\end_layout
+
+\begin_layout Plain Layout
+
+- for every edge (s, v):
+\end_layout
+
+\begin_layout Plain Layout
+
+	- if v not yet explored
+\end_layout
+
+\begin_layout Plain Layout
+
+		- DFS(G, v)
+\end_layout
+
+\begin_layout Plain Layout
+
+- set F(s)=current_label
+\end_layout
+
+\begin_layout Plain Layout
+
+- current_label--
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+[16:05]
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Running time
+\bar default
+: 
+\begin_inset Formula $O(m+n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Reason
+\bar default
+: 
+\begin_inset Formula $O(1)$
+\end_inset
+
+ time per node, 
+\begin_inset Formula $O(1)$
+\end_inset
+
+ time per edge
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Correctness
+\bar default
+: need to show that if (u, v) is an edge, then 
+\begin_inset Formula $f(u)<f(v)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Case 1
+\bar default
+: 
+\begin_inset Formula $u$
+\end_inset
+
+ visited by DFS before 
+\begin_inset Formula $v$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+recursive call corresponding to 
+\begin_inset Formula $v$
+\end_inset
+
+ finishes before that of 
+\begin_inset Formula $u$
+\end_inset
+
+ (since DFS) 
+\begin_inset Formula $\Rightarrow f(v)>f(u)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Case 2
+\bar default
+: 
+\begin_inset Formula $v$
+\end_inset
+
+ visted before 
+\begin_inset Formula $u$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $v$
+\end_inset
+
+'s recursive call finishes before 
+\begin_inset Formula $u$
+\end_inset
+
+'s even starts 
+\begin_inset Formula $\Rightarrow f(v)>f(u)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Computing Strong Components: The Algorithm
+\end_layout
+
+\begin_layout Standard
+Formal Definition: The strongly connected components (SCCs) of a directed
+ graph 
+\begin_inset Formula $G$
+\end_inset
+
+ are the equivalence classes of the relation 
+\begin_inset Formula $u\sim v\iff\exists\text{path }u\leadsto v\text{ and a path }u\leadsto u\text{ in G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Why Depth-First Search
+\end_layout
+
+\begin_layout Standard
+Depending on which vertex you start with, you can end up with one component
+ - whole graph or many.
+\end_layout
+
+\begin_layout Subsubsection
+Kosaraju's Two-Pass Algorithm
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Theorem
+\bar default
+: Can compute SCCs in 
+\begin_inset Formula $O(+n)$
+\end_inset
+
+ time
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Algorithm
+\bar default
+: (given directed graph 
+\begin_inset Formula $G$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $G^{reverse}=G$
+\end_inset
+
+ with all arcs reversed
+\end_layout
+
+\begin_layout Enumerate
+run DFS-Loop on 
+\begin_inset Formula $G^{rev}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+goal: compute 
+\begin_inset Quotes eld
+\end_inset
+
+magical ordering
+\begin_inset Quotes erd
+\end_inset
+
+ of nodes
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $f(v)$
+\end_inset
+
+=
+\begin_inset Quotes erd
+\end_inset
+
+finishing time
+\begin_inset Quotes erd
+\end_inset
+
+ of each 
+\begin_inset Formula $v\in V$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+run DFS-Loop on G
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+goal: discover the SCCs one-by-one
+\end_layout
+
+\begin_layout Enumerate
+processing nodes in decreasing order of finishing times
+\end_layout
+
+\begin_layout Enumerate
+[SCCs=nodes with the same 
+\begin_inset Quotes eld
+\end_inset
+
+leader
+\begin_inset Quotes erd
+\end_inset
+
+]
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+DFS-Loop
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+- global variable t=0 [for finishing times in 1st pass
+\end_layout
+
+\begin_layout Plain Layout
+
+[#of nodes processed so far
+\end_layout
+
+\begin_layout Plain Layout
+
+- global variable s=NULL [for leaders in 2nd pass]
+\end_layout
+
+\begin_layout Plain Layout
+
+[current source vertex]
+\end_layout
+
+\begin_layout Plain Layout
+
+Assume nodes labeled 1 to n
+\end_layout
+
+\begin_layout Plain Layout
+
+- for i=n downto 1
+\end_layout
+
+\begin_layout Plain Layout
+
+	- if i not yet explored
+\end_layout
+
+\begin_layout Plain Layout
+
+		- s:=i
+\end_layout
+
+\begin_layout Plain Layout
+
+		DFS(G, i)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+DFS(graph G, node i)
+\end_layout
+
+\begin_layout Plain Layout
+
+-mark i as explored [for rest of DFS loop
+\end_layout
+
+\begin_layout Plain Layout
+
+- set leader(i):=node s
+\end_layout
+
+\begin_layout Plain Layout
+
+- for each arc (i, j) in G:
+\end_layout
+
+\begin_layout Plain Layout
+
+	- if j not yet explored:
+\end_layout
+
+\begin_layout Plain Layout
+
+		- DFS(G, j)
+\end_layout
+
+\begin_layout Plain Layout
+
+- t++
+\end_layout
+
+\begin_layout Plain Layout
+
+- set f(i):=t
+\end_layout
+
+\begin_layout Plain Layout
+
+[f(i) i's finishing time]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For second pass 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+reverse orientation, change names to 
+\begin_inset Formula $f(i)$
+\end_inset
+
+'s.
+\end_layout
+
+\begin_layout Standard
+Running Time: 
+\begin_inset Formula $2\cdot DFS=O(m+n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Computing Strong Components: The Analysis
+\end_layout
+
+\begin_layout Subsubsection
+Observation
+\end_layout
+
+\begin_layout Standard
+Claim: the SCCs of a directed graph induce an acyclic 
+\begin_inset Quotes eld
+\end_inset
+
+meta graph
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+mega-nodes = the SCCs 
+\begin_inset Formula $C_{1},\dots,C_{k}$
+\end_inset
+
+ of 
+\begin_inset Formula $G$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists\text{ arc }C\rightarrow\hat{C}\iff\exists\text{ arc }(i,j)\in G\text{ with }i\in C,j\in\hat{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Why acyclic?
+\end_layout
+
+\begin_layout Standard
+A cycle of SCCs would collapse into one.
+\end_layout
+
+\begin_layout Standard
+SCC of the original graph 
+\begin_inset Formula $G$
+\end_inset
+
+ and its reversal 
+\begin_inset Formula $G^{rev}$
+\end_inset
+
+ is exactly the same.
+\end_layout
+
+\begin_layout Subsubsection
+Key Lemma
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Lemma
+\bar default
+: [7:00] Consider two 
+\begin_inset Quotes eld
+\end_inset
+
+adjacent
+\begin_inset Quotes erd
+\end_inset
+
+ SCCs in 
+\begin_inset Formula $G$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $F(v)$
+\end_inset
+
+ = finishing times of DFS-Loop in 
+\begin_inset Formula $G^{rev}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Then
+\bar default
+: 
+\begin_inset Formula $\underset{v\in C_{1}}{max}F(v)<\underset{v\in C_{2}}{max}F(v)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Corollary
+\bar default
+: maximum F-value of 
+\begin_inset Formula $G$
+\end_inset
+
+ must lie in a 
+\begin_inset Quotes eld
+\end_inset
+
+sink SCC
+\begin_inset Quotes erd
+\end_inset
+
+ [10:00]
+\end_layout
+
+\begin_layout Subsubsection
+Correctness Intuition
+\end_layout
+
+\begin_layout Standard
+By Corollary: 2nd pass of DFS-Loop begins somewhere in a sink SCC 
+\begin_inset Formula $C*$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+First call to DFS discovers 
+\begin_inset Formula $C*$
+\end_inset
+
+ and nothing else.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+rest of DFS-Loop like recursing on 
+\begin_inset Formula $G$
+\end_inset
+
+ with 
+\begin_inset Formula $C*$
+\end_inset
+
+ deleted.
+ [starts in a sink node of 
+\begin_inset Formula $G-C*$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+successive calls to DFS(
+\begin_inset Formula $G_{ij}$
+\end_inset
+
+) 
+\begin_inset Quotes eld
+\end_inset
+
+peel off
+\begin_inset Quotes erd
+\end_inset
+
+ SCCs one by one [in reverse topological order of the 
+\begin_inset Quotes eld
+\end_inset
+
+meta-graph
+\begin_inset Quotes erd
+\end_inset
+
+ of the SCCs]
+\end_layout
+
+\begin_layout Subsubsection
+Proof of Key Lemma
+\end_layout
+
+\begin_layout Standard
+in 
+\begin_inset Formula $G^{rev}$
+\end_inset
+
+: 
+\begin_inset Formula $C_{1}\qquad i\leftarrow j\qquad C_{2}$
+\end_inset
+
+ [still SCCs (of 
+\begin_inset Formula $G^{rev}$
+\end_inset
+
+)]
+\end_layout
+
+\begin_layout Standard
+let 
+\begin_inset Formula $v$
+\end_inset
+
+ = 1st node of 
+\begin_inset Formula $C_{1}\cup C_{2}$
+\end_inset
+
+ reached by 1st pass of DFS-Loop (on 
+\begin_inset Formula $G^{rev}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Case 1 [
+\begin_inset Formula $v\in C_{1}$
+\end_inset
+
+]: all of 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+explored before 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ ever reached
+\end_layout
+
+\begin_layout Standard
+Reason: no paths from 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+to 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ (since meta-graph is acyclic)
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,1290 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Graphs and the Contraction Algorithm
+\end_layout
+
+\begin_layout Subsection
+Graphs and Minimum Cuts
+\end_layout
+
+\begin_layout Subsubsection
+Graphs
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Graph
+\bar default
+: represent pairwise relations between sets of bojects.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Two ingredients
+\series bold
+\bar default
+:
+\end_layout
+
+\begin_layout Itemize
+vertices aka nodes (
+\begin_inset Formula $N$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+edges (
+\begin_inset Formula $E$
+\end_inset
+
+) = pairs of vertices
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+undirected [unordered pair]
+\end_layout
+
+\begin_layout Itemize
+directed/arcs [ordered pair]
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Cuts and Graphs
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Definition
+\bar default
+: a cut of a graph 
+\begin_inset Formula $(V,E)$
+\end_inset
+
+ is a partition of 
+\begin_inset Formula $V$
+\end_inset
+
+ into two non-empty sets 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Definition
+\bar default
+: the 
+\bar under
+crossing edges
+\bar default
+ of a cut 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+ are those with:
+\end_layout
+
+\begin_layout Itemize
+one endpoint in each of 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+ [undirected]
+\end_layout
+
+\begin_layout Itemize
+tail in 
+\begin_inset Formula $A$
+\end_inset
+
+, head in 
+\begin_inset Formula $B$
+\end_inset
+
+ [directed]
+\end_layout
+
+\begin_layout Standard
+A graph with 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices has 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ cuts.
+ One binary degree of freedom.
+ Strictly speaking a cut can't have a non-empty set 
+\begin_inset Formula $A$
+\end_inset
+
+ or 
+\begin_inset Formula $B$
+\end_inset
+
+, so the number is 
+\begin_inset Formula $2^{n}-2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The Minimum Cut Problem
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Input
+\bar default
+: an undirected graph 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ [parallel edges allowed - video on representation of input]
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Goal
+\bar default
+: Compute a cut with fewest number of crossing edges (a min-cut).
+\end_layout
+
+\begin_layout Subsubsection
+Applications
+\end_layout
+
+\begin_layout Standard
+Identify weaknesses in a network/bottlenecks.
+\end_layout
+
+\begin_layout Standard
+Community detection in social network.
+\end_layout
+
+\begin_layout Standard
+Image segmentation
+\end_layout
+
+\begin_layout Itemize
+input: graph of pixels
+\end_layout
+
+\begin_layout Itemize
+use edge weights [
+\begin_inset Formula $(u,v)$
+\end_inset
+
+ has large weight 
+\begin_inset Formula $\iff$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+expect
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $u,v$
+\end_inset
+
+ to come from some object]
+\begin_inset Newline newline
+\end_inset
+
+
+\bar under
+hope
+\bar default
+: repeated min-cuts identifies the primary objects in picture.
+\end_layout
+
+\begin_layout Subsection
+Graph Representation
+\end_layout
+
+\begin_layout Standard
+Consider an undirected graph that has 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices, no parallel edges, and is connected (i.e.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+in one piece
+\begin_inset Quotes erd
+\end_inset
+
+).
+ The minimum and maximum number of edges that the graph could have respectively
+ is:
+\begin_inset Formula 
+\begin{eqnarray*}
+minimum & = & n-1\\
+maximum & = & \frac{n(n-1)}{2}={n \choose 2}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Sparse vs.
+ Dense Graphs
+\end_layout
+
+\begin_layout Standard
+Let
+\begin_inset Formula 
+\begin{eqnarray*}
+n & = & \text{number of vertices}\\
+m & = & \text{number of edges}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In most (but not all) applications 
+\begin_inset Formula $m\text{ is }\Omega(n)\text{ and }O(n^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In a sparse graph, 
+\begin_inset Formula $m$
+\end_inset
+
+ is 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ or close to it
+\end_layout
+
+\begin_layout Standard
+In a dense graph, 
+\begin_inset Formula $m$
+\end_inset
+
+ is closer to 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The Adjacency Matrix
+\end_layout
+
+\begin_layout Standard
+Represent 
+\begin_inset Formula $G$
+\end_inset
+
+ by a 
+\begin_inset Formula $n\times n,\,0-1$
+\end_inset
+
+ matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, where 
+\begin_inset Formula $A_{ij}=1\iff G$
+\end_inset
+
+ has an 
+\begin_inset Formula $i-j$
+\end_inset
+
+ edge.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Variants
+\bar default
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{ij}=\text{number of i-j edges (if parallel edges)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{ij}=\text{weight of i-j edge (if any)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{ij}=\begin{cases}
++1 & \text{if }i\rightarrow j\\
+-1 & \text{if }i\leftarrow j
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An adjacency matrix requires 
+\begin_inset Formula $\Theta(n^{2})$
+\end_inset
+
+ space as a function of the number 
+\begin_inset Formula $n$
+\end_inset
+
+ of vertices and the number 
+\begin_inset Formula $m$
+\end_inset
+
+ of edges.
+\end_layout
+
+\begin_layout Subsubsection
+Adjacency List
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Ingredients
+\bar default
+:
+\end_layout
+
+\begin_layout Itemize
+array (or list) of vertices [
+\begin_inset Formula $\Theta(n)$
+\end_inset
+
+ space]
+\end_layout
+
+\begin_layout Itemize
+array (or list) of edges [
+\begin_inset Formula $\Theta(m)$
+\end_inset
+
+ space]
+\end_layout
+
+\begin_layout Itemize
+each edge points ot its endpoints [
+\begin_inset Formula $\Theta(m)$
+\end_inset
+
+ space]
+\end_layout
+
+\begin_layout Itemize
+each vertex points to edges incident on it [
+\begin_inset Formula $\Theta(m)$
+\end_inset
+
+ space]
+\end_layout
+
+\begin_layout Standard
+The three 
+\begin_inset Formula $\Theta(m)$
+\end_inset
+
+ categories have 1-to-1 correspondence between 
+\begin_inset Formula $m,n$
+\end_inset
+
+.
+ All together 
+\begin_inset Formula $\Theta(m+n)$
+\end_inset
+
+ or 
+\begin_inset Formula $\Theta(max\left\{ m,n\right\} )$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+An adjacency list representation requires 
+\begin_inset Formula $\Theta(m+n)$
+\end_inset
+
+ space as a function of the number 
+\begin_inset Formula $n$
+\end_inset
+
+ of vertices and the number 
+\begin_inset Formula $m$
+\end_inset
+
+ of edges.
+\end_layout
+
+\begin_layout Standard
+Which is better? Depends on graph density, operatations needed.
+\end_layout
+
+\begin_layout Subsection
+Random Contraction Algorithm
+\end_layout
+
+\begin_layout Standard
+[David Karger, early 90s]
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+While there are more than 2 vertices:
+\end_layout
+
+\begin_layout Plain Layout
+
+	pick a remaining edge (u, v) uniformly at random
+\end_layout
+
+\begin_layout Plain Layout
+
+	merge (or "contract") u and v into a single vertex
+\end_layout
+
+\begin_layout Plain Layout
+
+	remove self-loops
+\end_layout
+
+\begin_layout Plain Layout
+
+	return cut represented by final 2 vertices
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Example
+\end_layout
+
+\begin_layout Standard
+[2:45]
+\end_layout
+
+\begin_layout Standard
+[6:40]
+\end_layout
+
+\begin_layout Standard
+Algorithm sometimes identifies a min-cut and sometimes doesn't, depending
+ on choice of vertex.
+\end_layout
+
+\begin_layout Standard
+What is the probability of success?
+\end_layout
+
+\begin_layout Subsection
+Analysis of Contraction Algorithm
+\end_layout
+
+\begin_layout Subsubsection
+The Setup
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Question
+\bar default
+: What is the probability of success?
+\end_layout
+
+\begin_layout Standard
+Fix a graph 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ with 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices, 
+\begin_inset Formula $m$
+\end_inset
+
+ edges.
+\end_layout
+
+\begin_layout Standard
+Fix any (if multiple) minimum-cut 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $k=$
+\end_inset
+
+number of edges crossing 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+.
+ Call these edges 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+What Could Go Wrong?
+\end_layout
+
+\begin_layout Standard
+Suppose one of the edges in 
+\begin_inset Formula $F$
+\end_inset
+
+ gets chosen for contraction at some point 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+algorithm 
+\bar under
+will not
+\bar default
+ output 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Suppose only edges inside 
+\begin_inset Formula $A$
+\end_inset
+
+ or inside 
+\begin_inset Formula $B$
+\end_inset
+
+ get contracted 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+algorithm will output 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Thus
+\bar default
+: 
+\begin_inset Formula $Pr\left[\text{output is (A, B)}\right]=Pr\left[\text{never contracts an edge of F}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $S_{i}=$
+\end_inset
+
+event that an edge of 
+\begin_inset Formula $F$
+\end_inset
+
+ contracted in iteration 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Goal: compute 
+\begin_inset Formula $Pr[\lnot S_{1}\cap\lnot S_{2}\cap\lnot S_{3}\cap\dots\cap\lnot S_{n-2}]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The probability that an edge crossing the minimum cut 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+ is chosen in the first iteration (as a function of the number of vertices
+ 
+\begin_inset Formula $n$
+\end_inset
+
+, the number of edges 
+\begin_inset Formula $m$
+\end_inset
+
+, and the number 
+\begin_inset Formula $k$
+\end_inset
+
+ of crossing edges is 
+\begin_inset Formula $\frac{k}{m}$
+\end_inset
+
+, because 
+\begin_inset Formula $Pr[S_{1}]=\frac{\text{\# of crossing edges}}{\text{\# of edges}}=\frac{k}{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The First Iteration
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Key observation
+\bar default
+: degree of each vertex is at least 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Reason
+\bar default
+: each vertex 
+\begin_inset Formula $v$
+\end_inset
+
+ defines a cut 
+\begin_inset Formula $(\left\{ u\right\} ,V-\left\{ u\right\} )$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\sum_{v}degree(v)=2m\ge kn$
+\end_inset
+
+, we have 
+\begin_inset Formula $m\ge\frac{kn}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $Pr[S_{1}]=\frac{k}{n},\, Pr[S_{1}]\le\frac{2}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+The Second Iteration
+\end_layout
+
+\begin_layout Standard
+Recall: 
+\begin_inset Formula $Pr[\lnot S_{1}\cap\lnot S_{2}]=Pr[\lnot S_{2}|\lnot S_{1}]\cdot Pr[\lnot S_{1}]$
+\end_inset
+
+ probability we don't screw up in first and second iteration.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Pr[\lnot S_{2}|\lnot S_{1}]=1-\frac{k}{\text{\# of remaining edges}}$
+\end_inset
+
+ probability we not screw up in second iteration given that we didn't do
+ it already.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $Pr[\lnot S_{1}]\ge(1-\frac{2}{n})$
+\end_inset
+
+ probability we not screw up in first iteration.
+\end_layout
+
+\begin_layout Standard
+How many remaining edges are there? Rewrite that denominator in terms of
+ remaining vertices 
+\begin_inset Formula $(n-1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: all nodes in contracted graph define cutes in 
+\begin_inset Formula $G$
+\end_inset
+
+ (with at least 
+\begin_inset Formula $k$
+\end_inset
+
+ crossing edges) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+all degrees in contracted graph are at least 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So: the number of remaining edges 
+\begin_inset Formula $\ge\frac{1}{2}k(n-1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $Pr[\lnot S_{2}|\lnot S_{1}]\ge1-\frac{2}{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+All Iterations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+Pr[\lnot S_{1}\cap\lnot S_{2}\cap\lnot S_{3}\cap\dots\cap\lnot S_{n-2}] & =\\
+Pr[\lnot S_{1}]Pr[\lnot S_{2}|\lnot S_{1}]Pr[\lnot S_{3}|\lnot S_{1}\cap\lnot S_{2}]\cdot\dots\cdot Pr[\lnot S_{n-2}|\lnot S_{1}\cap\dots\cap\lnot S_{n-1}] & \ge\\
+(1-\frac{2}{n})(1-\frac{2}{n-1})(1-\frac{2}{n-2})\dots(1-\frac{1}{n-(n-4)})(1-\frac{1}{n-(n-3)} & =\\
+\frac{n\not-2}{n}\frac{n\not-3}{n-1}\frac{n\not-4}{n\not-2}\dots\frac{2}{\not4}\frac{1}{\not3} & =\\
+\frac{2}{n(n-1)} & \ge & \frac{1}{n^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Problem
+\series default
+\bar default
+: low success probability (but: non-trivial lower bound).
+\end_layout
+
+\begin_layout Subsubsection
+Repeated Trials
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Solution
+\bar default
+: run the basic algorithm a large number 
+\begin_inset Formula $N$
+\end_inset
+
+ times, remember the smallest cut found.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Question
+\bar default
+: how many trials needed?
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $T_{i}=$
+\end_inset
+
+event that the cut 
+\begin_inset Formula $(A,B)$
+\end_inset
+
+ is found on the 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ try 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+by definition, different 
+\begin_inset Formula $T_{i}$
+\end_inset
+
+'s are independent.
+\end_layout
+
+\begin_layout Standard
+So.: 
+\begin_inset Formula 
+\begin{eqnarray*}
+Pr\left[\text{all N trials fail}\right] & = & Pr[\lnot T_{1}\cap\lnot T_{2}\cap\dots\cap\lnot T_{N}]\\
+(independent) & = & \prod_{i=1}^{N}Pr[\lnot T_{i}]\\
+ & \le & (1-\frac{1}{n^{2}})^{N}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Calculus fact: 
+\begin_inset Formula $\forall$
+\end_inset
+
+ reall numbers 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $1+x\le e^{x}$
+\end_inset
+
+ [2:40].
+\end_layout
+
+\begin_layout Standard
+So: if we take 
+\begin_inset Formula 
+\[
+N=n^{2},\, Pr\left[\text{all fail}\right]\le\left(e^{-\frac{1}{n^{2}}}\right)^{n^{2}}=\frac{1}{e}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we take 
+\begin_inset Formula 
+\[
+\mathbf{N=n^{2}\ln n,\, Pr\left[\text{all fail}\right]\le\left(\frac{1}{e}\right)^{\ln n}=\frac{1}{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Running time: Polynomial in 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $m$
+\end_inset
+
+ but slow - 
+\begin_inset Formula $\Omega(n^{2}m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But: can get big speedups (to roughly 
+\begin_inset Formula $O(n^{2})$
+\end_inset
+
+) with more ideas.
+ Outside of the scope of this course.
+\end_layout
+
+\begin_layout Subsection
+Counting Minimum Cuts
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: a graph can have multiple min-cuts.
+\end_layout
+
+\begin_layout Standard
+e.g.
+ a tree with n vertices has 
+\begin_inset Formula $(n-1)$
+\end_inset
+
+ min-cuts
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Question
+\bar default
+: what's the larges number of min-cuts that a graph with 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices can have?
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Answer
+\bar default
+: 
+\begin_inset Formula ${n \choose 2}=\frac{n(n-1)}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+The Lower Bound
+\end_layout
+
+\begin_layout Standard
+Consider the n-cycle, 
+\begin_inset Formula $n=8$
+\end_inset
+
+ [2:00]
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: each pair of the 
+\begin_inset Formula $n$
+\end_inset
+
+ edges defines a distinct minimum cut (with two crossing edges) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+has 
+\begin_inset Formula $\ge{n \choose 2}$
+\end_inset
+
+ min cuts.
+\end_layout
+
+\begin_layout Subsubsection
+The Upper Bound
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $(A_{1},B_{1}),(A_{2},B_{2}),\dots,(A_{t},B_{t})$
+\end_inset
+
+ be the min-cuts of a graph with 
+\begin_inset Formula $n$
+\end_inset
+
+ vertices.
+ By the Contraction Algorithm analysis (without repeated trials):
+\begin_inset Formula 
+\[
+Pr[output=(A_{i},B_{i})]\ge\frac{2}{n(n-1)}=\frac{1}{{n \choose 2}}\qquad\forall_{i=1,2,\dots,t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t=$
+\end_inset
+
+the number of different min-cuts
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: 
+\begin_inset Formula $S_{i}$
+\end_inset
+
+'s are 
+\bar under
+disjoint
+\bar default
+ events (i.e.
+ only one can happen) 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+their probabilities sum to at most 1
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Thus
+\bar default
+: 
+\begin_inset Formula $\frac{t}{{n \choose 2}}\le1\Rightarrow t\le{n \choose 2}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

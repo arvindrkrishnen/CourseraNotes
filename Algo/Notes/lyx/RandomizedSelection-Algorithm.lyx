@@ -1,0 +1,807 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Randomized Selection - Algorithm
+\end_layout
+
+\begin_layout Subsection
+Randomized Selection - Algorithm
+\end_layout
+
+\begin_layout Subsubsection
+The Problem
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Input
+\bar default
+: array A with n distinct numbers and a number 
+\begin_inset Formula $i\in\{1,2,\dots,n\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Output
+\bar default
+: 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ order statistic (i.e., 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ smallest element of input array)
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Example: 
+\bar default
+median
+\begin_inset Formula 
+\begin{eqnarray*}
+i & = & \frac{n+1}{2}\text{ for n odd,}\\
+i & = & \frac{n}{2}\text{ for n even}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Reduction to Sorting
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $O(n\log n)$
+\end_inset
+
+ algorithm
+\end_layout
+
+\begin_layout Enumerate
+Apply MergeSort
+\end_layout
+
+\begin_layout Enumerate
+return 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ element of sorted array
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Fact
+\bar default
+: can't sort any faster [optional video]
+\end_layout
+
+\begin_layout Standard
+To have a faster than 
+\begin_inset Formula $O(n\log n)$
+\end_inset
+
+ then we have to prove that selection is strictly easier than sorting.
+\end_layout
+
+\begin_layout Standard
+The selection will be in 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ time (randomized) by modifying QuickSort.
+\end_layout
+
+\begin_layout Standard
+Optional: 
+\begin_inset Formula $O(n)$
+\end_inset
+
+ time deterministic algorithm
+\end_layout
+
+\begin_layout Itemize
+pivot: 
+\begin_inset Quotes eld
+\end_inset
+
+median of means
+\begin_inset Quotes erd
+\end_inset
+
+ (not as practical)
+\end_layout
+
+\begin_layout Standard
+Ex.: Suppose we are looking for the 
+\begin_inset Formula $5^{th}$
+\end_inset
+
+ order statistic in an input array of length 10.
+ We partition the array, and the pivot winds up in the third position of
+ the partitioned array.
+ We should recurse on the right side of the pivot and look for the 
+\begin_inset Formula $2^{nd}$
+\end_inset
+
+ order statistic.
+\end_layout
+
+\begin_layout Subsubsection
+Randomized Selection
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+RSelect(array A, length n, order statistic i)
+\end_layout
+
+\begin_layout Plain Layout
+
+	if n=1 return A[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+	choose pivot p from A uniformly at random
+\end_layout
+
+\begin_layout Plain Layout
+
+	partition A around p
+\end_layout
+
+\begin_layout Plain Layout
+
+	let j=new index of p
+\end_layout
+
+\begin_layout Plain Layout
+
+	if j=i return p
+\end_layout
+
+\begin_layout Plain Layout
+
+	if [j > i] return RSelect(1st part of A, j-1, i)
+\end_layout
+
+\begin_layout Plain Layout
+
+	if [j < i] return RSelect(2nd part of A, n-j, i-j)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Claim
+\bar default
+: RSelect is correct (guaranteed to output 
+\begin_inset Formula $i^{th}$
+\end_inset
+
+ order statistic)
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Proof
+\bar default
+: by induction
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Running Time
+\bar default
+: depends on 
+\begin_inset Quotes eld
+\end_inset
+
+quality
+\begin_inset Quotes erd
+\end_inset
+
+ of the chosen pivot.
+\end_layout
+
+\begin_layout Standard
+If pivots are always chosen in the worst possible way, the running time
+ of RSelect is 
+\begin_inset Formula $\Theta(n^{2})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Ex.: 
+\end_layout
+
+\begin_layout Itemize
+suppose 
+\begin_inset Formula $i=\frac{n}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+suppose choose pivot=minimum every time
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow\Omega(n)$
+\end_inset
+
+ time in each of 
+\begin_inset Formula $\Omega(n)$
+\end_inset
+
+ recursive calls
+\end_layout
+
+\begin_layout Subsubsection
+Running Time of RSelect
+\end_layout
+
+\begin_layout Standard
+Depends on which pivots get chosen.
+ Could be as bad as 
+\begin_inset Formula $\Theta(n^{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Key
+\bar default
+: find pivot giving 
+\begin_inset Quotes eld
+\end_inset
+
+balanced
+\begin_inset Quotes erd
+\end_inset
+
+ split.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Best pivot
+\bar default
+: the one that gives the most balanced split, the median (but this is also
+ circular)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+would get recurrence 
+\begin_inset Formula 
+\begin{eqnarray*}
+T(n) & \le & T(\frac{n}{2})+O(n)\\
+ & \Rightarrow & T(n)=O(n)\text{ [case 2 of Master Method]}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Hope
+\bar default
+: random pivots is 
+\begin_inset Quotes eld
+\end_inset
+
+pretty good
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+of ten(?) enough
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+RSelect Theorem: for every input array of length 
+\begin_inset Formula $n$
+\end_inset
+
+, the average running time of RSelect is 
+\begin_inset Formula $O(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Holds for every input [no assumption of data]
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+average
+\begin_inset Quotes erd
+\end_inset
+
+ is over random pivot choices made by the algorithm
+\end_layout
+
+\begin_layout Subsection
+Randomized Selection - Analysis
+\end_layout
+
+\begin_layout Subsubsection
+Proof I: Tracking Progress via Phases
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: RSelect uses 
+\begin_inset Formula $\le cn$
+\end_inset
+
+ operations outside of the recursive call [for some constant 
+\begin_inset Formula $c>0$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Standard
+[from partitioning]
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Notion
+\bar default
+: RSelect is in 
+\series bold
+phase 
+\begin_inset Formula $\mathbf{j}$
+\end_inset
+
+
+\series default
+ if current array size is between 
+\begin_inset Formula $(\frac{3}{4})^{j+1}n$
+\end_inset
+
+ and 
+\begin_inset Formula $(\frac{3}{4})^{j}n$
+\end_inset
+
+.
+ So the outer most recursive call will be in phase 0 because the input array
+ is size 
+\begin_inset Formula $n$
+\end_inset
+
+ and then depending on size of pivot, you my or may not get out of phase
+ 0.
+ Phase number 
+\begin_inset Formula $j$
+\end_inset
+
+ quantifies the number of times we've made 75% progress relative to the
+ original input array.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X_{j}$
+\end_inset
+
+ = number of recursive calls during phase 
+\begin_inset Formula $j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note: 
+\begin_inset Formula 
+\[
+^{*}\text{Running time of RSelect}\le\sum_{phases\, j}X_{j}c(\frac{3}{4})^{j}n
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(\frac{3}{4})^{j}n\text{\le array size during phase j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c(\frac{3}{4})^{j}n=\text{work per phase j subproblem}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X_{j}=\text{\# of phase-j subproblems}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Proof II: Reduction to Coin Flipping
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X_{j}$
+\end_inset
+
+= # of recursive calls during phase j (size is between 
+\begin_inset Formula $(\frac{3}{4})^{j+1}n$
+\end_inset
+
+ and 
+\begin_inset Formula $(\frac{3}{4})^{j}n$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: if RSelect choses a pivot giving a 25-75 split (or better) then current
+ phase ends.
+ (new subarray length at must 75% of old length)
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Recall
+\bar default
+: probability of 25-75 split or better is 50%.
+\end_layout
+
+\begin_layout Standard
+So: 
+\begin_inset Formula $E(X_{j})\le$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ expected number of tries you need to flip a fair coin to get one "heads".
+ (heads 
+\begin_inset Formula $\approx$
+\end_inset
+
+good pivot, tails
+\begin_inset Formula $\approx$
+\end_inset
+
+bad pivot)
+\end_layout
+
+\begin_layout Subsubsection
+Proof III: Coin Flipping Analysis
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $N$
+\end_inset
+
+ = number of coin flips until you get heads.
+ (a geometric random variable)
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Note
+\bar default
+: 
+\begin_inset Formula $E[N]=1+\frac{1}{2}\cdot E[N]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1\rightarrow$
+\end_inset
+
+1st coin flip
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{2}\rightarrow$
+\end_inset
+
+probability of tails
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E[N]\rightarrow$
+\end_inset
+
+# of further coin flips needed in this case
+\end_layout
+
+\begin_layout Standard
+Solution:
+\end_layout
+
+\begin_layout Standard
+Recall 
+\begin_inset Formula $E[X_{j}]\le E[N]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, 
+\begin_inset Formula $E[N]=2$
+\end_inset
+
+ upper bound for the number of recursive calls in any given phase 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Putting It All Together
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+^{*}\text{Running time of RSelect} & \le & E\left[cn\sum_{phase\, j}(\frac{3}{4})^{j}X_{j}\right]\\
+\text{(linearity of expectation)} & = & cn\sum_{phase\, j}(\frac{3}{4})^{j}E[X_{j}]\\
+ & \le & E[\text{\# of coin flips N}]=2\\
+(\sum_{phase\, j}(\frac{3}{4})^{j}\text{geometric sum, }\le\frac{1}{1-\frac{3}{4}}=4) & \le & 2cn\sum_{phase\, j}(\frac{3}{4})^{j}\\
+\text{(only a constant factor larger} & \le & \mathbf{8cn=O(n)}\\
+\text{ than req to read input)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
