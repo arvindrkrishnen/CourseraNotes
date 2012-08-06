@@ -389,7 +389,8 @@ Pseudocode for Merge
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
+\begin_inset listings
+inline false
 status open
 
 \begin_layout Plain Layout
@@ -549,7 +550,7 @@ Claim
 
 \end_inset
 
- operations to sort 
+operations to sort 
 \begin_inset Formula $n$
 \end_inset
 
