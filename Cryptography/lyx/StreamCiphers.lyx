@@ -877,7 +877,7 @@ In practice
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\varepsilon\text{{negligible:}}\varepsilon\ge\frac{1}{2^{80}}\text{ {(won't\,\ happen\,\ over\,\ life\,\ of\,\ key)}}$
+\begin_inset Formula $\varepsilon\text{ {negligible:} }\varepsilon\ge\frac{1}{2^{80}}\text{ {(won't\,\ happen\,\ over\,\ life\,\ of\,\ key)}}$
 \end_inset
 
 
@@ -914,14 +914,14 @@ In theory
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\varepsilon\text{ {non-neg:} }\exists d:\,\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{ {inf.\: often\:(\varepsilon\ge\frac{1}{poly},\: for\: many\:\lambda})}$
+\begin_inset Formula $\varepsilon\text{ {non-neg:} }\exists_{d}:\,\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{ {inf.\:\ often\:(\varepsilon\ge\frac{1}{poly},\:\ for\:\ many\:\lambda})}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\varepsilon\text{ {negligible:} }\forall d:\,\lambda\ge\lambda_{d}:\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{ {(\varepsilon\le\frac{1}{poly},\: for\: large\:\lambda})}$
+\begin_inset Formula $\varepsilon\text{ {negligible:} }\forall_{d}:\,\lambda\ge\lambda_{d}:\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{ {(\varepsilon\le\frac{1}{poly},\:\ for\:\ large\:\lambda})}$
 \end_inset
 
 
