@@ -812,7 +812,7 @@ the way you generate randomness is run iteratively through the following
 \begin_layout Standard
 \begin_inset Formula 
 \[
-r[i]\leftarrow a\times r[i-1]+b\mod p
+r[i]\leftarrow a\cdot r[i-1]+b\mod p
 \]
 
 \end_inset
@@ -830,11 +830,11 @@ that outputs a few bits of
 \end_inset
 
  and repeat.
- This generator has some statistical properties (#0s
+ This generator has some statistical properties (#0s 
 \begin_inset Formula $\approx$
 \end_inset
 
-#1s) that make it easy to predict.
+ #1s) that make it easy to predict.
 \end_layout
 
 \begin_layout Standard
@@ -858,7 +858,7 @@ In practice
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\varepsilon\text{{non-neg:}}\varepsilon\ge\frac{1}{2^{30}}\text{{(likely\,\ to\,\ happen\,\ over\,1GB\,\ of\,\ data)}}$
+\begin_inset Formula $\varepsilon\text{ {non-neg:} }\varepsilon\ge\frac{1}{2^{30}}\text{ {(likely\,\ to\,\ happen\,\ over\,1GB\,\ of\,\ data)}}$
 \end_inset
 
 
@@ -877,7 +877,7 @@ In practice
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\varepsilon\text{{negligible:}}\varepsilon\ge\frac{1}{2^{80}}\text{{(won't\,\ happen\,\ over\,\ life\,\ of\,\ key)}}$
+\begin_inset Formula $\varepsilon\text{{negligible:}}\varepsilon\ge\frac{1}{2^{80}}\text{ {(won't\,\ happen\,\ over\,\ life\,\ of\,\ key)}}$
 \end_inset
 
 
@@ -914,14 +914,14 @@ In theory
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\varepsilon\text{{non-neg:}}\exists d:\,\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{\,{inf.\,\ often\,(\varepsilon\ge\frac{1}{poly},\,\ for\,\ many\,\lambda})}$
+\begin_inset Formula $\varepsilon\text{ {non-neg:} }\exists d:\,\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{ {inf.\: often\:(\varepsilon\ge\frac{1}{poly},\: for\: many\:\lambda})}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\varepsilon\text{{negligible:}}\forall d:\,\lambda\ge\lambda_{d}:\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{\,{(\varepsilon\le\frac{1}{poly},\,\ for\,\ large\,\lambda})}$
+\begin_inset Formula $\varepsilon\text{ {negligible:} }\forall d:\,\lambda\ge\lambda_{d}:\varepsilon(\lambda)\ge\frac{1}{\lambda^{d}}\text{ {(\varepsilon\le\frac{1}{poly},\: for\: large\:\lambda})}$
 \end_inset
 
 
@@ -1490,9 +1490,11 @@ Salsa 20 (software + hardware)
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-\{0,\,1\}^{128\, or\,256}\times\{0,\,1\}^{64}\rightarrow\{0,\,1\}^{n}\qquad(\text{{max\,\ n=2^{73}\,\ bits}}
-\]
+\begin{eqnarray*}
+\{0,\,1\}^{128\, or\,256}\cdot\{0,\,1\}^{64} & \rightarrow & \{0,\,1\}^{n}\\
+ &  & (\text{\text{max n=2^{73} bits} }\\
+ &  & \text{128 (or 256) bit seed and 64 bit nonce)}
+\end{eqnarray*}
 
 \end_inset
 
@@ -1500,7 +1502,6 @@ Salsa 20 (software + hardware)
 \end_layout
 
 \begin_layout Standard
-128 (or 256) bit seed and 64 bit nonce
 \begin_inset Formula 
 \[
 \text{{Salsa20}}(k;\, r):=H(k;\,(r,\,0))\,||\, H(k,\,(r,\,1))\,||\,\dots
@@ -1542,7 +1543,7 @@ We start by expanding the states into 64 bytes long (something), put constants
 \end_inset
 
  4 bytes.
- If we sum all of them , we get 64 bytes.
+ If we sum all of them, we get 64 bytes.
  All this comes from spec.
 \end_layout
 
@@ -1908,7 +1909,7 @@ We feed it first i bits of the output of the generator G, we choose a random
 \begin_inset Formula 
 \begin{eqnarray*}
 \underset{k\xleftarrow{R}K}{PR}\left[A(G(k)|_{1,\dots,i})=G(k)|_{i+1}\right] & = & \frac{1}{2}+\varepsilon\\
-\text{for non-negiligible \varepsilon\ (e.g. \varepsilon=\frac{1}{1000})}
+\text{for non-negiligible \varepsilon\ \left(e.g.\varepsilon=\frac{1}{1000}\right)}
 \end{eqnarray*}
 
 \end_inset
