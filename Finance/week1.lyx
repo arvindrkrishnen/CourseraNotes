@@ -1,0 +1,636 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Week 1 - Time Value of Money
+\end_layout
+
+\begin_layout Subsection
+Time Value of Money (TVM)
+\end_layout
+
+\begin_layout Subsubsection
+The Essence of Decision-Making
+\end_layout
+
+\begin_layout Itemize
+Virtually every decision involves time and uncertainty
+\end_layout
+
+\begin_layout Itemize
+Very important to understand the impact of just the passage of time on a
+ decision
+\end_layout
+
+\begin_layout Itemize
+First assume no uncertainty to internalize TVM
+\end_layout
+
+\begin_layout Subsubsection
+Some Terminology
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $PV$
+\end_inset
+
+ (or 
+\begin_inset Formula $P$
+\end_inset
+
+)= Present Value ($)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $FV$
+\end_inset
+
+= Future Value ($)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $n$
+\end_inset
+
+ or 
+\begin_inset Formula $t$
+\end_inset
+
+ = # of Periods (#) depends on the nature of the problem
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r=$
+\end_inset
+
+Interest Rate (%) > 0 (assumption)
+\end_layout
+
+\begin_layout Standard
+Book: Theory of Interest - Irving Fisher (1930s)
+\end_layout
+
+\begin_layout Subsection
+Simple Future Value (FV)
+\end_layout
+
+\begin_layout Subsubsection
+Importance of Time Lines
+\end_layout
+
+\begin_layout Standard
+We should be able to take a problem and put it on a timeline.
+\end_layout
+
+\begin_layout Standard
+At point 0, we call the value a Present Value (PV), r is the interest rate
+ that applies to one period.
+ We will take PV and try to relate it to FV.
+\end_layout
+
+\begin_layout Itemize
+A dollar today is worth more than a dollar tomorrow
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Example
+\end_layout
+
+\begin_layout Standard
+Suppose a bank pays a 10% interest rate per year and you are given a choice
+ between two plans
+\end_layout
+
+\begin_layout Standard
+A: Receive $100 today
+\end_layout
+
+\begin_layout Standard
+B: Receive $100 one year from now
+\end_layout
+
+\begin_layout Standard
+Which would you prefer, why?
+\end_layout
+
+\begin_layout Standard
+Probably the first one
+\end_layout
+
+\begin_layout Standard
+Future Value problem
+\end_layout
+
+\begin_layout Standard
+$100 0---------------1 A
+\end_layout
+
+\begin_layout Standard
+0---------------1 $100 B
+\end_layout
+
+\begin_layout Standard
+You can't compare these two at time 0, but you can either bring the FV down
+ to present or carry PV forward.
+\end_layout
+
+\begin_layout Standard
+We'll carry the FV forward first, easier to understand.
+\end_layout
+
+\begin_layout Standard
+so, if 
+\begin_inset Formula $r=10\%$
+\end_inset
+
+ with A, the 
+\begin_inset Formula $FV=\$\ensuremath{110}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Future Value (Concept)
+\end_layout
+
+\begin_layout Standard
+In general, 
+\series bold
+Future Value of a Single Cash Flow Invested for 
+\begin_inset Formula $n$
+\end_inset
+
+ Periods
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV=\text{Initial Payment +Accumulated Interest}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{FV=PV+r\cdot PV=(1+r)^{n}\cdot PV}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So, for the example
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV=\$100+10\%\cdot(\$100)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Simple FV
+\end_layout
+
+\begin_layout Subsubsection
+Future Value (Multiple Periods, Example)
+\end_layout
+
+\begin_layout Standard
+What is future value of $100 two years from now?
+\end_layout
+
+\begin_layout Standard
+0---------1----------2 FV?
+\end_layout
+
+\begin_layout Standard
+0: $100
+\end_layout
+
+\begin_layout Standard
+1: 
+\begin_inset Formula $\$\ensuremath{110=}\$100(1.10)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2: 
+\begin_inset Formula $\$121=\$110(1.10)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Future Value: Example
+\end_layout
+
+\begin_layout Standard
+Suppose you invest $500 in the bank at an interest rate of 7%.
+ How much will you have at the end of 10 years?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV=500\cdot(1+0.07)^{10}=983.576
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Simple FV: Example
+\end_layout
+
+\begin_layout Standard
+What are the future values of investing $100 at 10% versus 5% for 100 years?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV_{100,5\%}=\$100\cdot(1+0.05)^{100}=\$13150.1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV_{100,10\%}=\$100\cdot(1+0.1)^{10}=\$1378060
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5% is closer to a bond
+\end_layout
+
+\begin_layout Standard
+10% is closer to a stock market rate
+\end_layout
+
+\begin_layout Subsection
+Simple FV: Exmaple 2
+\end_layout
+
+\begin_layout Standard
+Peter Minuit bought the Manhattan Island for $24 in 1626.
+ Suppose that Native Americans could have earned 6% on their investment
+ all these years.
+ How much would they have today?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV=24\cdot(1+0.06)^{386}=\$1.40694*10^{11}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Excel, FV function is fv()
+\end_layout
+
+\begin_layout Subsection
+Simple Present Value (PV)
+\end_layout
+
+\begin_layout Standard
+What is the present value of receiving $110 one year from now if the interest
+ rate is 10%?
+\end_layout
+
+\begin_layout Standard
+$100 0--------------1 $110
+\end_layout
+
+\begin_layout Standard
+at 10%
+\end_layout
+
+\begin_layout Standard
+PV
+\begin_inset space ~
+\end_inset
+
+0----------------------1 FV
+\end_layout
+
+\begin_layout Standard
+if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV=PV\cdot(1+r)^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The process is called 
+\series bold
+discounting
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Present Value of a Single Cash Flow Received 
+\begin_inset Formula $n$
+\end_inset
+
+ Periods from Now
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{PV=\frac{FV}{(1+r)^{n}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+for 
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so for the example
+\begin_inset Formula 
+\[
+PV=\frac{\$110}{(1+0.1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ex.:
+\end_layout
+
+\begin_layout Standard
+Suppose you will inherit 
+\begin_inset Formula $\ensuremath{\$121,000}$
+\end_inset
+
+ two years from now and the interest rate is 
+\begin_inset Formula $r=10\%$
+\end_inset
+
+.
+ What is the value today to you? 
+\end_layout
+
+\begin_layout Standard
+2
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{121000}{1.1}=110000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+2
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\frac{121000}{1.1}}{1.1}=100000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Present Value (Concept & Formula)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+PV=\frac{FV}{(1+r)^{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Excel, PV function is pv()
+\end_layout
+
+\end_body
+\end_document

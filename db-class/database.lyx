@@ -1,0 +1,9235 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\usepackage{pifont}
+\usepackage[normalem]{ulem}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Relational Databases
+\end_layout
+
+\begin_layout Subsection
+Creating relations (tables) in SQL
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Create Table
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Create Table Student(ID, name, GPA, photo)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Create Table College(
+\end_layout
+
+\begin_layout Plain Layout
+
+	name string, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	state char(2),
+\end_layout
+
+\begin_layout Plain Layout
+
+	enrollment integer
+\end_layout
+
+\begin_layout Plain Layout
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Querying Relational Databases
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Steps in creating and using a (relational) database
+\end_layout
+
+\begin_layout Enumerate
+Design schema; create using DDL
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Bulk load
+\begin_inset Quotes erd
+\end_inset
+
+ initial data
+\end_layout
+
+\begin_layout Enumerate
+Repeat: execute queries and modifications
+\end_layout
+
+\begin_layout Standard
+Databases support ad-hoc queries in high-level language
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Queries return relations:
+\end_layout
+
+\begin_layout Itemize
+compositional
+\end_layout
+
+\begin_layout Itemize
+closed - closure - when you get back the same type as you queried (table)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Query languages:
+\end_layout
+
+\begin_layout Itemize
+Relational Algebra - formal
+\end_layout
+
+\begin_layout Itemize
+SQL - actual/implemented
+\end_layout
+
+\begin_layout Section
+SQL
+\end_layout
+
+\begin_layout Section
+Relational Design Theory
+\end_layout
+
+\begin_layout Subsection
+Relational design overview
+\end_layout
+
+\begin_layout Subsubsection
+Motivation & overview
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: College application info
+\end_layout
+
+\begin_layout Itemize
+SSN and name
+\end_layout
+
+\begin_layout Itemize
+Colleges applying to
+\end_layout
+
+\begin_layout Itemize
+High schools attended (with city)
+\end_layout
+
+\begin_layout Itemize
+Hobbies
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, sName, cName, HS, HScity, hobby
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Populating:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+123 Ann Stanford PAHS P.A.
+ tennis
+\end_layout
+
+\begin_layout Plain Layout
+
+123 Ann Berkeley PAHS P.A.
+ tennis
+\end_layout
+
+\begin_layout Plain Layout
+
+123 Ann Stanford PAHS P.A.
+ trumpet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+need 12 tupples to represent this
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Design 
+\begin_inset Quotes eld
+\end_inset
+
+anomalies
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Redundancy
+\end_layout
+
+\begin_layout Itemize
+Update anomaly - can update facts differently in different places, trumpet
+ can be named cornet
+\end_layout
+
+\begin_layout Itemize
+Deletion anomaly - can do complete deletion of somebody in db.
+ If we delete all people surfing
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Better alternative
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName)
+\end_layout
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName)
+\end_layout
+
+\begin_layout Plain Layout
+
+HighSchool(SSN, HS)
+\end_layout
+
+\begin_layout Plain Layout
+
+Located(HS, HScity)
+\end_layout
+
+\begin_layout Plain Layout
+
+Hobbies(SSN, hobby)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No anomalies, we can reconstruct original data.
+\end_layout
+
+\begin_layout Standard
+One possible problem is that 
+\series bold
+HS
+\series default
+ alone is not a key, so if we brake up 
+\series bold
+HS
+\series default
+ and 
+\series bold
+HScity
+\series default
+, we can no longer identify the high school, we can do:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName)
+\end_layout
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName)
+\end_layout
+
+\begin_layout Plain Layout
+
+HighSchool(SSN, HS, HScity)
+\end_layout
+
+\begin_layout Plain Layout
+
+Hobbies(SSN, hobby)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose student doesn't want to reveal hobbies to all of the colleges, we
+ do this:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName)
+\end_layout
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, hobby)
+\end_layout
+
+\begin_layout Plain Layout
+
+HighSchool(SSN, HS, HScity)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Design by decomposition
+\end_layout
+
+\begin_layout Itemize
+Start with 
+\begin_inset Quotes eld
+\end_inset
+
+mega
+\begin_inset Quotes erd
+\end_inset
+
+ relations containing everything
+\end_layout
+
+\begin_layout Itemize
+Decompose into smaller, better relations with same info.
+\end_layout
+
+\begin_layout Itemize
+Can do decomposition automatically
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Automatic decomposition
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Mega
+\begin_inset Quotes erd
+\end_inset
+
+ relations + properties of the data
+\end_layout
+
+\begin_layout Itemize
+System decomposes based on properties
+\end_layout
+
+\begin_layout Itemize
+Final set of relations satisfies 
+\series bold
+normal form
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+no anomalies, no lost information
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Properties and Normal Forms
+\end_layout
+
+\begin_layout Standard
+For specification of properties:
+\end_layout
+
+\begin_layout Itemize
+Functional dependencies
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Boyce-Codd Normal Form
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Stricter than 4NF
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Multivalued dependencies
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Fourth Normal Form - adds to BCNF
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+1NF - Relations are real relations with atomic values in each cell
+\end_layout
+
+\begin_layout Itemize
+2NF - Specifies something about the way relations are structured with respect
+ to their keys
+\end_layout
+
+\begin_layout Itemize
+3NF - Slight weakening of BCNF
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+BCNF
+\series default
+ - most common NF used if we have 
+\series bold
+functional dependencies only
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+4NF
+\series default
+ - most common NF used if we have 
+\series bold
+functional dependencies and multivalued dependencies
+\series default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Functional Dependencies and BCNF
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, sName, cName)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This relation has all:
+\end_layout
+
+\begin_layout Itemize
+Redundancy; Update & Deletion Anomalies
+\end_layout
+
+\begin_layout Itemize
+Storing SSN-sName pair once for each college
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Functional Dependency SSN
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+sName
+\end_layout
+
+\begin_layout Itemize
+Same 
+\series bold
+SSN
+\series default
+ always has same 
+\series bold
+sName
+\end_layout
+
+\begin_layout Itemize
+Should store each 
+\series bold
+SSN
+\series default
+'s 
+\series bold
+sName
+\series default
+ only once
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+BCNF
+\end_layout
+
+\begin_layout Itemize
+If 
+\series bold
+A
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+B
+\series default
+ then 
+\series bold
+A 
+\series default
+is a key
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+meaning we have one tuple for each attribute
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+The functional dependency would tell us to:
+\end_layout
+
+\begin_layout Standard
+Decompose: 
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName)
+\end_layout
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Multivalued Dependencies and 4NF
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, HS)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Redundancy; Update & Deletion Anomalies
+\end_layout
+
+\begin_layout Itemize
+Multiplicative effect
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+C colleges, H highschools
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Formula $C\cdot H$
+\end_inset
+
+ tupples, we'd like to have 
+\begin_inset Formula $C+H$
+\end_inset
+
+, because then we'd capture each piece of info only once.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Not addressed by BCNF: No functional dependencies, if there are no functional
+ dependencies, then the relation is automatically in BCNF.
+ It's not necessary that every instance of 
+\series bold
+SSN
+\series default
+ is associated with a single 
+\series bold
+cName
+\series default
+ or a single 
+\series bold
+HS
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Multivalued Dependency SSN
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+cName
+\end_layout
+
+\begin_layout Itemize
+Given 
+\series bold
+SSN
+\series default
+ has every combination of 
+\series bold
+cName
+\series default
+ with 
+\series bold
+HS
+\series default
+ that's associated with that 
+\series bold
+SSN
+\series default
+.
+\end_layout
+
+\begin_layout Itemize
+Should store each 
+\series bold
+cName
+\series default
+ and each 
+\series bold
+HS
+\series default
+ for an 
+\series bold
+SSN
+\series default
+ once
+\end_layout
+
+\begin_layout Standard
+That's what 4NF will solve.
+ If 
+\begin_inset Formula $\mathbf{A\twoheadrightarrow B}$
+\end_inset
+
+ then 
+\series bold
+A
+\series default
+ is a key.
+\end_layout
+
+\begin_layout Standard
+Decompose:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName)
+\end_layout
+
+\begin_layout Plain Layout
+
+HighSchool(SSN, HS)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider the relation
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+StudentInfo(sID, dorm, courseNum)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Multivalued dependencies:
+\end_layout
+
+\begin_layout Itemize
+sID
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+dorm
+\end_layout
+
+\begin_layout Itemize
+sID
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+courseNum
+\end_layout
+
+\begin_layout Standard
+4NF requires the left-hand side of multivalued dependencies to be a key
+ for the relation.
+ 
+\series bold
+sID
+\series default
+ is not a key for 
+\series bold
+StudentInfo
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Functional dependencies
+\end_layout
+
+\begin_layout Standard
+Functional dependencies are generally useful concept
+\end_layout
+
+\begin_layout Itemize
+Data storage -compression
+\end_layout
+
+\begin_layout Itemize
+Reasoning about queries - optimization
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: College application info.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName, address, HScode, HSname, HScity, GPA, priority)
+\end_layout
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, state, date, major)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose priority is determined by GPA
+\end_layout
+
+\begin_layout Standard
+say, if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $GPA>3.8$
+\end_inset
+
+ then 
+\begin_inset Formula $priority=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $3.3<GPA\leq3.8$
+\end_inset
+
+ then 
+\begin_inset Formula $priority=2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $GPA\leq3.3$
+\end_inset
+
+ then 
+\begin_inset Formula $priority=3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If this is guaranteed in our data, then we can say that two tuples with
+ same 
+\series bold
+GPA
+\series default
+ have the same 
+\series bold
+priority
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Formally
+\begin_inset Formula 
+\[
+\forall_{t,u\in Student}t.GPA=u.GPA\Rightarrow t.priority=u.priority
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+GPA\rightarrow priority
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+meaning that 
+\series bold
+GPA
+\series default
+ determines 
+\series bold
+priority
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Generally, for a relation 
+\begin_inset Formula $\textcircled{R}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall_{t,u\in R}t.A=u.A\Rightarrow t.B=u.B
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\textcircled{R}\qquad A\rightarrow B
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+more generally, for a set of attributes of 
+\begin_inset Formula $\textcircled{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall_{t,u\in R}t\left[A_{1},A_{2},\dots,A_{n}\right]=u\left[A_{1},A_{2},\dots,A_{n}\right]\Rightarrow t\left[B_{1},B_{2},\dots,B_{m}\right]=u\left[B_{1},B_{2},\dots,B_{m}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\textcircled{R}\qquad A_{1},A_{2},\dots,A_{n}\rightarrow B_{1},B_{2},\dots,B_{m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two tuples 
+\series bold
+t 
+\series default
+and 
+\series bold
+u
+\series default
+ have the same values for all attributes 
+\begin_inset Formula $A_{1},A_{2},\dots,A_{n}$
+\end_inset
+
+ and if they do then they will also have the same values for 
+\begin_inset Formula $B_{1},B_{2},\dots,B_{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For simplicity, the notation for 
+\begin_inset Formula $B_{1},B_{2},\dots,B_{m}$
+\end_inset
+
+ will be 
+\begin_inset Formula $\overline{B}$
+\end_inset
+
+, same for 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Functional Dependency
+\end_layout
+
+\begin_layout Itemize
+Basend on knowledge of real world data that's being captured.
+\end_layout
+
+\begin_layout Itemize
+All instances of a relation must adhere.
+\end_layout
+
+\begin_layout Standard
+Say we have attributes 
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $R(\bar{A},\bar{B},\bar{C})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we have 2 tuples who's values are the same then:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{c_{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{c_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+values 
+\begin_inset Formula $\bar{C}$
+\end_inset
+
+ don't have to be the same
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the above example
+\end_layout
+
+\begin_layout Standard
+SSN functionally determines sName
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $SSN\rightarrow sName$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student doesn't change address
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $SSN\rightarrow address$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Same HSname and HScity for every HScode
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $HScode\rightarrow HSname,HScity$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There's no two high schools with the same name and city
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $HSname,HScity\rightarrow HScode$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $SSN\rightarrow GPA$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $GPA\rightarrow priority$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $SSN\rightarrow priority$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For Apply relation, it may depend on real world constraints:
+\end_layout
+
+\begin_layout Standard
+If every college has a particular single date on which it receives its applicati
+on.
+ College names are unique
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $cName\rightarrow date$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Students are allowed to apply to a single major at each college they apply
+ to
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $SSN,cName\rightarrow major$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Students only allowed to colleges in one state
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $SSN\rightarrow state$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Functional Dependencies and Keys
+\end_layout
+
+\begin_layout Itemize
+Relation with no duplicates 
+\begin_inset Formula $R(\bar{A},\bar{B})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Suppose 
+\begin_inset Formula $\bar{A}\rightarrow$
+\end_inset
+
+all attributes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We cannot have the same two tuples with the same 
+\begin_inset Formula $A$
+\end_inset
+
+ values is what it means for 
+\begin_inset Formula $A$
+\end_inset
+
+ to be a 
+\series bold
+key
+\series default
+.
+ That's for the case when we have no duplicates in 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Trivial Functional Dependency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ if 
+\begin_inset Formula $\bar{B}\subseteq\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nontrivial FD
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ if 
+\begin_inset Formula $\bar{B}\not\subseteq\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we have some values agreeing in 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ then they will also agree in 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+, there are some attributes in 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+ that are not a part of 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Completely nontrivial FD
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ if 
+\begin_inset Formula $\bar{B}\cap\bar{A}=\textrm{Ø}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+ attributes are going to be some part of remaining portion of attributes
+ from 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+.
+ We're saying if 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ values are the same then 
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+ values will be the same.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Rules for Funcional Dependencies
+\end_layout
+
+\begin_layout Itemize
+Splitting Rule
+\begin_inset Newline newline
+\end_inset
+
+If we have a set of attributes determining another set of attributes
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bar{A}\rightarrow B_{1},B_{2},\dots,B_{m}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+then we also have this implication that we have 
+\begin_inset Formula $A$
+\end_inset
+
+ determines 
+\begin_inset Formula $B_{1},B_{2},\dots$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bar{A}\rightarrow B_{1},\bar{A}\rightarrow B_{2},\dots$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Can we also split left-hand side?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A_{1},A_{2},\dots,A_{n}\rightarrow\bar{B}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A_{1}\rightarrow\bar{B},A_{2}\rightarrow\bar{B},\dots$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+NO
+\begin_inset Newline newline
+\end_inset
+
+
+\series default
+say if we have:
+\begin_inset Newline newline
+\end_inset
+
+HSname, HScity
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+HScode
+\begin_inset Newline newline
+\end_inset
+
+it is likely not the case that we have:
+\begin_inset Newline newline
+\end_inset
+
+HSname
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+HScode
+\begin_inset Newline newline
+\end_inset
+
+or
+\begin_inset Newline newline
+\end_inset
+
+HScity
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+HScode
+\end_layout
+
+\begin_layout Itemize
+Combining rule - an inverse of the splitting rule
+\begin_inset Newline newline
+\end_inset
+
+If we have:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bar{A}\rightarrow B_{1}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bar{A}\rightarrow B_{2}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bar{A}\rightarrow B_{n}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow\bar{A}\rightarrow B_{1},\dots,B_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Trivial-dependency rules
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ then 
+\begin_inset Formula $\bar{A}\rightarrow\bar{A}\cup\bar{B}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+and
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ then 
+\begin_inset Formula $\bar{A}\rightarrow\bar{A}\cap\bar{B}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+which is also implied by the splitting rule.
+\end_layout
+
+\begin_layout Itemize
+Transitive rule
+\begin_inset Newline newline
+\end_inset
+
+If 
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{B}\rightarrow\bar{C}$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\bar{A}\rightarrow\bar{C}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{C}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{c}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+If we know that the two 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ values are the same, then the two 
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+ values are the same and if the two 
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+ values are the same then the two 
+\begin_inset Formula $\bar{c}$
+\end_inset
+
+ values are the same.
+\end_layout
+
+\begin_layout Subsubsection
+Closure of Attributes
+\end_layout
+
+\begin_layout Itemize
+Given relation, FDs, set of attributes 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Find all 
+\series bold
+B
+\series default
+ such that 
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Notation: 
+\begin_inset Formula $\bar{A}^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Algorithm
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Start with 
+\begin_inset Formula $\left\{ A_{1},A_{2},\dots,A_{n}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+repeat adding attributes to the closure until we get to the closure:
+\end_layout
+
+\begin_layout Standard
+repeat if 
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ and all of 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ is in the set, add 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+ to the set.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Closure Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName, address, HScode, HSname, HScity, GPA, priority)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+SSN & \rightarrow & sName,address,GPA\\
+GPA & \rightarrow & priority\\
+HScode & \rightarrow & HSname,HScity
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose that we're interesting in computing the closure of 
+\begin_inset Formula $\left\{ SSN,HScode\right\} ^{+}$
+\end_inset
+
+, so in other words we want to find all attributes in the student relation
+ that are determined by these two attributes.
+\end_layout
+
+\begin_layout Standard
+Start with:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left\{ \mathbf{SSN,HScode}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Add attributes that are functionally determined by ones in the set from
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $SSN\rightarrow sName,address,GPA$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\left\{ SSN,HScode,\mathbf{sName,address,GPA}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Repeat with 
+\begin_inset Formula $GPA\rightarrow priority$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\left\{ SSN,HScode,sName,address,GPA,\mathbf{priority}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Repeat with 
+\begin_inset Formula $HScode\rightarrow HSname,HScity$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\left\{ SSN,HScode,sName,address,GPA,priority,\mathbf{HSname,HScity}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The two attributes: 
+\series bold
+SSN, HScode
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+, functionally determine all of the attributes of the Student relation and
+ therefore are the key.
+\end_layout
+
+\begin_layout Subsubsection
+Closure and Keys
+\end_layout
+
+\begin_layout Standard
+Is 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ a key for 
+\begin_inset Formula $R$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+Compute 
+\begin_inset Formula $\bar{A}^{+}$
+\end_inset
+
+, if it's equal to all attributes, then 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ is a key.
+\end_layout
+
+\begin_layout Standard
+In general, how can we find all keys given a set of FDs?
+\end_layout
+
+\begin_layout Standard
+Consider every subset, 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+, of attributes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{A}^{+}\rightarrow$
+\end_inset
+
+all attributes then it's a key.
+ To be more efficient, we can consider these subsets in an increasing order.
+ So an actual algorithm would start with a single attribute.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Consider the relation R(A, B, C, D, E) and suppose we have the functional
+ dependencies: 
+\end_layout
+
+\begin_layout Standard
+AB
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+C
+\end_layout
+
+\begin_layout Standard
+AE
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+D
+\end_layout
+
+\begin_layout Standard
+D
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+B
+\end_layout
+
+\begin_layout Standard
+the key for R is AE
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${AB}^{+}={ABC}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${AC}^{+}={AC}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${AD}^{+}={ABCD}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${AE}^{+}={ABCDE}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Specifying FDs for a relation
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ sets of FDs
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+follows from
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+if every relation instance satisfying 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ also satisfies 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Suppose
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{2}:\left\{ SSN\rightarrow priority\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{1}:\left\{ SSN\rightarrow GPA,GPA\rightarrow priority\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+then 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ follows from 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+How to test?
+\end_layout
+
+\begin_layout Standard
+Does 
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ follow from S?
+\end_layout
+
+\begin_layout Itemize
+Compute 
+\begin_inset Formula $\bar{A}^{+}$
+\end_inset
+
+ based on functional dependencies that are in 
+\begin_inset Formula $S$
+\end_inset
+
+ and check if 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+ is in the set.
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Example
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+Consider the relation R(A, B, C, D, E) and the set of functional dependencies
+ 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+= {AB
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+C, AE
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+D, D
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+B}
+\begin_inset Newline newline
+\end_inset
+
+Which of the following sets 
+\begin_inset Formula $S_{2}$
+\end_inset
+
+ of FDs does NOT follow from 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $S_{2}$
+\end_inset
+
+={ABC
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+D, D
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+B}
+\begin_inset Newline newline
+\end_inset
+
+Using the FDs in S1: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${AD}^{+}$
+\end_inset
+
+ = {ABCD}
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${AE}^{+}$
+\end_inset
+
+= {ABCDE}
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${ABC}^{+}$
+\end_inset
+
+= {ABC}
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${D}^{+}$
+\end_inset
+
+= {B}
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula ${ADE}^{+}$
+\end_inset
+
+= {ABCDE}
+\end_layout
+
+\begin_layout Itemize
+Armstrong's Axioms
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Want
+\series default
+: Minimal set of completely nontrivial FDs such that all FDs that hold on
+ the relation follow from the dependencies in this set.
+\end_layout
+
+\begin_layout Subsection
+Boyce-Codd normal form
+\end_layout
+
+\begin_layout Subsubsection
+Decomposition of a relational schema
+\end_layout
+
+\begin_layout Standard
+Say we have a relation 
+\begin_inset Formula $R(A_{1},A_{2},\dots,A_{n})$
+\end_inset
+
+, we can decompose it into 
+\begin_inset Formula $R_{1}(B_{1},\dots,B_{k})$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{2}(C_{1},\dots,C_{m})$
+\end_inset
+
+, call those 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{C}$
+\end_inset
+
+ respectively.
+ Then 
+\begin_inset Formula $\bar{B}\cup\bar{C}=\bar{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{1}\bowtie R_{2}=R$
+\end_inset
+
+.
+ 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ can also be defined as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{1}=\Pi_{\bar{B}}(R)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{2}=\Pi_{\bar{C}}(R)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName, address, HScode, HSname, HScity, GPA, priority)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Decomposition 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+S1(SSN, sName, address, HScode, GPA, priority)
+\end_layout
+
+\begin_layout Plain Layout
+
+S2(HScode, HSname, HScity)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is this a correct decomposition in a sense that
+\begin_inset Formula $\bar{B}\cup\bar{C}=\bar{A}$
+\end_inset
+
+ and will 
+\begin_inset Formula $S_{1}\bowtie S_{2}=Student$
+\end_inset
+
+ (yes)?
+\end_layout
+
+\begin_layout Standard
+Decomposition 2
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+S1(SSN, sName, address, HScode, HSname, HScity)
+\end_layout
+
+\begin_layout Plain Layout
+
+S2(HScode, GPA, priority)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is this a correct decomposition in a sense that
+\begin_inset Formula $\bar{B}\cup\bar{C}=\bar{A}$
+\end_inset
+
+ and will 
+\begin_inset Formula $S_{1}\bowtie S_{2}=Student$
+\end_inset
+
+ (no)? We'd be joining on sName and HSname and likely those are not unique,
+ so we could be getting information back that doesn't belong together.
+\end_layout
+
+\begin_layout Subsubsection
+Rational design by decomposition
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Mega
+\begin_inset Quotes erd
+\end_inset
+
+ relations + properties of the data
+\end_layout
+
+\begin_layout Itemize
+System decomposes based on properties
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+Good
+\begin_inset Quotes erd
+\end_inset
+
+ decompositions only
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+reassembly produces original 
+\end_layout
+
+\begin_layout Itemize
+lossless join property
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Into 
+\begin_inset Quotes eld
+\end_inset
+
+good
+\begin_inset Quotes erd
+\end_inset
+
+ relations - BCNF
+\end_layout
+
+\begin_layout Subsubsection
+Boyce-Codd Normal Form
+\end_layout
+
+\begin_layout Standard
+A relation 
+\series bold
+R
+\series default
+ with FDs is in BCNF if:
+\end_layout
+
+\begin_layout Standard
+For each 
+\begin_inset Formula $\bar{A}\rightarrow B$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ is a key (or contains a key, like a superset of attributes/key)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: Determine if a relation is in BCNF
+\end_layout
+
+\begin_layout Standard
+We need a relation and a set of functional dependencies
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName, address, HScode, HSname, HScity, GPA, priority)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+SSN & \rightarrow & sName,address,GPA\\
+GPA & \rightarrow & priority\\
+HScode & \rightarrow & HSname,HScity
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To determine if this R is in BCNF, we need a key or set of keys.
+ Use closure idea - {SSN, HScode} determins all other attributes.
+ 
+\end_layout
+
+\begin_layout Standard
+Does every FD have a key on left hand side?
+\end_layout
+
+\begin_layout Standard
+NO
+\end_layout
+
+\begin_layout Standard
+In this case none does.
+\end_layout
+
+\begin_layout Standard
+We would have to use these FDs to brake this R down into one that's a better
+ design.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: Determine if a relation is in BCNF
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, state, date, major)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+SSN,cName,state\rightarrow date,major
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note: since we have only this one FD, here we are not assuming cName is
+ a unique college name, but that colleges are identified by cName+state.
+\end_layout
+
+\begin_layout Standard
+The three attributes on LHS form a key, because they determine the rest
+ of the attributes.
+ Furthermore the only (all) FD has a key on LHS, so this relation is already
+ in BCNF and there's no way to decompose it into a better design.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+For the relation
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, state, date, major)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose college names are unique and students may apply to each only once,
+ so we have two FDs:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $cName\rightarrow state$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $SSN,cName\rightarrow date,major$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Is Apply in BCNF?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+{SSN, cName}
+\series default
+ is a key so only 
+\series bold
+cName 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ state
+\series default
+ is a BCNF violation.
+ Based on this violation we decompose into 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+A1(cName, state)
+\end_layout
+
+\begin_layout Plain Layout
+
+A2(SSN, cName, date, major)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now both FDs have keys on their left-hand-side so we're done.
+\end_layout
+
+\begin_layout Subsubsection
+BCNF decomposition algorithm
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Input
+\series default
+: relation 
+\series bold
+R+FD
+\series default
+s for 
+\series bold
+R
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Output
+\series default
+: decomposition of 
+\series bold
+R
+\series default
+ into BCNF relations with 
+\begin_inset Quotes eld
+\end_inset
+
+lossless
+\begin_inset Quotes erd
+\end_inset
+
+ join
+\end_layout
+
+\begin_layout Itemize
+Compute keys for R - using FDs
+\end_layout
+
+\begin_layout Itemize
+Repeat until all relations are in BCNF:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pick any 
+\begin_inset Formula $R'$
+\end_inset
+
+ with 
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ that violates BCNF
+\end_layout
+
+\begin_layout Itemize
+Decompose 
+\begin_inset Formula $R'$
+\end_inset
+
+ into 
+\begin_inset Formula $R_{1}(A,B)$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{2}(A,rest)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute FDs for 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute keys for 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $R'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rest
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\downarrow$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{1}$
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+ 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rest
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{1}\bowtie R_{2}\rightarrow R'$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Student(SSN, sName, address, HScode, HSname, HScity, GPA, priority)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+SSN
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+sName, address, GPA
+\end_layout
+
+\begin_layout Standard
+GPA
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+priority
+\end_layout
+
+\begin_layout Standard
+HScode
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+HSname, HScity
+\end_layout
+
+\begin_layout Standard
+key: {SSN, HScode}
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Goal is to brake down the relation until it's in BCNF.
+\end_layout
+
+\begin_layout Standard
+Pick some FD that violates BCNF and use it to start decomposition.
+ All of the FDs in this case violate BCNF, because none have a key on LHS.
+ Pick HScode
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+HSname, HScity
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S1(HScode, HSname, HScity) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ding{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S2(SSN, sName, address, HScode, GPA, priority)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For relation S1, the only relational dependency is HScode
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+HSname, HScity; that tells us that HScode is the key for S1, the only FD
+ for S1 has a key on LHS and so it's in BCNF.
+\end_layout
+
+\begin_layout Standard
+For S2, SSN and HScode are the key and we still have the two FDs that are
+ BCNF violations.
+ Take GPA
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+priority, now we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S1(HScode, HSname, HScity) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ding{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sout{S2(SSN, sName, address, HScode, GPA, priority)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S3(GPA, priority) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ding{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S4(SSN, sName, address, HScode, GPA)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S4 still has SSN and HScode as its key, so we decompose further.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S1(HScode, HSname, HScity) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ding{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sout{S2(SSN, sName, address, HScode, GPA, priority)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S3(GPA, priority) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ding{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sout{S4(SSN, sName, address, HScode, GPA)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S5(SSN, sName, address, GPA) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ding{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S6(SSN, HScode) 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ding{51}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Consider relation
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, state, date, major)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with FDs
+\end_layout
+
+\begin_layout Standard
+cName
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+state
+\end_layout
+
+\begin_layout Standard
+SSN, cName
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+date, major
+\end_layout
+
+\begin_layout Standard
+What schema would be produced by the BCNF decomposition algorithm?
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+A1(cName, state)
+\end_layout
+
+\begin_layout Plain Layout
+
+A2(SSN, cName, date, major)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+{SSN, cName} is a key so only cName 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+ state is a BCNF violation.
+ Based on this violation we decompose into A1(cName,state), A2(SSN, cName,
+ date, major).
+ Now both FDs have keys on their left-hand-side so we're done.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To compute 
+\end_layout
+
+\begin_layout Itemize
+Compute FDs for 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute keys for 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We use closure to compute 
+\series bold
+Implied FD
+\series default
+s.
+\end_layout
+
+\begin_layout Standard
+Picking any 
+\begin_inset Formula $R'$
+\end_inset
+
+ introduces non-determinism to the algorithm.
+ So you can get a different answer depending what you choose, but the schema
+ will be in BCNF.
+\end_layout
+
+\begin_layout Standard
+Some decomposition algos have another step after the above one.
+ We can extend the FD used for the decomposition.
+ If we have 
+\begin_inset Formula $A\rightarrow B$
+\end_inset
+
+, we can also have 
+\begin_inset Formula $A\rightarrow BA^{+}$
+\end_inset
+
+ .
+ We'll have relations that are bigger.
+ In some cases that is good, because you don't need to join them back when
+ doing queries.
+ [shortcomings of BCNF]
+\end_layout
+
+\begin_layout Subsection
+Multivalued dependencies, 4th normal form
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: College application info.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, hobby)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+FDs?
+\series default
+ No
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Keys?
+\series default
+ All attributes
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+BCNF?
+\series default
+ Yes, no FDs.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Good design?
+\series default
+ No, if you apply to 5 colleges and have 6 hobbies, we have 30 tuples
+\end_layout
+
+\begin_layout Subsubsection
+Multivalued Dependency
+\end_layout
+
+\begin_layout Itemize
+Based on knowledge of real world
+\end_layout
+
+\begin_layout Itemize
+All instances of relation must adhere to the dependency
+\end_layout
+
+\begin_layout Standard
+For a relation 
+\begin_inset Formula $R$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+means multi-determines
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\forall_{t,u\in R}:t\left[\bar{A}\right] & = & u\left[\bar{A}\right]\text{ then}\\
+\exists_{v\in R}:v\left[\bar{A}\right] & = & t\left[\bar{A}\right]\text{ and}\\
+v\left[\bar{B}\right] & = & t\left[\bar{B}\right]\text{ and}\\
+v\left[rest\right] & = & u\left[rest\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For all tuples t, u that are in a relation R, if t with the attributes 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ equals u with the attributes 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ (tuples agree on their 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ values), then there exists a third tuple, v, in R where v has the same
+ values, 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ as t and u, furthermore, it has 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+ value from t and rest from u[rest].
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $rest$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b_{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b_{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+w
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\bar{b_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w$
+\end_inset
+
+ comes from swapping the values ot 
+\begin_inset Formula $t$
+\end_inset
+
+ and 
+\begin_inset Formula $u$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+ values are independent
+\end_layout
+
+\begin_layout Standard
+FD are sometimes called tuple-generating dependencies
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Consider a relation R(A, B, C) with multivalued dependecy 
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}$
+\end_inset
+
+.
+ Suppose there are at least 3 different values for A, and each value of
+ A is associated with at least 4 different B values and at least 5 different
+ C values.
+\end_layout
+
+\begin_layout Standard
+The minimum number of tuples in R is 60.
+\end_layout
+
+\begin_layout Standard
+Multivalued dependency 
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}$
+\end_inset
+
+ says that for each value of A, we must have every combination of B and
+ C values.
+ So for each of the 3 values of A we must have at least 4*5=20 different
+ tuples.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, hobby)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $SSN\twoheadrightarrow cName$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+(and also 
+\begin_inset Formula $SSN\twoheadrightarrow hobby$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SSN
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cName
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+hobby
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stanford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+trumpet
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Berkeley
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tennis
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+v
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stanford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+tennis
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+w
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Berkeley
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+trumpet
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Modified example
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, hobby)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reveal hobbies to colleges selectively
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+MVDs?
+\series default
+ None
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Good design?
+\series default
+ Yes, no multiplicative effect in the relation
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Expanded example
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, date, major, hobby)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reveal hobbies to colleges selectively
+\end_layout
+
+\begin_layout Standard
+Apply once to each college
+\end_layout
+
+\begin_layout Standard
+May apply to multiple majors
+\end_layout
+
+\begin_layout Standard
+SSN, cName
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+date
+\end_layout
+
+\begin_layout Standard
+SSN, cName, date 
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+major
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: For the relation Apply(SSN, cName, date, major) with functional dependency
+ SSN, cName
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+date, what real-world constraint is captured by SSN
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+cName, date?
+\end_layout
+
+\begin_layout Standard
+A sutdent must apply to the same set of majors at all colleges.
+\end_layout
+
+\begin_layout Standard
+SSN
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+cName, date says that (cName, date) and major are independent, i.e., all combinati
+ons of (cName, date) and major must be present for any college or major
+ a student applies for.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Trivial Multivalued Dependency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}$
+\end_inset
+
+ when 
+\begin_inset Formula $\bar{B}\subseteq\bar{A}$
+\end_inset
+
+ or 
+\begin_inset Formula $\bar{A}\cup\bar{B}=$
+\end_inset
+
+all attributes
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nontrivial MVD
+\end_layout
+
+\begin_layout Standard
+otherwise
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Rules for Multivalued Dependencies
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+FD-is-an-MVD rule
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{A}\rightarrow\bar{B}$
+\end_inset
+
+ then 
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rest
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{r}_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{r}_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+v
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}_{1}=\bar{b}_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{r}_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Intersection rule
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{C}$
+\end_inset
+
+ then 
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}\cap\bar{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Transitive rule
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{C}$
+\end_inset
+
+ then 
+\begin_inset Formula $\bar{A}\twoheadrightarrow\bar{B}-\bar{C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Every rule for MVD is a rule for FD, not necessarily the other way around,
+ example is splitting rule.
+\end_layout
+
+\begin_layout Subsubsection
+Fourth Normal Form
+\end_layout
+
+\begin_layout Standard
+Relation 
+\series bold
+R
+\series default
+ with MVDs is in 4NF if for each non-trivial 
+\series bold
+
+\begin_inset Formula $A\twoheadrightarrow B$
+\end_inset
+
+
+\series default
+, 
+\series bold
+A
+\series default
+ 
+\series bold
+is a key
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rest
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+t
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{r}_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+u
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{b}_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\bar{r}_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+4NF Decomposition Algorithm
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Input
+\series default
+: relation R + FDs for R + MVDs for R
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Output
+\series default
+: decomposition of R into 4NF relations with 
+\begin_inset Quotes eld
+\end_inset
+
+lossless join
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute keys for R
+\end_layout
+
+\begin_layout Itemize
+Repeat until all relations are in 4NF:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Pick any R' with nontrivial A
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+B that violates 4NF
+\end_layout
+
+\begin_layout Itemize
+Decompose R' into 
+\begin_inset Formula $R_{1}(A,B)$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{2}(A,rest)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute FDs and MVDs for 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute keys for 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+Example 1: 4NF Decomposition 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, hobby)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+SSN
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+cName, no keys
+\end_layout
+
+\begin_layout Standard
+This is a violating MVD, so decompose into
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{1}$
+\end_inset
+
+(SSN, cName)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{2}$
+\end_inset
+
+(SSN, hobby)
+\end_layout
+
+\begin_layout Standard
+no FDs and no MVDs, so done.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example 2: 4NF Decomposition 
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Apply(SSN, cName, date, major, hobby)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+SSN, cName
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+date
+\end_layout
+
+\begin_layout Standard
+SSN, cName, date
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+major
+\end_layout
+
+\begin_layout Standard
+no keys
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{1}$
+\end_inset
+
+(SSN, cName, date, major) - contains all attributes of our MVD
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{2}$
+\end_inset
+
+(SSN, cName, date, hobby) - contains all the remaining attributes along
+ with the left hand side of our MVD.
+ Now take a look at the decomposed relations and see what we have in terms
+ of FDs and MVDs for them.
+ We have no more MVDs but FD applies to both of the decomposed relations
+ and we still don't have a key on LHS, so we need to decompose further based
+ on the first FD.
+ Take 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+ and turn it into:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sout{(SSN, cName, date, major)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{2}$
+\end_inset
+
+(SSN, cName, date, hobby)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{3}$
+\end_inset
+
+(SSN, cName, date)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{4}$
+\end_inset
+
+(SSN, cName, major)
+\end_layout
+
+\begin_layout Standard
+We have a similar problem with 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+, so decompose it:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sout{(SSN, cName, date, major)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+sout{(SSN, cName, date, hobby)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{3}$
+\end_inset
+
+(SSN, cName, date)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{4}$
+\end_inset
+
+(SSN, cName, major)
+\end_layout
+
+\begin_layout Standard
+we'll discover that 
+\begin_inset Formula $A_{3}$
+\end_inset
+
+ is the same relation in the decomposition of 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+ as we got with 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+, so we only add one relation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{5}$
+\end_inset
+
+(SSN, cName, hobby)
+\end_layout
+
+\begin_layout Standard
+Now the only MVDs or FDs we have left do have a key on the LHS.
+ This is in 4NF.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Consider relation StudentInfo(sID, name, dorm, major) with functional dependency
+ sID
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+name and MVD sID
+\begin_inset Formula $\twoheadrightarrow$
+\end_inset
+
+dorm.
+ What schema would be produced by the 4NF decomposition algorithm?
+\end_layout
+
+\begin_layout Standard
+There is no key for the relation.
+ Decomposing on the violating FD separates (sID, name) from (sID, dorm,
+ major).
+ Decomposing on the violating MVD separates (sID, dorm) from (sID, major).
+ Now there are no violating FDs or nontrivial MVDs.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{1}$
+\end_inset
+
+(sID, name)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{2}$
+\end_inset
+
+(sID, dorm)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{3}$
+\end_inset
+
+(sID, major)
+\end_layout
+
+\begin_layout Subsubsection
+Summary
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Functional dependencies & BCNF
+\end_layout
+
+\begin_layout Standard
+If we have R(A, B, C), a FD 
+\begin_inset Formula $A\rightarrow B$
+\end_inset
+
+ tells us that when we have the same A values, we have the same B values
+ and BCNF tells us to factor those attributes into their own relation so
+ we don't repeat that relationship over and over
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+MVDs & 4NF
+\end_layout
+
+\begin_layout Standard
+Say we have a relation R(A, B, C, D) and if we have the MVD 
+\begin_inset Formula $\bar{A}\twoheadrightarrow B$
+\end_inset
+
+, what that tells us is that we have every combination of for a given A
+ of B values and CD values and if we have that multiplicative effect, we
+ take the A and B attributes and we put them in a separate relation so that
+ we can separate those facts from the independent fact of A and its CD values.
+\end_layout
+
+\begin_layout Standard
+4NF is a stronger form than BCNF.
+\end_layout
+
+\begin_layout Subsection
+Shortcomings of BCNF/4NF
+\end_layout
+
+\begin_layout Standard
+3rd normal form may be a better design if we need to join needlessly.
+\end_layout
+
+\begin_layout Standard
+After decomposition, there is no guarantee dependencies can be checked on
+ decomposed relations, need joins.
+\end_layout
+
+\begin_layout Standard
+Denormalized relation - when query needs to reassemble relation, it may
+ be preferable to use this, not in NF.
+\end_layout
+
+\begin_layout Standard
+Too decomposed relations
+\end_layout
+
+\begin_layout Standard
+Shortcomings:
+\end_layout
+
+\begin_layout Itemize
+Dependency enforcement
+\end_layout
+
+\begin_layout Itemize
+Query workload
+\end_layout
+
+\begin_layout Itemize
+Over-decomposition
+\end_layout
+
+\begin_layout Section
+UML: 
+\end_layout
+
+\begin_layout Subsection
+Unified Data Modeling
+\end_layout
+
+\begin_layout Subsubsection
+Higher level Database Design Models
+\end_layout
+
+\begin_layout Itemize
+Entity-Relationship Model (E/R)
+\end_layout
+
+\begin_layout Itemize
+Unified Modeling Language (UML)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+data modeling subset
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+UML Data Modeling: 5 concepts
+\end_layout
+
+\begin_layout Enumerate
+Classes
+\end_layout
+
+\begin_layout Enumerate
+Associations
+\end_layout
+
+\begin_layout Enumerate
+Association Classes
+\end_layout
+
+\begin_layout Enumerate
+Subclasses
+\end_layout
+
+\begin_layout Enumerate
+Composition & Aggregation
+\end_layout
+
+\begin_layout Subsubsection
+Classes
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Name, attributes, methods
+\end_layout
+
+\begin_layout Standard
+For data modeling: add 
+\begin_inset Quotes eld
+\end_inset
+
+pk
+\begin_inset Quotes erd
+\end_inset
+
+, drop methods
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-classes.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Associations
+\end_layout
+
+\begin_layout Standard
+Capture relationships between objects of two classes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-associations.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Multiplicity of Associations
+\end_layout
+
+\begin_layout Standard
+Each object of class 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ is related to at least 
+\begin_inset Formula $m$
+\end_inset
+
+ and at most 
+\begin_inset Formula $n$
+\end_inset
+
+ objects of class 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-associations-multiplicity.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+every object in 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ will be related to between 
+\begin_inset Formula $m$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ objects of 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m..*\leftarrow$
+\end_inset
+
+any number
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0..n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0..*$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1..1\leftarrow$
+\end_inset
+
+default
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-associations-multiplicity2.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1..1\rightarrow1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0..*\rightarrow*$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Students must apply somewhere and may not apply to more than 5 colleges.
+ No college takes more than 20000 applications.
+\end_layout
+
+\begin_layout Subsubsection
+Types of Relationships
+\end_layout
+
+\begin_layout Itemize
+One-to-One
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+0..1 0..1
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Many-to-One
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+* 0..1
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Many-to-Many
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+* *
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Complete
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+default
+\end_layout
+
+\begin_layout Itemize
+1..1 1..1
+\end_layout
+
+\begin_layout Itemize
+1..* 1..*
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Association Classes
+\end_layout
+
+\begin_layout Standard
+Relationships between objects of two classes, with attributes on relationships.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-association-classes.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Eliminating Association Classes
+\end_layout
+
+\begin_layout Standard
+Unnecessary if 0..1 or 1..1 multiplicity
+\end_layout
+
+\begin_layout Standard
+Suppose that multiplicity on left is * and right 1..1, so each object of C1
+ is related to exactly one object of C2, so we know there's gonna be just
+ one association for each object of C1.
+ We can take attributes from the association and put them in C1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-association-classes-eliminating.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Self-Association
+\end_layout
+
+\begin_layout Standard
+Associations between a class and itself
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-associations-self.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Subclasses
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-subclasses.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student is a superclass
+\end_layout
+
+\begin_layout Standard
+Rest are subclasses
+\end_layout
+
+\begin_layout Standard
+Superclass = Generalization
+\end_layout
+
+\begin_layout Standard
+Subclass = Specialization
+\end_layout
+
+\begin_layout Standard
+Incpmplete (partial) vs Complete (every obj in at least one subclass)
+\end_layout
+
+\begin_layout Standard
+Disjoint (exclusive, every obj in at most one subclass) vs.
+ Overlapping
+\end_layout
+
+\begin_layout Standard
+We can have any combination of the above
+\end_layout
+
+\begin_layout Standard
+For above example - {complete, overlapping}, every student in at least one
+ subclass, some students are both ap and domestic student.
+\end_layout
+
+\begin_layout Standard
+If we didn't have the ap section, it would be disjoint.
+\end_layout
+
+\begin_layout Subsubsection
+Composition & Aggregationp
+\end_layout
+
+\begin_layout Standard
+Objects of one class belong to objects of another class.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-composition-aggregation.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Composition - Each department belongs to one college.
+ Aggregation - Some apartment buildings are owned by the college but not
+ all of them.
+\end_layout
+
+\begin_layout Subsection
+UML to relations
+\end_layout
+
+\begin_layout Subsubsection
+Classes
+\end_layout
+
+\begin_layout Standard
+Every class becomes a relation; pk
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+primary key
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-rel-classes.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student(sID, sName, GPA)
+\end_layout
+
+\begin_layout Standard
+College(cName, state, enrollment)
+\end_layout
+
+\begin_layout Subsubsection
+Associations
+\end_layout
+
+\begin_layout Standard
+Relation with key from each side
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-rel-associations.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student(sID, sName, GPA)
+\end_layout
+
+\begin_layout Standard
+College(cName, state, enrollment)
+\end_layout
+
+\begin_layout Standard
+Applied(sID, cName)
+\end_layout
+
+\begin_layout Subsubsection
+Keys for Association Relations
+\end_layout
+
+\begin_layout Standard
+Depends on multiplicity
+\end_layout
+
+\begin_layout Standard
+Suppose:
+\end_layout
+
+\begin_layout Standard
+C1(k1, O1)
+\end_layout
+
+\begin_layout Standard
+C2(k2, O2)
+\end_layout
+
+\begin_layout Standard
+A(k1, k2)
+\end_layout
+
+\begin_layout Standard
+Suppose on left it's 0..1 and * on right.
+\end_layout
+
+\begin_layout Standard
+C1 can be related to many objects of C2 but each object of C2 can be related
+ to at most 1 object of C1.
+ From this, we conclude that k2 is the key for A.
+ So when we have 0..1 on the left side, then the key attribute from the other
+ side is a key for the association.
+\end_layout
+
+\begin_layout Standard
+For the student example
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-rel-associations-keys.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So according to the above, sID would be the key for applied.
+\end_layout
+
+\begin_layout Subsubsection
+Association Relation Always Needed?
+\end_layout
+
+\begin_layout Standard
+Depends on multiplicity
+\end_layout
+
+\begin_layout Standard
+C1(k1, O1)
+\end_layout
+
+\begin_layout Standard
+C2(k2, O2)
+\end_layout
+
+\begin_layout Standard
+A(k1, k2)
+\end_layout
+
+\begin_layout Standard
+C1 1..1 ------ * C2
+\end_layout
+
+\begin_layout Standard
+We can take the related element from the left and add it to right.
+\end_layout
+
+\begin_layout Standard
+C1(k1, O1)
+\end_layout
+
+\begin_layout Standard
+C2(k2, O2, k1)
+\end_layout
+
+\begin_layout Standard
+If left side was 0..1, this would still be ok as long as Nulls are allowed
+ for k1.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Student example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+Student(sID, sName, GPA, cName)
+\end_layout
+
+\begin_layout Standard
+College(cName, state, enrollment)
+\end_layout
+
+\begin_layout Standard
+This works for 0..n or m..n multiplicity, although the bigger n is, the less
+ sense this translation makes.
+\end_layout
+
+\begin_layout Subsubsection
+Association Classes
+\end_layout
+
+\begin_layout Standard
+Add attributes to relation for association
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-association-classes-rel.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student(sID, ...)
+\end_layout
+
+\begin_layout Standard
+College(cName, ...)
+\end_layout
+
+\begin_layout Standard
+Applied(sID, cName, date, decision)
+\end_layout
+
+\begin_layout Subsubsection
+Self-Associations
+\end_layout
+
+\begin_layout Standard
+Student(sID pk, sName, GPA) 
+\end_layout
+
+\begin_layout Standard
+Student * --(sibling)-- * Student
+\end_layout
+
+\begin_layout Standard
+Student(sID, sName, GPA)
+\end_layout
+
+\begin_layout Standard
+Sibling(sID1, sID2)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-associations-self.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+College(cName, state, enrollment)
+\end_layout
+
+\begin_layout Standard
+Branch(home, satellite)
+\end_layout
+
+\begin_layout Standard
+Key for branch is satellite - if we have 1..1 on one side then the other side
+ is a key in the association relation.
+\end_layout
+
+\begin_layout Subsubsection
+Subclasses
+\end_layout
+
+\begin_layout Enumerate
+Subclass relation contan superclass key + specialized attributes
+\end_layout
+
+\begin_layout Enumerate
+Subclass relations contain all attributes
+\end_layout
+
+\begin_layout Enumerate
+One relation containing all superclass + subclass attributes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-association-superclasses-rel.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+S(
+\bar under
+K
+\bar default
+, A) S1(
+\bar under
+K
+\bar default
+, B) S2(
+\bar under
+K
+\bar default
+, C)
+\end_layout
+
+\begin_layout Enumerate
+S(
+\bar under
+K
+\bar default
+, A) S1(
+\bar under
+K
+\bar default
+, A, B) S2(
+\bar under
+K
+\bar default
+, A, C)
+\end_layout
+
+\begin_layout Enumerate
+S((
+\bar under
+K
+\bar default
+, A, B, C)
+\end_layout
+
+\begin_layout Standard
+Heavily overlapping
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+design 3
+\end_layout
+
+\begin_layout Standard
+Disjoint/complete
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+design 2, we could get rid of S
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename database/uml-subclasses.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student(sID, sName)
+\end_layout
+
+\begin_layout Standard
+ForeignS(sID, country)
+\end_layout
+
+\begin_layout Standard
+DomesticS(sID, state, SSN)
+\end_layout
+
+\begin_layout Standard
+APStudent(sID)
+\end_layout
+
+\begin_layout Standard
+APCourse(Course#, title)
+\end_layout
+
+\begin_layout Standard
+Took(sID, course#, year, grade)
+\end_layout
+
+\begin_layout Standard
+Comment: if every student takes at least one course, then we can eliminate
+ this relation, because ever sID in APStudent will also appear in the Took
+ relation, so it's redundant.
+\end_layout
+
+\begin_layout Standard
+Keys for 
+\begin_inset Quotes eld
+\end_inset
+
+regular
+\begin_inset Quotes erd
+\end_inset
+
+ classes - subclasses don't need to have keys and we can still have automatic
+ translation.
+\end_layout
+
+\begin_layout Subsubsection
+Composition & Aggregation
+\end_layout
+
+\begin_layout Standard
+College(cName pk, state) ◆-------Department(dName, building)
+\end_layout
+
+\begin_layout Standard
+College(cName, state)
+\end_layout
+
+\begin_layout Standard
+Department(dName, building, cName)
+\end_layout
+
+\begin_layout Standard
+With aggregation, empty diamond, we need for cName to have the ability to
+ be Null.
+\end_layout
+
+\begin_layout Section
+Indexes
+\end_layout
+
+\begin_layout Itemize
+Primary mechanism to get improved performance on database
+\end_layout
+
+\begin_layout Itemize
+Persistent data structure, stored in database
+\end_layout
+
+\begin_layout Itemize
+Many interesting implementation issues
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+T
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dog
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dog
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cat
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Users don't access indexes; they're used underneath by the query execution
+ engine.
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+Utility
+\end_layout
+
+\begin_layout Itemize
+Index = difference between full table scans and immediate location of tuples
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Order of magnitude performance difference
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Underlying data structures
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Balanced trees (B trees, B+ trees)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+for 
+\begin_inset Formula $=,<,\leq,\geq$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\log(n)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Hash tables
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+only for
+\begin_inset Formula $=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+constant running time
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Examples
+\end_layout
+
+\begin_layout Standard
+If Index on sID
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Select sName
+\end_layout
+
+\begin_layout Plain Layout
+
+From Student
+\end_layout
+
+\begin_layout Plain Layout
+
+Where sID=18942
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Many DBMS's build indexes automatically on PRIMARY KEY (and sometimes UNIQUE)
+ attributes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Select sID
+\end_layout
+
+\begin_layout Plain Layout
+
+From Student
+\end_layout
+
+\begin_layout Plain Layout
+
+Where sName='Mary' and GPA>3.9
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Index on sName - find Mary and then check each of the found rows to find
+ if any has GPA>3.9 - tree or hash based index
+\end_layout
+
+\begin_layout Standard
+Index on GPA - find students with GPA>3.9 and then check if their name is
+ Mary - tree based index
+\end_layout
+
+\begin_layout Standard
+Index on (sName, GPA) - find simultaneously for both conditions
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Select sName, cName
+\end_layout
+
+\begin_layout Plain Layout
+
+From Student, Apply
+\end_layout
+
+\begin_layout Plain Layout
+
+Where Student.sID = Apply.sID
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's say we have an index on Apply.sID.
+ In this case the query engine can scan Student relation and for each Student.sID
+ quickly match the sID in Apply relation.
+\end_layout
+
+\begin_layout Standard
+In some cases it's possible to use indexes on both indexed columns.
+ Indexes often allow relations to be accessed in sorted order of the index
+ attributes.
+ There may be other conditions that allow more choices - Query planning
+ and optimization.
+\end_layout
+
+\begin_layout Subsection
+Downsides of Indexes
+\end_layout
+
+\begin_layout Enumerate
+Extra space - persistent data structure in db, marginal downside
+\end_layout
+
+\begin_layout Enumerate
+Index creation overhead - medium
+\end_layout
+
+\begin_layout Enumerate
+Index maintenance - when db values change, indexes have to be updated, can
+ offset benefits if db not queried as often as updated
+\end_layout
+
+\begin_layout Subsection
+Picking which indexes to create
+\end_layout
+
+\begin_layout Standard
+Benefit of an idex depends on:
+\end_layout
+
+\begin_layout Itemize
+Size of table (and possibly layout)
+\end_layout
+
+\begin_layout Itemize
+Data distributions
+\end_layout
+
+\begin_layout Itemize
+Query vs.
+ update load
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\begin_inset Quotes eld
+\end_inset
+
+Physical design advisor
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+ - software to determine what to index
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Input
+\series default
+: database (statistics) and worklad
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Output
+\series default
+: recommended indexes
+\end_layout
+
+\begin_layout Standard
+Relies on 
+\bar under
+Query Optimizer
+\bar default
+, which takes a query and figures out how to execute it.
+\end_layout
+
+\begin_layout Standard
+It will take statistics on the database, query to be executed and the set
+ of indexes that exist and explore ways of executing the query, estimates
+ the cost of each one and will output the best execution plan with estimated
+ cost.
+\end_layout
+
+\begin_layout Subsection
+SQL Syntax
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Create Index IndexName on T(A)
+\end_layout
+
+\begin_layout Plain Layout
+
+Create Index IndexName on T(A1, A2, ..., An)
+\end_layout
+
+\begin_layout Plain Layout
+
+Create Unique Index IndexName on T(A)
+\end_layout
+
+\begin_layout Plain Layout
+
+Drop Index IndexName
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Unique will check if all values of 
+\series bold
+A
+\series default
+ are unique otherwise will throw an error.
+\end_layout
+
+\begin_layout Section
+Constraints and Triggers
+\end_layout
+
+\begin_layout Subsection
+Motivation and Overview
+\end_layout
+
+\begin_layout Itemize
+For relational databases
+\end_layout
+
+\begin_layout Itemize
+SQL standard; systems vary considerably in support
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+(Integrity) Constrain
+\series default
+ts: constrain allowable database states.
+ static concept
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Triggers
+\series default
+: monitor database changes, check conditions and initiate actions.
+ dynamic concept
+\end_layout
+
+\begin_layout Subsubsection
+Integrity Constraints
+\end_layout
+
+\begin_layout Standard
+Impose restrictions on allowable data, beyond those imposed by structure
+ and types
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $0.0<GPA\leq4.0$
+\end_inset
+
+ GPA must be between 0 and 4
+\end_layout
+
+\begin_layout Standard
+decision: 'y', 'n', null
+\end_layout
+
+\begin_layout Standard
+major='cs'
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+decision = null
+\end_layout
+
+\begin_layout Subsubsection
+
+\series bold
+Why use them?
+\end_layout
+
+\begin_layout Itemize
+Data-entry errors (inserts)
+\end_layout
+
+\begin_layout Itemize
+Correctness criteria (updates)
+\end_layout
+
+\begin_layout Itemize
+Enforce consistency
+\end_layout
+
+\begin_layout Itemize
+Tell system about the data (key constraints, unique...) - store, query processing
+\end_layout
+
+\begin_layout Subsubsection
+Classification
+\end_layout
+
+\begin_layout Itemize
+Non-null
+\end_layout
+
+\begin_layout Itemize
+Key
+\end_layout
+
+\begin_layout Itemize
+Referential integrity (foreign key)
+\end_layout
+
+\begin_layout Itemize
+Attribute-based
+\end_layout
+
+\begin_layout Itemize
+Tuple-based
+\end_layout
+
+\begin_layout Itemize
+General assertion
+\end_layout
+
+\begin_layout Subsubsection
+Declaring and enforcing constraings
+\end_layout
+
+\begin_layout Itemize
+Declaration
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+With original schema - checked after bulk loading, error raised if bad
+\end_layout
+
+\begin_layout Itemize
+Or later - checked on current DB
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Enforcement
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Check after every 
+\begin_inset Quotes eld
+\end_inset
+
+dangerous
+\begin_inset Quotes erd
+\end_inset
+
+ modification
+\end_layout
+
+\begin_layout Itemize
+Deferred constraing checking - sometimes we want to do a whole bunch of
+ operations that violate constraings, but after we're done, they won't be
+ violated - 
+\series bold
+transaction
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Triggers
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Event-Condition-Action Rules
+\begin_inset Quotes erd
+\end_inset
+
+: When even occurs check condition; if true, do action.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Examples
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+If enrollment > 35000
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+reject all applicants
+\end_layout
+
+\begin_layout Standard
+Insert app with GPA > 3.95
+\begin_inset Formula $\mbox{\Rightarrow}$
+\end_inset
+
+accept automatically.
+\end_layout
+
+\begin_layout Standard
+Update sizeHS to be > 7000 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+change to 
+\begin_inset Quotes eld
+\end_inset
+
+wrong
+\begin_inset Quotes erd
+\end_inset
+
+ or raise an error
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Why use them?
+\end_layout
+
+\begin_layout Standard
+Original motivation was to move logic appearing in application to the DBMS.
+\end_layout
+
+\begin_layout Standard
+To enforce constraints - because most constraint features across databases
+ are limited.
+\end_layout
+
+\begin_layout Itemize
+expressiveness
+\end_layout
+
+\begin_layout Itemize
+constraint 
+\begin_inset Quotes eld
+\end_inset
+
+repair
+\begin_inset Quotes erd
+\end_inset
+
+ logic
+\end_layout
+
+\begin_layout Subsubsection
+Triggers in SQL
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Create Trigger name
+\end_layout
+
+\begin_layout Plain Layout
+
+Before|After|Instead Of events
+\end_layout
+
+\begin_layout Plain Layout
+
+[referencing-variables]
+\end_layout
+
+\begin_layout Plain Layout
+
+[For Each Row]
+\end_layout
+
+\begin_layout Plain Layout
+
+When (condition)
+\end_layout
+
+\begin_layout Plain Layout
+
+action
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Constraints of several types
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Constraints Demo
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+College(cName, state, enrollment)
+\end_layout
+
+\begin_layout Plain Layout
+
+Student(sID, sName, GPA, sizeHS)
+\end_layout
+
+\begin_layout Plain Layout
+
+Apply(sID, cName, major, decision)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table Student(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sID int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	sName text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	GPA real not null,
+\end_layout
+
+\begin_layout Plain Layout
+
+	sizeHS int);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+only GPA is allowed to be null
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+update Student set GPA = null where sID=123
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+will be updated if there is a student with sID = 123
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Defered constraint checking
+\series default
+ - check if there are constraint violations after all changes are made
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Immediate constraint checking
+\series default
+ - check constraint violations after each change
+\end_layout
+
+\begin_layout Standard
+Only 
+\series bold
+one primary
+\series default
+ key is 
+\series bold
+allowed
+\series default
+ per table, but more keys allowed with 
+\series bold
+unique
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table Student(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sID int primary key,
+\end_layout
+
+\begin_layout Plain Layout
+
+	sName text unique,
+\end_layout
+
+\begin_layout Plain Layout
+
+	GPA real,
+\end_layout
+
+\begin_layout Plain Layout
+
+	sizeHS int);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can have 
+\series bold
+keys that span several attributes
+\series default
+ - combination of attributes must be unique for each tuple.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table College(
+\end_layout
+
+\begin_layout Plain Layout
+
+	cName text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	state text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	enrollment int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	primary key(cName, state));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+insert into College values('Mason', 'CA', 123454)
+\end_layout
+
+\begin_layout Plain Layout
+
+insert into College values('Mason', 'NY', 123454)
+\end_layout
+
+\begin_layout Plain Layout
+
+insert into College values('Mason', 'CA', 123454)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Last one will generate an error because there can only be one 'Mason', 'CA'
+ pair.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Two key constraints
+\end_layout
+
+\begin_layout Standard
+Each student can apply to each college once and each major once.
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table Apply(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sID int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	cName text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	major text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	decision text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	unique(sID, cName),
+\end_layout
+
+\begin_layout Plain Layout
+
+	unique(sID, major)
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Changing values may violate constraints as well.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Null values with keys
+\end_layout
+
+\begin_layout Standard
+Null values are allowed, but not repeated for the same key.
+\end_layout
+
+\begin_layout Subsubsection
+Attribute based check constraints
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table Student(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sID int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	sName text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	GPA real check(GPA <= 4.0 and GPA > 0.0),
+\end_layout
+
+\begin_layout Plain Layout
+
+	sizeHS int check(sizeHS < 5000));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Tuple based check constraints
+\end_layout
+
+\begin_layout Standard
+Have boolean expression in check condition.
+\end_layout
+
+\begin_layout Standard
+The above attribute and tuple based constraints IN MySQL 
+\bar under
+ARE ACCEPTED
+\bar default
+ BUT 
+\series bold
+\bar under
+NOT ENFORCED
+\series default
+\bar default
+, but are enforced in sqlite and postgres.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+No subqueries or aggregation in check constraints (in SQL standard but not
+ supported)
+\end_layout
+
+\begin_layout Standard
+Make sure that sID in the Apply table is in the Student table.
+ This will not work because of the subquery - but demonstrates 
+\bar under
+referential integrity
+\bar default
+.
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table Student(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sID int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	sName text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	GPA real
+\end_layout
+
+\begin_layout Plain Layout
+
+	sizeHS int
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+create table Apply(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sid int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	cName text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	major text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	decision text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	check(
+\end_layout
+
+\begin_layout Plain Layout
+
+		sid in(
+\end_layout
+
+\begin_layout Plain Layout
+
+			select sID from Student
+\end_layout
+
+\begin_layout Plain Layout
+
+		)
+\end_layout
+
+\begin_layout Plain Layout
+
+	)
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+General Assertions
+\end_layout
+
+\begin_layout Standard
+Not supported by any database.
+\end_layout
+
+\begin_layout Subsection
+Referential integrity
+\end_layout
+
+\begin_layout Standard
+Impose restrictions on allowable data, beyond those imposed by structure
+ and types.
+\end_layout
+
+\begin_layout Standard
+Referential integrity = integrity of references = no 
+\begin_inset Quotes eld
+\end_inset
+
+dangling pointers
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Student
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sName
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GPA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+HS
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mary
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apply
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sID
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sName
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+major
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dec
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+123
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stanford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CS
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Y
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+College
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+cName
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+state
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+enr
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stanford
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Referential integrity from R.A to S.B
+\end_layout
+
+\begin_layout Standard
+Each value in column A of tabe R must appear in column B of table S
+\end_layout
+
+\begin_layout Itemize
+A is called the 
+\begin_inset Quotes eld
+\end_inset
+
+foreign key
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+B is usually required to be the primary key for the table S or at least
+ unique
+\end_layout
+
+\begin_layout Itemize
+Multi-attribute foreign keys are allowed
+\end_layout
+
+\begin_layout Standard
+Referential Integrity Enforcement (R.A to S.B)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Potential violating modifications:
+\end_layout
+
+\begin_layout Itemize
+Insert into R - if violation
+\begin_inset Formula $\rightarrow error$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Delete from S - possible to modify the referencing table so there's no violation
+\end_layout
+
+\begin_layout Itemize
+Update R.A - if violation
+\begin_inset Formula $\rightarrow error$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Update S.B - possible to modify the referencing table so there's no violation
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Special actions
+\series default
+:
+\end_layout
+
+\begin_layout Itemize
+Delete from S (we do a deletion from a referenced table)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Restrict(default): generates error if constraint violated
+\end_layout
+
+\begin_layout Itemize
+Set Null - if we delete a tuple in the referenced table, we take the referencing
+ tuples and replace them with null
+\end_layout
+
+\begin_layout Itemize
+Cascade - delete tuple that has a referencing value, can setup a chain of
+ referential integrity constraints
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Update S.B
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Restrict(default)
+\end_layout
+
+\begin_layout Itemize
+Set Null
+\end_layout
+
+\begin_layout Itemize
+Cascade: if we're updating a referenced value, we'll update the referencing
+ value too
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table College(
+\end_layout
+
+\begin_layout Plain Layout
+
+	cName text primary key,
+\end_layout
+
+\begin_layout Plain Layout
+
+	state text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	enrollment int
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+create table Student(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sID int primary key,
+\end_layout
+
+\begin_layout Plain Layout
+
+	sName text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	GPA real,
+\end_layout
+
+\begin_layout Plain Layout
+
+	sizeHS int
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+create table Apply(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sID int references Student(sID),
+\end_layout
+
+\begin_layout Plain Layout
+
+	cName text references College(cName),
+\end_layout
+
+\begin_layout Plain Layout
+
+	major text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	decision text
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Need to first insert tuples for Student and College, Apply last.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Automatic referential integrity management
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table Apply(
+\end_layout
+
+\begin_layout Plain Layout
+
+	sID int references Student(sID) on delete set null,
+\end_layout
+
+\begin_layout Plain Layout
+
+	cName text references College(cName) on update cascade,
+\end_layout
+
+\begin_layout Plain Layout
+
+	major text,
+\end_layout
+
+\begin_layout Plain Layout
+
+	decision text
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+create table T(
+\end_layout
+
+\begin_layout Plain Layout
+
+	A int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	B int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	C int,
+\end_layout
+
+\begin_layout Plain Layout
+
+	primary key (A, B),
+\end_layout
+
+\begin_layout Plain Layout
+
+	foreign key (B, C) references T(A, B) on delete cascade);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+insert into T values (1, 1, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+insert into T values (2, 1, 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+insert into T values (3, 2, 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Demonstrates
+\end_layout
+
+\begin_layout Itemize
+Referential integrity within a single table
+\end_layout
+
+\begin_layout Itemize
+Referential integrity involving multiple attributes, foreign keys and primary
+ keys
+\end_layout
+
+\begin_layout Itemize
+Real cascading
+\end_layout
+
+\begin_layout Subsection
+Triggers introduction
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Even-Condition-Action Rules
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+When event occurs, check condition; if true, do action
+\end_layout
+
+\begin_layout Enumerate
+Move monitoring logic from apps into DBMS
+\end_layout
+
+\begin_layout Enumerate
+Enforce constraints
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+beyond what constraint system supports
+\end_layout
+
+\begin_layout Enumerate
+automatic constraint 
+\begin_inset Quotes eld
+\end_inset
+
+repair
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Create Trigger name
+\end_layout
+
+\begin_layout Plain Layout
+
+Before|After|Instead Of events
+\end_layout
+
+\begin_layout Plain Layout
+
+[referencing-variables]
+\end_layout
+
+\begin_layout Plain Layout
+
+[For Each Row]
+\end_layout
+
+\begin_layout Plain Layout
+
+When (condition)
+\end_layout
+
+\begin_layout Plain Layout
+
+action
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+events:
+\end_layout
+
+\begin_layout Itemize
+insert on T (referencing-variable: new)
+\end_layout
+
+\begin_layout Itemize
+delete on T (referencing-variable: old)
+\end_layout
+
+\begin_layout Itemize
+update of [C1, ..., Cn] on T (referencing-variable: old, new)
+\end_layout
+
+\begin_layout Standard
+[For Each Row]: Run the trigger per each modified tuple, if missing, it
+ will execute trigger once
+\end_layout
+
+\begin_layout Standard
+[referencing-variables]: give us a way to reference the data that was modified
+ that caused the trigger to be activated.
+ Once declared, these variables can be referenced in the trigger condition
+ and action.
+ keywords:
+\end_layout
+
+\begin_layout Itemize
+old row as var
+\end_layout
+
+\begin_layout Itemize
+new row as var
+\end_layout
+
+\begin_layout Itemize
+old table as var
+\end_layout
+
+\begin_layout Itemize
+new table as var
+\end_layout
+
+\begin_layout Standard
+Row level trigger - old row will refer to the specific tuple that the trigger
+ is activated for, while old table will refere to all of the (deleted) tuples.
+ It is refering not to the old state of db but the 
+\bar under
+specific
+\bar default
+ tuples that were, in this case, deleted.
+\end_layout
+
+\begin_layout Standard
+If the trigger is statement level, then we can not refer to row variables,
+ just table.
+\end_layout
+
+\begin_layout Standard
+The last (condition) is like SQL where 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+general assertion
+\end_layout
+
+\begin_layout Standard
+action - SQL statement
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: Referential integrity
+\end_layout
+
+\begin_layout Standard
+R.A references S.B, implement cascaded delete
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Create Trigger Cascade
+\end_layout
+
+\begin_layout Plain Layout
+
+After Delete on S
+\end_layout
+
+\begin_layout Plain Layout
+
+Referencing Old Row as O
+\end_layout
+
+\begin_layout Plain Layout
+
+For Each Row
+\end_layout
+
+\begin_layout Plain Layout
+
+Delete From R Where A=O.B
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After we delete on S, activate trigger for each deleted row, call row o,
+ delete from R all values where A value = O.B of the deleted tuple from S.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: Same as a statement level
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+Create Trigger Cascade
+\end_layout
+
+\begin_layout Plain Layout
+
+After Delete on S
+\end_layout
+
+\begin_layout Plain Layout
+
+Referencing Old Table as OT
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+Delete From R Where A in (select B from OT)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+May be more efficient, also 
+\series bold
+not all systems support both.
+\end_layout
+
+\begin_layout Subsubsection
+Tricky Issues
+\end_layout
+
+\begin_layout Itemize
+Row-level vs.
+ Statement-level
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+New/Old Row and New/Old Table
+\end_layout
+
+\begin_layout Itemize
+Before, Instead Of
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Multiple triggers activated at same time
+\end_layout
+
+\begin_layout Itemize
+Trigger actions activating other triggers (chaining)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+also self-triggering, cycles, nested invocations
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Conditions in when vs.
+ as part of action
+\end_layout
+
+\begin_layout Itemize
+Can affect performance
+\end_layout
+
+\begin_layout Subsection
+Triggers demo I
+\end_layout
+
+\begin_layout Itemize
+Postgres
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Expressiveness/behavior = full standard row-level + statement-level, old/new
+ row & table
+\end_layout
+
+\begin_layout Itemize
+Cumbersome & awkward syntax 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+SQLite
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Row-level only, immediate activation
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+no old/new table 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+MySQL
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Row-level only, immediate activation
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+no old/new table
+\end_layout
+
+\begin_layout Itemize
+Only one trigger per event type
+\end_layout
+
+\begin_layout Itemize
+Limited trigger chaining
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Triggers demo II
+\end_layout
+
+\end_body
+\end_document
