@@ -188,7 +188,7 @@ efficient
  where
 \begin_inset Formula 
 \[
-E:K\times M\rightarrow C
+E:K\cdot M\rightarrow C
 \]
 
 \end_inset
@@ -196,7 +196,7 @@ E:K\times M\rightarrow C
 
 \begin_inset Formula 
 \[
-D:K\times C\rightarrow M
+D:K\cdot C\rightarrow M
 \]
 
 \end_inset
@@ -647,7 +647,7 @@ Suppose PRG is predictable, that meanst that there exists some
  rest of the stream.
 \begin_inset Formula 
 \[
-\exists i:\, G(k)|_{1,\dots,i}\overset{algo}{\rightarrow}G(k)|_{i+1,\dots,n}
+\exists i:\, G(k)|_{1,\dots,i}\xrightarrow{algo}G(k)|_{i+1,\dots,n}
 \]
 
 \end_inset
@@ -1670,7 +1670,7 @@ Ex.:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $A(x)=1\iff|\#0(x)-\#1(x)|\le10*\sqrt{(n)}$
+\begin_inset Formula $A(x)=1\iff|\#0(x)-\#1(x)|\le10\cdot\sqrt{(n)}$
 \end_inset
 
 

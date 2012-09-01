@@ -166,7 +166,7 @@ Input: 2 n-digit numbers x and y
 
 \begin_layout Standard
 Output: product 
-\begin_inset Formula $x\times y$
+\begin_inset Formula $x\cdot y$
 \end_inset
 
 
@@ -219,7 +219,7 @@ Then:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $x\times y=(10^{\frac{n}{2}}a+b)(10^{\frac{n}{2}}c+d)=10^{n}ac+10^{\frac{n}{2}}(ad+bc)+bd$
+\begin_inset Formula $x\cdot y=(10^{\frac{n}{2}}a+b)(10^{\frac{n}{2}}c+d)=10^{n}ac+10^{\frac{n}{2}}(ad+bc)+bd$
 \end_inset
 
 
@@ -252,7 +252,7 @@ Karatsuba Multiplication
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $x\times y=10^{n}\mathbf{ac}+10^{\frac{n}{2}}(\mathbf{ad+bc})+\mathbf{bd}$
+\begin_inset Formula $x\cdot y=10^{n}\mathbf{ac}+10^{\frac{n}{2}}(\mathbf{ad+bc})+\mathbf{bd}$
 \end_inset
 
 
