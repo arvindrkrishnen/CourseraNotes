@@ -1,0 +1,2040 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\usepackage[normalem]{ulem}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Week 5
+\end_layout
+
+\begin_layout Subsection
+Recap Week 4
+\end_layout
+
+\begin_layout Itemize
+Cash Flows: Important Principle I
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Estimate all cash flows on an incremental basis
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+with project
+\end_layout
+
+\begin_layout Itemize
+without project
+\end_layout
+
+\begin_layout Itemize
+look at change that value is creating
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Do not forget importance of year 0 and the last year of the chosen timeline
+ for the project
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+difference between capital and the cash flows is that one is a stock that's
+ used throughout the process of the project.
+ Kinds of capital, both coming from the balance sheet:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+CapEx
+\end_layout
+
+\begin_layout Itemize
+Working Capital
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Accounting issues important
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Depreciation - ficticious creation
+\end_layout
+
+\begin_layout Itemize
+Working capital has to be thought of carefully, because there's many kinds
+ (accounts receivables, payables, inventory...)
+\end_layout
+
+\begin_layout Itemize
+Do not mix financing with operations
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Assets is what generates receipts, C's and 
+\begin_inset Quotes eld
+\end_inset
+
+r
+\begin_inset Quotes erd
+\end_inset
+
+ (cost of capital)
+\end_layout
+
+\begin_layout Itemize
+Liabilities - 
+\bar under
+DO NOT TOUCH
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Equity
+\end_layout
+
+\begin_layout Itemize
+Debt
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Include the effects of inflation/deflation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+r has inflation built in
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Do not compare project with unequal lives
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+not equally lived (machines) - maintenance lower for a more expensive machine
+ (~13:00)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Financing: Bonds and Stocks
+\end_layout
+
+\begin_layout Standard
+One Final Issue
+\end_layout
+
+\begin_layout Standard
+Project vs.
+ Firm - timeline
+\end_layout
+
+\begin_layout Standard
+If the project is over, you sell inventory, etc, or close shop, working
+ capital comes back.
+ You undo what happened at the beginning, it doesn't have the same value,
+ you take taxes.
+\end_layout
+
+\begin_layout Standard
+Projects have finite lives, Firms have 
+\begin_inset Quotes eld
+\end_inset
+
+infinite
+\begin_inset Quotes erd
+\end_inset
+
+ lives.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Terminal Value (perpetuity) - 
+\series default
+what happens after the project 
+\begin_inset Quotes eld
+\end_inset
+
+ends
+\begin_inset Quotes erd
+\end_inset
+
+ if it continues
+\series bold
+ 
+\series default
+
+\begin_inset Formula 
+\[
+=\frac{C}{R-g}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+g = growth rate
+\end_layout
+
+\begin_layout Standard
+R = r
+\end_layout
+
+\begin_layout Standard
+Ongoing things are called firms - bonds, stocks.
+\end_layout
+
+\begin_layout Subsubsection
+Bonds and Stocks
+\end_layout
+
+\begin_layout Standard
+Most bonds are loans.
+ Loans are between you and the bank.
+ We're trying to find out what is our cost of capital.
+\end_layout
+
+\begin_layout Subsubsection
+Financing
+\end_layout
+
+\begin_layout Standard
+Value created by ideas/projects/entities/you
+\end_layout
+
+\begin_layout Standard
+Fundamental Idea: Financing cannot be value-creating per se
+\end_layout
+
+\begin_layout Standard
+How do you raise money to finance the idea?
+\end_layout
+
+\begin_layout Standard
+Bonds/Debt & Stocks/Equity
+\end_layout
+
+\begin_layout Standard
+A Snap-Shot of Idea/Entity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Assets
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Liabilities
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Real Assets
+\end_layout
+
+\end_inset
+</cell>
+<cell multirow="3" alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Equity and Debt
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Zero-Coupon Government Bonds
+\end_layout
+
+\begin_layout Subsubsection
+Bonds
+\end_layout
+
+\begin_layout Standard
+Bond binds the borrower to the lender in a contract.
+\end_layout
+
+\begin_layout Standard
+We have seen these before: A loan - contract : entity (bank)
+\end_layout
+
+\begin_layout Standard
+An explicit IOU: A promise to pay money in the future in return for the
+ money borrowed
+\end_layout
+
+\begin_layout Standard
+Governments issue the simplest type of IOUs
+\end_layout
+
+\begin_layout Subsubsection
+Zero-Coupon Bonds
+\end_layout
+
+\begin_layout Standard
+This bond has only one payment, the face value, at maturity.
+\end_layout
+
+\begin_layout Standard
+Coupon - something that's paid periodically
+\end_layout
+
+\begin_layout Standard
+Bond pays in two ways: coupon or face value.
+\end_layout
+
+\begin_layout Standard
+Zero-coupon bond pays only once, maturity is when bond contract is over.
+\end_layout
+
+\begin_layout Standard
+An example: Treasury bill or strip in the U.S.
+\end_layout
+
+\begin_layout Subsubsection
+Discount (why?) Bonds
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+P & = & (\text{Face value})\cdot PF(r,n)\\
+ & = & \frac{\text{Face value}}{(1+r)^{n}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The bond does nothing over the n years and then at the end, 
+\begin_inset Formula $n$
+\end_inset
+
+, gives the face value.
+\end_layout
+
+\begin_layout Standard
+Give me some money today, 
+\begin_inset Formula $P$
+\end_inset
+
+, for the future value in the future.
+\end_layout
+
+\begin_layout Standard
+Discount - because 
+\begin_inset Formula $r>0$
+\end_inset
+
+, 
+\begin_inset Formula $P<F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: Suppose a zero-coupon bond pays $1000 in exactly one year.
+ What is the price of value/price of bond today if the interest rate on
+ similar bonds is 2%?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=\frac{\text{Face value}}{(1+r)^{n}}=\frac{1000}{1.02^{1}}=\$980.39$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+interest rate unqualified 
+\series default
+\bar default
+means 
+\series bold
+\bar under
+annual
+\end_layout
+
+\begin_layout Standard
+to verify
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $980.39\cdot1.02=1000$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Yield to maturity
+\series default
+\bar default
+ - 
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+The return built-into the pricing of a bond is called yield-to-maturity
+ (YTM).
+ To maturity means length of contract:
+\end_layout
+
+\begin_layout Standard
+What is the YTM of a 10-year zero-coupon bond with a face value of $1000
+ and a current price of $744.09?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P=\frac{\text{Face value}}{(1+YTM)^{n}}=\frac{1000}{(1+YTM)^{10}}=\$744.09$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{C}{F}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+or, 
+\begin_inset Formula $YTM=3\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is similar to IRR
+\end_layout
+
+\begin_layout Subsubsection
+What comes first, price or YTM
+\end_layout
+
+\begin_layout Standard
+What makes the YTM of a zero-coupon government bond risk-free?
+\end_layout
+
+\begin_layout Standard
+For bonds in the U.S., the compounding interval is 
+\bar under
+six months
+\bar default
+.
+ What is the YTM of the 10-year $1,000 zero-coupon bond selling for $744.09?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $YTM=\left(\frac{1000}{744.09}\right)^{\frac{1}{20}}-1=1.489\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Government Coupon Bonds
+\end_layout
+
+\begin_layout Standard
+a1=1000/744.09 tells us the YTM, however they key is the number of periods
+ that passed, so take 10th root of a1
+\end_layout
+
+\begin_layout Standard
+=a1^0.1
+\end_layout
+
+\begin_layout Standard
+subtract one from this calculation when you get to years to maturity.
+\end_layout
+
+\begin_layout Standard
+What's the difference between this and if we make compounding happen every
+ six months?
+\end_layout
+
+\begin_layout Standard
+=a1^0.5
+\end_layout
+
+\begin_layout Subsubsection
+Yield Curve
+\end_layout
+
+\begin_layout Standard
+The relation between the maturity and the YTM of government bonds.
+\end_layout
+
+\begin_layout Standard
+
+\bar under
+Typical relation goes up
+\bar default
+.
+\end_layout
+
+\begin_layout Standard
+If we have a bond for 1000 1 year from now and a bond for 1000 10 years
+ from now, which one is more risky? Who's price will fluctuate more? The
+ 1 year one, because its price is 
+\begin_inset Formula $\frac{1000}{(1+R)^{1}}$
+\end_inset
+
+ vs 
+\begin_inset Formula $\frac{1000}{(1+R)^{10}}$
+\end_inset
+
+.
+ The second one will be much larger and has to compensate for risk and so
+ the interest rate will be higher for a 10 year bond.
+\end_layout
+
+\begin_layout Subsubsection
+Coupon Bonds
+\end_layout
+
+\begin_layout Itemize
+Most common type of bond is a coupon bond
+\end_layout
+
+\begin_layout Itemize
+These bonds pay periodic coupons and a larger face value at maturity
+\end_layout
+
+\begin_layout Itemize
+All payments are explicitly stated in the IOU/contract
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\bar under
+Example
+\series default
+\bar default
+: Suppose a government bond has a 6% coupon, a face value of $1000, and
+ 10 years to maturity.
+ What is the price of this bond given that similar bonds yield an annual
+ return of 6%? What if similar bonds yield 4% or 8%?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Timeline and Formula
+\end_layout
+
+\begin_layout Standard
+U.S.
+ Government bonds pay coupons every 6 months, so even though it's over 10
+ years, there's 20 periods.
+\end_layout
+
+\begin_layout Standard
+0-----------20, F=1000 at year 10
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{C}{F}=6\%$
+\end_inset
+
+ coupon
+\end_layout
+
+\begin_layout Standard
+so 
+\begin_inset Formula $C=\$30$
+\end_inset
+
+ per six months
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r=6\%$
+\end_inset
+
+ per year
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r=3\%$
+\end_inset
+
+ per six months
+\end_layout
+
+\begin_layout Standard
+Price today = P=PMT(30, 20, 3%), then do PV of that then add PV(1000, 20,
+ 3%)
+\end_layout
+
+\begin_layout Subsection
+Bond Pricing: Calculations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000/744.09
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=pv(.03, 20, 30, 1000)=$1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a1^0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a1^0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The price of the bond is equal to face value.
+\end_layout
+
+\begin_layout Standard
+C1: The coupon is the numerator, it's coming to you, but the time is hurting
+ you at the same rate, so they cancel each other out and you're left with
+ 1000.
+ In real world they'll say the bond is trading at face value - at par.
+\end_layout
+
+\begin_layout Standard
+Assume the interest rate is 4% per year, which is 2% per month.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000/744.09
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=pv(.03, 20, 30, 1000)=$1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a1^0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=pv(.02, 20, 30, 1000)=$1163.51
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a1^0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C2: the price is greater than face value, it's 
+\bar under
+trading at a premium
+\bar default
+.
+ It doesn't mean you're paying a higher price than you should.
+ 
+\end_layout
+
+\begin_layout Standard
+Why did this happen? The coupon is still $30 and it cannot change once you've
+ issued the bond, because we assume that the issuer, the government, is
+ not going to default in the 30 (???).
+ We can change the market rate.
+ It is now 2% and coupon 3%, that's going to make the value of the bond
+ go over $1000 because the value is higher than discount rate.
+\end_layout
+
+\begin_layout Standard
+Now assume the rate of return in a similar instrument in the market is 8%.
+ Half of that is 4%.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+A
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+B
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+E
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000/744.09
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=pv(.03, 20, 30, 1000)=$1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a1^0.1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=pv(.02, 20, 30, 1000)=$1163.51
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+a1^0.5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+=pv(.04, 20, 30, 1000)=$864.10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C3: The price will go below a thousand.
+ This is called 
+\begin_inset Quotes eld
+\end_inset
+
+selling it to discount
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Zero coupons always sell at a discount.
+ we're hurting the bond's price at higher rate than then coupon flowing
+ in.
+\end_layout
+
+\begin_layout Standard
+Interest rates go up, price goes down.
+ For coupon paying bonds, there is a relationship a where the coupon rate
+ and the interest rate are the same, the price of the coupon bond has to
+ be the face value.
+ If the interest rate is higher, the price is lower.
+ If interest is lower than the coupon rate, the price is higher.
+\end_layout
+
+\begin_layout Standard
+If
+\begin_inset Formula 
+\[
+\frac{C}{F}>r\Rightarrow P>F
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{C}{F}<r\Rightarrow P<F
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{C}{F}=r\Rightarrow P=F
+\]
+
+\end_inset
+
+P = Price
+\end_layout
+
+\begin_layout Standard
+F = Face Value
+\end_layout
+
+\begin_layout Standard
+C = Coupon
+\end_layout
+
+\begin_layout Standard
+r = Interest Rate
+\end_layout
+
+\begin_layout Standard
+Price of a bond falls when the interest rate goes up.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename week5-price-vs-interest.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the interest rate is 
+\begin_inset Formula $\frac{3\%}{6\, months}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{C}{F}=3\%$
+\end_inset
+
+, what will the price be? 1000.
+ 
+\end_layout
+
+\begin_layout Standard
+Coupon rate is fixed by the government.
+ Why is a detail related to their ability to pay periodically vs.
+ face value.
+\end_layout
+
+\begin_layout Standard
+Price goes down when interest rate goes down
+\end_layout
+
+\begin_layout Standard
+Long term bonds are more sensitive to interest rate changes.
+\end_layout
+
+\begin_layout Standard
+Zero coupon/with coupon bond whose price will jump around more if their
+ maturities stay the same? Zero-coupon bond will be more sensitive
+\end_layout
+
+\begin_layout Subsection
+Sources of Risk in Bonds
+\end_layout
+
+\begin_layout Subsubsection
+Interest Rate Risk
+\end_layout
+
+\begin_layout Standard
+We expect no default from a government bond.
+ Doesn't mean there's no risk.
+\end_layout
+
+\begin_layout Standard
+The uncertainty concerning bond values/prices due to interest rates fluctuations
+ is known as 
+\series bold
+interest rate risk of bonds
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+There are two types of interest rate risk:
+\end_layout
+
+\begin_layout Itemize
+Price risk
+\end_layout
+
+\begin_layout Itemize
+Coupon reinvestment risk
+\end_layout
+
+\begin_layout Standard
+Suppose you start with zero-coupon, 20 periods, $1000 bond.
+ You buy the bond at year 0 and it's 
+\begin_inset Formula $YTM=1.489\%$
+\end_inset
+
+, so price at year 0 is 744.09.
+ Do we need to get exactly 1.489% every 6 months? No, YTM is an average over
+ the 20 periods.
+ Suppose after 5 years we are forced to sell the bond.
+ What will the bond's price be? 
+\begin_inset Formula $P_{10}=\frac{1000}{(1+YTM)^{10}}$
+\end_inset
+
+, we don't know YTM at point 10.
+ Suppose YTM fluctuates and becomes greater than 1.489% per period, what
+ will happen to the price of the bond? It will be lower than we expect.
+ If below 1.489, because inflation has dropped or whatever, the price of
+ the bond will go up.
+ We, however, do not know 
+\begin_inset Formula $P_{10}$
+\end_inset
+
+, that's called 
+\series bold
+price risk
+\series default
+.
+ Price risk is not knowing the price.
+ Even if we have a zero-coupon bond, we have price risk at all points before
+ 
+\begin_inset Quotes eld
+\end_inset
+
+20
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Suppose we have coupon bonds.
+ Every period we're getting $30.
+ suppose we hold this bond to maturity, 
+\begin_inset Formula $YTM=3\%$
+\end_inset
+
+.
+ you buy for 1000 and face value is 1000.
+ What if we hold this bond and get 1000? Will we have a 3% YTM? No, YTM
+ will change in the future, $30 stays the same.
+ The $30 on the market will earn 3% per period, this is called 
+\series bold
+Coupon Reinvestment Risk
+\series default
+.
+ (???).
+ The 3% is likely to change.
+ Even if we hold bond until maturity, it has Coupon Reinvestment Risk, because
+ we do not know the future YTMs and therefore, we do not know how much the
+ $30 will earn.
+\end_layout
+
+\begin_layout Standard
+CRR is not in a zero-coupon bond.
+ If it doesn't pay a coupon, you don't have to worry about what reinvesetment
+ you're going to do.
+\end_layout
+
+\begin_layout Standard
+So if we sell a bond in year 5, we have to worry about 
+\begin_inset Formula 
+\[
+P_{10}=PV(PMT=30,10,F=1000)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Price will change depending on interest rate, if r goes up, price goes down.
+ We also have to worry about the value of the payments at time 10, they
+ have 
+\begin_inset Formula 
+\[
+CRR=FV_{10}(30,n=10)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, if r goes up, we benefit.
+\end_layout
+
+\begin_layout Standard
+If interest rates go up in the future, that helps the part we're reinvesting
+ the coupons.
+ When we sell it, it'll hurt us for the remaining value of the bond.
+\end_layout
+
+\begin_layout Standard
+Zero-coupon bonds have no risk when we hold it to maturity.
+\end_layout
+
+\begin_layout Subsubsection
+Corporate Bonds and Default Risk
+\end_layout
+
+\begin_layout Standard
+Corporate bonds almost always pay coupons.
+ Corporate bonds are largely a U.S.
+ phenomenon.
+\end_layout
+
+\begin_layout Standard
+Like government bonds, they are subject to interest rate risk
+\end_layout
+
+\begin_layout Standard
+Subject to 
+\series bold
+default risk
+\series default
+.
+ Default risk is the risk of not getting paid.
+ People assume that gov.
+ bonds will pay for sure or at least relative to companies, will pay for
+ sure.
+ [Rating agencies, (Moody's, S&P,...) rate corporate bonds in the U.S.] Notion
+ of rating is the outside party tells you chances of default for a bond.
+ Tough to predict.
+\end_layout
+
+\begin_layout Standard
+Most bonds are contracts/loans issued by a bank.
+\end_layout
+
+\begin_layout Subsubsection
+Pricing of Corporate Bonds: Intuition
+\end_layout
+
+\begin_layout Standard
+Suppose you have two identical bonds (same maturities and same coupon rates),
+ but on is a government bond and the other corporate bond.
+\end_layout
+
+\begin_layout Standard
+Which will sell for less? (same values as before)
+\end_layout
+
+\begin_layout Standard
+The one will sell for less is the one perceived to have higher chances of
+ default.
+ No reason paying more for something that's likely not to pay what it promises.
+ That bond is a corporate bond.
+\end_layout
+
+\begin_layout Subsection
+Market Data on Bonds
+\end_layout
+
+\end_body
+\end_document
