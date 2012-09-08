@@ -1,0 +1,1710 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\usepackage[normalem]{ulem}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Week 1
+\end_layout
+
+\begin_layout Subsection
+Time Value of Money
+\end_layout
+
+\begin_layout Subsubsection
+Future Value, Present Value and Compounding
+\end_layout
+
+\begin_layout Itemize
+$V invested for 
+\begin_inset Formula $n$
+\end_inset
+
+ years at simple interest rate R per year
+\end_layout
+
+\begin_layout Itemize
+Compounding of interest occurs at end of year
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV_{n}=\ensuremath{V\text{\cdot}(1+R)^{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $FV_{n}$
+\end_inset
+
+ is future value after 
+\begin_inset Formula $n$
+\end_inset
+
+ years.
+\end_layout
+
+\begin_layout Standard
+So after, say, 1 year, the initial investment grows to 
+\begin_inset Formula $V\cdot(1+R)$
+\end_inset
+
+, after 2 years 
+\begin_inset Formula $V\cdot(1+R)(1+R)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: Consider putting $1000 in an interest checking account that pays a simple
+ annual percentage rate of 3%.
+ The future value after n = 1, 5 and 10 years is, respectively, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $FV_{1}$
+\end_inset
+
+= $1000 · (1.03) 1 = $1030, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $FV_{5}$
+\end_inset
+
+= $1000 · (1.03) 5 = $1159.27, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $FV_{10}$
+\end_inset
+
+= $1000 · (1.03) 10 = $1343.92.
+\end_layout
+
+\begin_layout Standard
+FV function is a relationship between four variables 
+\begin_inset Formula $FV_{n}$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+, 
+\begin_inset Formula $R$
+\end_inset
+
+, 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Given three variables, you can solve for the fourth:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Present Value
+\series default
+
+\begin_inset Formula 
+\[
+V=\frac{FV_{n}}{(1+R)^{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Compound annual return
+\series default
+ - average annual interest rate that you get every year that compounds such
+ that the investment grows to the future value
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R=\left(\frac{FV_{n}}{V}\right)^{\frac{1}{n}}-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Investment horizon
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+n=\frac{ln\left(\frac{FV_{n}}{V}\right)}{ln(1+R)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Investment horizon answers a question 
+\begin_inset Quotes eld
+\end_inset
+
+how long does it take the money to double
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Related to the 
+\begin_inset Quotes eld
+\end_inset
+
+rule of 70
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+2 & = & V(1+R)^{n}\\
+\ln2 & = & n\ln(1+R)\\
+n & = & \frac{\ln(2)}{\ln(1+R)}\approx\frac{0.7}{R}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ex.: If 
+\begin_inset Formula $R=0.01$
+\end_inset
+
+, then 
+\begin_inset Formula $n=\frac{0.7}{0.01}=70$
+\end_inset
+
+ years for the money to double.
+\end_layout
+
+\begin_layout Standard
+Compounding can occur 
+\begin_inset Formula $m$
+\end_inset
+
+ times per year
+\begin_inset Formula 
+\[
+FV_{n}^{m}=\ensuremath{V\cdot(1+\frac{R}{m})^{m\cdot n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{R}{m}=\text{periodic interest rate}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Continuous compounding
+\series default
+ - if we're moving compounding from daily to hourly to minutely to secondly...
+\begin_inset Formula $m\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+FV_{n}^{\infty}\lim_{m\rightarrow\infty}V\cdot\left(1+\frac{R}{m}\right)^{m\cdot n}=Ve^{R\cdot n}
+\]
+
+\end_inset
+
+
+\series bold
+Example
+\series default
+: If the simple annual percentage rate is 10% then the value of $1000 at
+ the end of one year (
+\begin_inset Formula $n=1$
+\end_inset
+
+) for different values of 
+\begin_inset Formula $m$
+\end_inset
+
+ is given in the table below.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compounding Frequency
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value of $1000 at end of 1 year (
+\begin_inset Formula $R=10\%$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Annually (
+\begin_inset Formula $m=1$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1100.00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quarterly (
+\begin_inset Formula $m=4$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1103.81
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Weekly (
+\begin_inset Formula $m=52$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1105.06
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Daily (
+\begin_inset Formula $m=365$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1105.16
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Continuously (
+\begin_inset Formula $m=\infty$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1105.17
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For historical reasons, compounding interesting more than once a year, let
+ banks get around certain kinds of regulations that capped interest rates.
+\end_layout
+
+\begin_layout Standard
+Because we can have compounding periods different from a year, there's a
+ concept of 
+\series bold
+Effective Annual Rate
+\series default
+.
+ For example, we effectively have a higher interest rate when we compoud
+ daily than annually, like in the above example.
+ So for the above example the effective annual rate for daily compounding
+ frequency is 10.5%.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Effective Annual Rate
+\end_layout
+
+\begin_layout Standard
+Annual rate 
+\begin_inset Formula $R_{A}$
+\end_inset
+
+ that equates 
+\begin_inset Formula $FV_{n}^{m}$
+\end_inset
+
+ with 
+\begin_inset Formula $FV_{n}$
+\end_inset
+
+ i.e.
+\begin_inset Formula 
+\begin{eqnarray*}
+V\cdot\left(1+\frac{R}{m}\right)^{m\cdot n} & = & V\cdot(1+R_{A})^{n}\\
+(1+\frac{R}{m})^{m} & = & 1+R_{A}\\
+\mathbf{R_{A}} & \mathbf{=} & \mathbf{\left(1+\frac{R}{m}\right)^{m}-1}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $V\cdot\left(1+\frac{R}{m}\right)^{m\cdot n}$
+\end_inset
+
+- future value with compounding m per year
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $V\cdot(1+R_{A})^{n}$
+\end_inset
+
+ - future value compounding once per year at 
+\begin_inset Formula $R_{A}$
+\end_inset
+
+, effective annual rate.
+\end_layout
+
+\begin_layout Standard
+For continuous compouding we do the same computations
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+Ve^{R\cdot n} & = & V\cdot\left(1+R_{A}\right)^{n}\\
+e^{R} & = & (1+R_{A})\\
+R_{A} & = & e^{R}-1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ve^{R\cdot n}$
+\end_inset
+
+ - future value of continuous compounding
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V\cdot\left(1+R_{A}\right)^{n}$
+\end_inset
+
+ - future value with compounding once per year
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+.
+ Compute effective annual rate with semi-annual compounding The effective
+ annual rate associated with an investment with a simple annual rate 
+\begin_inset Formula $R=10\%$
+\end_inset
+
+ and semi-annual compounding (
+\begin_inset Formula $m=2$
+\end_inset
+
+) is determined by solving
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+(1+R_{A}) & = & \left(1+\frac{0.10}{2}\right)^{2}\\
+R_{A} & = & \left(1+\frac{0.10}{2}\right)^{2}-1\\
+ & = & 0.1025
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="30page%">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Compounding Frequency
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value of $1000 at end of 1 year (
+\begin_inset Formula $R=10\%$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" width="30page%">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{A}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Annually (
+\begin_inset Formula $m=1$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1100.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Quarterly (
+\begin_inset Formula $m=4$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1103.81
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.38
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Weekly (
+\begin_inset Formula $m=52$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1105.06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.51%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Daily (
+\begin_inset Formula $m=365$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1105.16
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.52%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Continuously (
+\begin_inset Formula $m=\infty$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1105.17
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.52%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We get a slightly higher rate when we compound more often, reason for CCs
+ quoting an annual interest rate but compounding daily, so the effective
+ rate is higher.
+\end_layout
+
+\begin_layout Subsection
+Simple Returns
+\end_layout
+
+\begin_layout Subsubsection
+Asset Returns
+\end_layout
+
+\begin_layout Paragraph
+Simple Returns
+\end_layout
+
+\begin_layout Standard
+Buy stock, hold it for a period of time and sell, want to know whta the
+ return on that will be.
+\end_layout
+
+\begin_layout Paragraph
+Holding Period Return
+\end_layout
+
+\begin_layout Standard
+The idea is that we have a price 0, 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+, of some asset.
+ At some 
+\begin_inset Formula $t$
+\end_inset
+
+ in the future we're going to sell the asset at 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+.
+ 
+\series bold
+Holding Period Return:
+\begin_inset Formula 
+\[
+\underset{\text{over holding period}}{\%\Delta P}=\frac{P_{t}-P_{0}}{P_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Holding periods are often standardized to 1 month, they could be 2.34 days.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{t}$
+\end_inset
+
+ - price at the end of month t on an asset that pays no dividends
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P_{t-1}$
+\end_inset
+
+- price at the end of month 
+\begin_inset Formula $t-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Net return over month t:
+\begin_inset Formula 
+\[
+R_{t}=\frac{P_{t}-P_{t-1}}{P_{t-1}}=\%\Delta P_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gross return over month t:
+\begin_inset Formula 
+\[
+1+R_{t}=\frac{P_{t}}{P_{t-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+can think of this as: if we have $1, invested at 
+\begin_inset Formula $t-1$
+\end_inset
+
+, how much does that dollar grow after 1 month.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+: One month investment in Microsoft stock.
+ Buy stock at end of month 
+\begin_inset Formula $t-1$
+\end_inset
+
+ at 
+\begin_inset Formula $P_{t}-1=\$85$
+\end_inset
+
+ and sell stock at end of next month for 
+\begin_inset Formula $P_{t}=\$90$
+\end_inset
+
+.
+ Assuming that Microsoft does not pay a dividend between months 
+\begin_inset Formula $t-1$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+, the one-month simple net and gross returns are:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{t} & = & \frac{90-85}{85}=\frac{90}{85}-1=1.0588-1\\
+ & = & 0.588
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+1+R_{t}=1.0588
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The one month investment in Microsoft yielded a 5.88% per month return.
+ (unusual, maybe in the 90s)
+\end_layout
+
+\begin_layout Paragraph
+Multi-period Returns
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Simple two-month return
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+Formula: What's the percentage rate of return over 2 months.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Relationship to one month returns
+\series default
+:
+\begin_inset Newline newline
+\end_inset
+
+What's the relationship between 2 month return and two one month returns?
+ Geometric average of two one period returns.
+\end_layout
+
+\begin_layout Paragraph
+Simple k-month Return
+\end_layout
+
+\begin_layout Standard
+We can do the above if our investment horizon is 
+\begin_inset Formula $k$
+\end_inset
+
+ months.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1+R_{t}(k)=\prod_{j=0}^{k-1}\left(1+R_{t-j}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Portfolio Returns
+\end_layout
+
+\begin_layout Standard
+Portfolio - a clutch of assets that you want to invest in, you spread spread
+ welath across those assets.
+\end_layout
+
+\begin_layout Standard
+Case with 2 assets.
+ We define our portfolio by how much of our wealth we invest in each of
+ the securities.
+\end_layout
+
+\begin_layout Standard
+When we study the portfolios, we generally assume that we exhaust all of
+ our wealth amongst the assets that we have.
+\end_layout
+
+\begin_layout Standard
+Errata:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x_{B}$
+\end_inset
+
+= share of $V invested in B; $V × 
+\begin_inset Formula $x_{B}$
+\end_inset
+
+ = $ amount
+\end_layout
+
+\begin_layout Standard
+Now we think about what is the rate of return on this portfolio over a given
+ holding period and how does that rate of return relate to the rates of
+ return on the individual securities A and B.
+\end_layout
+
+\begin_layout Standard
+We start with the initial investment $V and then the portfolio grows to
+ 
+\begin_inset Formula $\left(1+R_{p,t}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $R_{p,t}$
+\end_inset
+
+ being the portfolio's rate of return.
+\end_layout
+
+\begin_layout Standard
+Portfolio shares add up to 100%, hence the reduction to 1 (line 3).
+\end_layout
+
+\begin_layout Standard
+Rates of return on portfolios are linear combination of returns on securities.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+msft/sbux Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+We made money on msft, but lost on sbux
+\end_layout
+
+\begin_layout Paragraph
+In general
+\end_layout
+
+\begin_layout Standard
+For n assets, weighted average across all the portfolio weights times the
+ rates of return on individual securities.
+\end_layout
+
+\begin_layout Standard
+We can simplify this using linear algebra, portfolio weights and returns,
+ 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{i,t}$
+\end_inset
+
+ can be vectors and 
+\begin_inset Formula $x_{i}\times R_{i,t}$
+\end_inset
+
+ for weighted average.
+\end_layout
+
+\begin_layout Subsubsection
+Dividends
+\end_layout
+
+\begin_layout Paragraph
+Adjusting for Dividends
+\end_layout
+
+\begin_layout Standard
+If we buy stock in a publicly held company, it decides to share some of
+ its profits during a meeting held every 3 months.
+ Some types of stocks pay dividends regularly, public utilities, established
+ companies.
+ Stocks like Google typically don't share dividends, just reinvest into
+ growth.
+ You buy shares for their price appreciation, while with established companies
+ the price may stay stationary and you make money from the dividend payment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D_{t}=$
+\end_inset
+
+divident payment between months 
+\begin_inset Formula $t-1$
+\end_inset
+
+ and 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Capital gain return + divident yield (gross)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R_{t}^{total}=\frac{P_{t}+D_{t}-P_{t-1}}{P_{t-1}}=\frac{P_{t}-P_{t-1}}{P_{t-1}}+\frac{D_{t}}{P_{t-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1+R_{t}^{total}=\frac{P_{t}+D_{t}}{P_{t-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can brake the total return, 
+\begin_inset Formula $R_{t}^{total}$
+\end_inset
+
+ into:
+\end_layout
+
+\begin_layout Itemize
+Pure percentage change in price called 
+\series bold
+capital gains
+\begin_inset Newline newline
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\frac{P_{t}-P_{t-1}}{P_{t-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Divident payment divided by initial price called 
+\series bold
+dividend yield
+\begin_inset Formula 
+\[
+\frac{D_{t}}{P_{t-1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The total return is: capital gain return + dividend yield
+\end_layout
+
+\begin_layout Standard
+When you have a company like Google which doesn't have dividend, the return
+ is essentially pure capital gain
+\end_layout
+
+\begin_layout Subsubsection
+Inflation
+\end_layout
+
+\begin_layout Paragraph
+Adjusting for Inflation
+\end_layout
+
+\begin_layout Standard
+Accounting for growth in the general level of prices.
+ We're computing the real rage of return as opposed to the nominal rate
+ of return.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $CPI_{t}$
+\end_inset
+
+ - consumer price index, aggregated index of a typical basket of goods a
+ household purchases.
+ Published every month.
+\end_layout
+
+\begin_layout Standard
+Inflation 
+\begin_inset Formula $\pi_{t}$
+\end_inset
+
+ - can be defined as percentage change in the CPI, 
+\begin_inset Formula $\%\Delta CPI_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Real rate of return, 
+\begin_inset Formula $R_{t}^{Real}$
+\end_inset
+
+ is related to the nominal rate 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+ and inflation 
+\begin_inset Formula $\pi_{t}$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+R_{t}^{Real}=\frac{1+R_{t}}{1+\pi_{t}}-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Example:
+\end_layout
+
+\begin_layout Standard
+From a practical point of view if the rate of return is not too big and
+ the inflation rate is not too big,
+\begin_inset Formula 
+\[
+R_{t}^{Real}\approx R_{t}-\pi_{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Annualizing Returns
+\end_layout
+
+\begin_layout Standard
+Rates of returns are often expressed as an annual rate of return.
+ 
+\end_layout
+
+\begin_layout Standard
+Problem: how do you convert a monthly rate of return to an annual rate of
+ return, if say, you have an investment only for one month.
+\end_layout
+
+\begin_layout Subsection
+Continuously Compounded Returns
+\end_layout
+
+\begin_layout Subsubsection
+Continuously Compounded Returns
+\end_layout
+
+\begin_layout Standard
+Simple returns are based on the percentage change in price.
+ One of their features is that if we look at the relationship between single-per
+iod returns and multi-period returns, it was multiplicative.
+ So one year return was e.g.
+ a geometric average of one month returns.
+ From the point of view of modeling, it's better if things are additive.
+ Continuously compounded returns give us this property.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $r_{t}$
+\end_inset
+
+- Continuously Compounded Return, continuously compounded growth rate of
+ prices between two periods.
+\end_layout
+
+\begin_layout Paragraph
+Computational Trick
+\end_layout
+
+\begin_layout Standard
+When you see macro data, like GDP plotted over time, it's often a logarithm
+ instead of the price.
+ That's done, because the slope of the logarithm represents the growth rate
+ from one period to the next.
+ So the elasticity in this case would be the same as the continuously compounded
+ growth rate between two time periods.
+ Same for prices, slope of the log-price graph would be the continuously
+ compounded return between two time periods.
+\end_layout
+
+\begin_layout Standard
+Example:
+\end_layout
+
+\begin_layout Standard
+Why is 
+\begin_inset Formula $r_{t}<R_{t}$
+\end_inset
+
+? With 
+\begin_inset Formula $R_{t}$
+\end_inset
+
+ we're compounding once over a period, with 
+\begin_inset Formula $r_{t}$
+\end_inset
+
+ we have continuously compounding returns and rate of return may be smaller
+ and we're getting interest on the interest.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Multi-period Returns
+\end_layout
+
+\begin_layout Standard
+One of the features of 
+\begin_inset Formula $r_{t}$
+\end_inset
+
+ is the relationship between single-period continuously compounding returns
+ and multi-period continuously compounding returns.
+\end_layout
+
+\begin_layout Standard
+We can ask what's the relation between two-month CCR and two one-month CCRs.
+ Two-month CCR is the sum of two one-month CCRs.
+\end_layout
+
+\begin_layout Subsubsection
+CC Portfolio Returns and Inflation
+\end_layout
+
+\begin_layout Paragraph
+Portfolio Returns
+\end_layout
+
+\begin_layout Standard
+Portfolio return is not a weighted average of CCR of each of the securities,
+ not additive in continuously compounding space.
+\end_layout
+
+\begin_layout Paragraph
+Adjusting for inflation
+\end_layout
+
+\begin_layout Standard
+Becomes easier.
+\end_layout
+
+\begin_layout Subsection
+Excel Examples
+\end_layout
+
+\begin_layout Subsubsection
+Getting Financial Data from Yahoo!
+\end_layout
+
+\begin_layout Standard
+Bid and Ask - dealers hold and inventory in stock, when you buy from a dealer
+ you buy at the ask price, when you sell to the dealer you sell at the bid
+ price.
+\end_layout
+
+\begin_layout Standard
+Bid-Ask spread - represents profits to the dealer on a round-trip transaction.
+\end_layout
+
+\begin_layout Standard
+Average volume - number of shares that were transacted
+\end_layout
+
+\begin_layout Standard
+Adjusted close - closing price adjusted for dividends and stock splits.
+ If msft paid a dividend today, it would get added to the adjusted close
+ 
+\begin_inset Formula $P_{t}+D_{t}$
+\end_inset
+
+, whereas the Closing Price is just 
+\begin_inset Formula $P_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Stock split - that means every share holder of a company receives an additional
+ share.
+ Now there's twice as many shares of stock outstanding.
+ Correspondingly, the price of that stock on that day gets cut in half.
+ So if a stock is trading at $100 and then suddenly at $50, that may mean
+ there was a 2 for 1 stock split.
+ There's not going to be a jump in the adjusted closing price because of
+ that, they're split-adjusted.
+\end_layout
+
+\begin_layout Subsubsection
+Return Calculations
+\end_layout
+
+\begin_layout Subsubsection
+Growth of $1
+\end_layout
+
+\begin_layout Standard
+Start with $1
+\end_layout
+
+\begin_layout Standard
+in month:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $1\rightarrow\$1\cdot(1+R_{1})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $2\rightarrow(1+R_{1})\cdot(1+R_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $t\rightarrow(1+R_{1})\cdot(1+R_{2})\cdot\dots\cdot(1+R_{t})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+in excel, data sheet
+\end_layout
+
+\begin_layout Standard
+FV: I3=(1+D3)=93.4%
+\end_layout
+
+\begin_layout Standard
+I4=I3*(1+D4)=1.138554
+\end_layout
+
+\begin_layout Standard
+etc
+\end_layout
+
+\begin_layout Standard
+This plots the 
+\series bold
+equity curve
+\series default
+ that shows what the dollar grew to every month.
+\end_layout
+
+\end_body
+\end_document
