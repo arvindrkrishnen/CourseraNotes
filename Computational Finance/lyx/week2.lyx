@@ -1,0 +1,649 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{fancyvrb}
+\usepackage{color}
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.31,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.38,0.56}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.31,0.44,0.56}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.56,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.38}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.75}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.38}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.31,0.31,0.31}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.38,0.69}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.88,0.88,0.88}{\strut ##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.69}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.56,0.38,0.19}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.13,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.50,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.94,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{0.94,0.63,0.63}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.38,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.00}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,1.00}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.25,0.00,0.88}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.82}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.19}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.19,0.50}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.19,0.19,0.56}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.25,0.82}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.38,0.38,0.38}{##1}}\def\PY@bc##1{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\@addtoreset{section}{part}
+\usepackage{tikz}
+\usepackage{cancel}
+\usepackage[normalem]{ulem}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Probability Review
+\end_layout
+
+\begin_layout Subsection
+Univariate Random Variables
+\end_layout
+
+\begin_layout Standard
+Random variable like a future price, can go up or down.
+ Typically an upper case letter.
+\end_layout
+
+\begin_layout Standard
+Sample space - values the variable take on.
+\end_layout
+
+\begin_layout Subsubsection
+Discrete Random Variables
+\end_layout
+
+\begin_layout Standard
+Once we have the random variable, we need to characterize the distribution.
+ 
+\end_layout
+
+\begin_layout Standard
+Probability must satisfy certain conditions.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+X = annual rate of return on MSFT
+\end_layout
+
+\begin_layout Standard
+A stock analyst may decide that price of the stock will primarely be influenced
+ by what happens to the economy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{X}\rightarrow$
+\end_inset
+
+MSFT is going to lose 30% (-0.30)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p(x)=Pr(X=x)$
+\end_inset
+
+
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+probability of the above occuring, subjective views of the analyst.
+\end_layout
+
+\begin_layout Standard
+Two approaches to view probability:
+\end_layout
+
+\begin_layout Itemize
+The subjective approach, opinions - Bayesian Statistics
+\end_layout
+
+\begin_layout Itemize
+Real physical, objective things - coin flip, 50% comes from the experiment
+ - property that you can reproduce.
+\end_layout
+
+\begin_layout Standard
+Discrete Distribution in R
+\end_layout
+
+\begin_layout Itemize
+Create vector of values in sample space
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Itemize
+
+r.msft = c(-0.3, 0, 0,1, 0.2, 0.5)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+vector of probabilities
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Itemize
+
+prob.vals = c(0.05, 0.20, 0.50, 0.20, 0.05)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+create barplot
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example: Bernouli Distribution
+\end_layout
+
+\begin_layout Standard
+Describes the coin flipping experiment.
+\end_layout
+
+\begin_layout Standard
+When modeling stock prices, assuming we have a long position, success describes
+ stock going up, failure - down.
+ With short position it's the opposite.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Long position
+\series default
+ - you buy today, hold and sell in the future
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Short position
+\series default
+ - sell today and buy it back in the future.
+ Open a brokerage account, sell something you don't own - first you borrow
+ stock from somebody who owns it, sell it, now you hold the proceeds, but
+ since you borrowed, you're going to have to give it back at some point,
+ so when you close out the short position, you go back on the market, buy
+ back the stock and return it.
+\end_layout
+
+\begin_layout Subsubsection
+Continuous Random Variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f(x)$
+\end_inset
+
+ represents a 
+\series bold
+probability curve
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Pr(X\in A)$
+\end_inset
+
+ - probability that the random variable X is in the interval A.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example: Uniform distribution over [a, b]
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\sim U[a,b]$
+\end_inset
+
+ - X is distributed as uniform over a, b
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphics/week2-ex-uniform-dist-over-ab.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Cumulative Distribution Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $F(x)$
+\end_inset
+
+ - area
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Pr(X\le x)$
+\end_inset
+
+ - area under the probability curve to the left of 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ If you have a discrete distribution, count up the probability values for
+ all 
+\begin_inset Formula $X\le$
+\end_inset
+
+to a particular value, end up with a stair step.
+\end_layout
+
+\begin_layout Standard
+On CDF of Discrete Distribution graph
+\end_layout
+
+\begin_layout Standard
+The probability that 
+\begin_inset Formula $Pr(X\le-0.4)=0$
+\end_inset
+
+, the probability that the return 
+\begin_inset Formula $<-0.3=$
+\end_inset
+
+the probability that it's 
+\begin_inset Formula $=-30\%$
+\end_inset
+
+ (??) - depression.
+ The probability that the return
+\begin_inset Formula $=-10\%$
+\end_inset
+
+ is the sum of the previous events.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphics/week2-ex-uniform-dist-over-01.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The CDF is just a straight line for a unit square
+\begin_inset Formula 
+\begin{eqnarray*}
+F(x) & = & Pr(X\le x)=\int_{0}^{x}dz\\
+ & = & \left[z\right]_{0}^{x}=x
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphics/week2-ex-uniform-dist-over-01CDF.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Remark
+\end_layout
+
+\begin_layout Standard
+What happens when this area under curve gets smaller and smaller.
+ What's the probability at a single point, it's 0, it's like saying it can
+ never happen, but that's not true, it just doesn't make any sense, we define
+ it over an interval.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphics/week2-ex-uniform-dist-over-01-remark.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Quantiles of a Distribution
+\end_layout
+
+\begin_layout Standard
+Related to CDF (
+\begin_inset Formula $F_{X}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+say 
+\begin_inset Formula $\alpha=0.05=5\%$
+\end_inset
+
+, the the 
+\begin_inset Formula $5\%$
+\end_inset
+
+ quantile is the value of x such that the probability to the left of the
+ quantile is equal to this probability value
+\begin_inset Formula $\Rightarrow q_{\alpha}=q_{0.05}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Given our probability value, what value of 
+\begin_inset Formula $x$
+\end_inset
+
+ gives me this probability of 0.05.
+\end_layout
+
+\begin_layout Standard
+When we're working with CDF, we take 
+\begin_inset Formula $x$
+\end_inset
+
+ and then figure out the probability value, with quantiles, we take the
+ probability value and figure out 
+\begin_inset Formula $q_{\alpha}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note
+\begin_inset Graphics
+	filename graphics/week2-ex-quantiles.png
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{X}^{-1}(F_{X}(q_{\alpha}))=q_{\alpha}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quantiles tell us about the 
+\series bold
+probability of a loss
+\series default
+.
+ Quantities to the left tell us about negative rates of return, to the right,
+ positive.
+\end_layout
+
+\begin_layout Standard
+We can figure out quantile function for a random variable.
+\end_layout
+
+\begin_layout Subsection
+Standard Normal Distribution
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\sim N(0,1)$
+\end_inset
+
+ - 
+\begin_inset Formula $X$
+\end_inset
+
+ is distributed as a normal 0, 1.
+ Center of the distribution is at 0, a standardized measure of spread about
+ 0 is 1 
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+standard deviation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $CDF\rightarrow\Phi(x)\rightarrow$
+\end_inset
+
+height
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphics/week-standard-normal-distribution.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we look at monthly returns on some stock and plot empirical distribution,
+ sort prices returns from largest to smallest, the distribution will look
+ normal.
+\end_layout
+
+\begin_layout Standard
+Normal distribution provides approximations.
+ Some features can't be captured.
+\end_layout
+
+\begin_layout Subsection
+Expected VAlue and Standard Deviation
+\end_layout
+
+\begin_layout Subsection
+General Normal Distribution
+\end_layout
+
+\begin_layout Subsection
+Standard deviation as a Measure of Risk
+\end_layout
+
+\begin_layout Subsection
+Normal Distribution: Appropriate for siple returns?
+\end_layout
+
+\begin_layout Subsection
+Skewness and Kurtosis
+\end_layout
+
+\begin_layout Subsection
+Student's-t Distribution
+\end_layout
+
+\begin_layout Subsection
+Linear Functions of Random Variables
+\end_layout
+
+\end_body
+\end_document
