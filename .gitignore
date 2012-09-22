@@ -1,0 +1,6 @@
+
+*.lyx~
+*.lyx#
+/Compilers
+/NLP
+/ML/other
